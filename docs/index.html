@@ -132,7 +132,7 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": 
 const norm = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const eur = n => n == null ? "" : n.toFixed(2).replace(".", ",") + " €";
 const today = new Date().toISOString().slice(0, 10);
-const fmtDate = s => { if (!s) return ""; const [y, m, d] = s.split("-"); return `${+d}. ${+m}.`; };
+const fmtDate = s => { if (!s) return ""; const [y, m, d] = s.split("-"); return `${+d}.${+m}.`; };
 
 function load(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
 function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
