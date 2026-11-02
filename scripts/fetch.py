@@ -225,12 +225,8 @@ def main():
                                                       ensure_ascii=False, indent=1), encoding="utf-8")
 
     # Publish what we have: reused AI results where available, rule-based fallback elsewhere.
-    deals_path = ROOT / "docs" / "deals.json"
-    current = json.loads(deals_path.read_text(encoding="utf-8")) if deals_path.exists() else {}
-    if current.get("week") == today.isoformat() and current.get("source") == "ai":
-        print("AI deals for this week already exist; not rebuilt.")
-    else:
-        subprocess.run([sys.executable, str(ROOT / "scripts" / "merge.py"), str(week_dir)], check=False)
+    # merge.py keeps every processed (AI) result and marks the week incomplete if any flyer still needs processing.
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "merge.py"), str(week_dir)], check=False)
 
     for old in sorted(p for p in WEEKS.iterdir() if p.is_dir())[:-KEEP_WEEKS]:
         shutil.rmtree(old)
