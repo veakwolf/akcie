@@ -116,6 +116,15 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .shop > summary .store { font: 800 20px/1 var(--display); letter-spacing: -0.01em; text-transform: none; }
 .shop > summary::after { content: "▾"; margin-left: auto; color: var(--muted); transition: transform .15s; }
 .shop:not([open]) > summary::after { transform: rotate(-90deg); }
+.deal { grid-template-columns: 1fr auto 36px; padding: 11px 10px 11px 14px; margin-bottom: 8px; border-radius: 16px; gap: 2px 10px; align-items: center; }
+.deal > .addbtn { grid-column: 3; grid-row: 1 / span 3; }
+.prices { grid-column: 2; gap: 4px; }
+.price { font-size: 21px; }
+.name { font-size: 15px; }
+.oldrow { display: flex; gap: 6px; align-items: center; }
+.addbtn { width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--raised); color: var(--ink);
+  font-size: 20px; font-weight: 600; line-height: 1; display: grid; place-items: center; }
+.addbtn.on { background: var(--accent); color: var(--on-accent); font-size: 16px; }
 </style>
 </head>
 <body>
@@ -204,7 +213,9 @@ function filtered() {
 
 function dealCard(d, showStore = true) {
   const inList = state.list.some(i => i.key === keyOf(d));
-  const dates = d.valid_from || d.valid_to ? `platí ${fmtDate(d.valid_from)}–${fmtDate(d.valid_to)}` : "";
+  const sv = state.data.stores?.[d.store] || {};
+  const differs = (d.valid_from && d.valid_from !== sv.valid_from) || (d.valid_to && d.valid_to !== sv.valid_to);
+  const dates = differs ? `len ${fmtDate(d.valid_from || sv.valid_from)}–${fmtDate(d.valid_to || sv.valid_to)}` : "";
   return `<article class="deal ${isWatched(d) ? "watched" : ""} ${expired(d) ? "expired" : ""}">
     ${showStore || expired(d) ? `<div>${showStore ? `<span class="store ${esc(d.store)}">${esc(d.store)}</span>` : ""}${expired(d) ? ' <span class="meta">skončila</span>' : ""}</div>` : ""}
     <div class="prices">
@@ -212,20 +223,17 @@ function dealCard(d, showStore = true) {
         <div class="price emp">${eur(empPrice(d))}</div>
         <div><span class="club empTag">so zam. kartou</span></div>
         <div class="old" style="text-decoration:none">akcia ${eur(d.price)}${d.club_price != null && d.club_price < d.price ? ` · Clubcard ${eur(d.club_price)}` : ""}</div>
-        ${d.old_price ? `<div class="old">${eur(d.old_price)}</div><div class="pct">−${Math.round((1 - empPrice(d) / d.old_price) * 100)} %</div>` : ""}
+        ${d.old_price ? `<div class="oldrow"><span class="old">${eur(d.old_price)}</span><span class="pct">−${Math.round((1 - empPrice(d) / d.old_price) * 100)} %</span></div>` : ""}
       ` : `
         <div class="price">${eur(d.price)}</div>
-        ${d.old_price ? `<div class="old">${eur(d.old_price)}</div>` : ""}
-        ${d.discount ? `<div class="pct">−${d.discount} %</div>` : ""}
+        ${d.old_price || d.discount ? `<div class="oldrow">${d.old_price ? `<span class="old">${eur(d.old_price)}</span>` : ""}${d.discount ? `<span class="pct">−${d.discount} %</span>` : ""}</div>` : ""}
         ${d.club_price != null && d.club_price < d.price ? `<div><span class="club">${STORE_CLUB[d.store] || "Karta"} ${eur(d.club_price)}</span></div>` : ""}
       `}
     </div>
     <div class="name">${esc(d.name)}</div>
     <div class="meta">${[d.brand, d.unit, dates].filter(Boolean).map(esc).join(" · ")}</div>
     ${d.note ? `<div class="note">${esc(d.note)}</div>` : ""}
-    <div class="actions">
-      <button class="btn ${inList ? "on" : ""}" data-add="${esc(keyOf(d))}">${inList ? "✓ V nákupe" : "+ Do nákupu"}</button>
-    </div>
+    <button class="addbtn ${inList ? "on" : ""}" data-add="${esc(keyOf(d))}" aria-label="${inList ? "Odobrať z nákupu" : "Pridať do nákupu"}">${inList ? "✓" : "+"}</button>
   </article>`;
 }
 
