@@ -38,6 +38,13 @@ h1 { margin: 0; font-size: 22px; letter-spacing: -0.01em; }
 .chip { flex: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card);
   font-size: 14px; white-space: nowrap; }
 .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.sname.Tesco, .shopchip.Tesco { color: var(--tesco); }
+.sname.Billa, .shopchip.Billa { color: var(--billa); }
+.sname.Lidl, .shopchip.Lidl { color: var(--lidl); }
+.shopchip { font-weight: 600; }
+.shopchip.Tesco[aria-pressed="true"] { background: var(--tesco); border-color: var(--tesco); color: #fff; }
+.shopchip.Billa[aria-pressed="true"] { background: var(--billa); border-color: var(--billa); color: #1c1b18; }
+.shopchip.Lidl[aria-pressed="true"] { background: var(--lidl); border-color: var(--lidl); color: #fff; }
 select.chip { appearance: none; -webkit-appearance: none; padding-right: 26px;
   background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
   background-position: calc(100% - 14px) 55%, calc(100% - 9px) 55%; background-size: 5px 5px; background-repeat: no-repeat; }
@@ -153,13 +160,13 @@ async function init() {
   }
   const stores = Object.keys(state.data.stores || {}).sort();
   $("#stores").innerHTML = stores.map(s =>
-    `<button class="chip" data-store="${esc(s)}" aria-pressed="${state.stores.has(s)}">${esc(s)}</button>`).join("");
+    `<button class="chip shopchip ${esc(s)}" data-store="${esc(s)}" aria-pressed="${state.stores.has(s)}">${esc(s)}</button>`).join("");
   const cats = [...new Set(state.data.deals.map(d => d.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, "sk"));
   $("#cat").innerHTML = `<option value="">Všetky kategórie</option>` + cats.map(c => `<option>${esc(c)}</option>`).join("");
   $("#sort").value = state.sort;
   $("#validity").innerHTML = stores.map(s => {
     const v = state.data.stores[s] || {};
-    return `${esc(s)} ${v.valid_from ? fmtDate(v.valid_from) + "–" + fmtDate(v.valid_to) : ""}`;
+    return `<b class="sname ${esc(s)}">${esc(s)}</b> ${v.valid_from ? fmtDate(v.valid_from) + "–" + fmtDate(v.valid_to) : ""}`;
   }).join(" · ") || "Zatiaľ žiadne akcie";
   render();
 }
