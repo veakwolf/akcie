@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Akcie Trnava</title>
-<meta name="theme-color" content="#09080f" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f3f2fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09080f">
+<meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
@@ -16,22 +16,16 @@
 <link rel="manifest" href="manifest.webmanifest">
 <style>
 :root {
-  --bg: #f3f2fa; --card: #ffffff; --raised: #ebe9f7; --ink: #171433; --muted: #5e5a86; --line: #dddbee;
-  --accent: #4b2fb8; --accent-soft: #e9e4ff; --on-accent: #ffffff;
-  --sale: #cf3f2c; --sale-soft: #fde4e0;
-  --tesco: #d6202f; --billa: #a06e00; --lidl: #0050aa; --kaufland: #c2410c; --watch: #a06e00; --watch-soft: #fff1cc;
-  --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
-  --tabs-h: 62px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
+  color-scheme: dark;
     --bg: #09080f; --card: #14121f; --raised: #1d1a2e; --ink: #ecebf5; --muted: #8f8cad; --line: #26233a;
     --accent: #8b6cff; --accent-soft: #231c45; --on-accent: #ffffff;
     --sale: #ff7466; --sale-soft: #33181b;
     --tesco: #ff6b6b; --billa: #f4c152; --lidl: #5aa2ff; --kaufland: #ff8a3d; --watch: #f4c152; --watch-soft: #2c2412;
-  }
+  --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  --tabs-h: 62px;
 }
+
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.4 var(--body); -webkit-text-size-adjust: 100%; }
 button, input, select { font: inherit; color: inherit; }
@@ -135,13 +129,11 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .tag.best { background: #1d3b2c; color: #5ee0ae; }
 .tag.hist { background: var(--raised); color: var(--muted); }
 .tag.soon { background: var(--sale-soft); color: var(--sale); }
-@media (prefers-color-scheme: light) { .tag.best { background: #d9f6e9; color: #0f8f62; } }
 .seg { margin: 10px 0 0; }
 .summary { display: flex; justify-content: flex-end; gap: 22px; margin: 14px 2px 4px; }
 .summary > div { display: flex; flex-direction: column; align-items: flex-end; }
 .summary b { font: 800 22px/1.1 var(--display); }
 .summary .savings { color: #5ee0ae; }
-@media (prefers-color-scheme: light) { .summary .savings { color: #0f8f62; } }
 .group .meta { font-weight: 500; }
 .listseg { margin: 4px 0 10px; }
 .syncbox { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; margin: 6px 0 10px; }
@@ -156,6 +148,32 @@ header.compact { padding-bottom: 8px; cursor: pointer; }
 header.compact h1 { font-size: 22px; }
 header .sub { max-height: 80px; transition: max-height .25s ease, opacity .2s ease, margin .2s ease; overflow: hidden; }
 header.compact .sub { max-height: 0; opacity: 0; margin: 0; }
+.cat { font-size: 11px; font-weight: 700; letter-spacing: .03em; color: var(--muted); background: var(--raised);
+  border-radius: 6px; padding: 2px 7px; text-transform: none; }
+.deal { cursor: pointer; }
+.deal:active { transform: scale(.99); }
+.sheet-back { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 20; opacity: 0; transition: opacity .2s ease; }
+.sheet-back.open { opacity: 1; }
+.sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 21; max-height: 86vh; overflow-y: auto;
+  background: var(--card); border-radius: 24px 24px 0 0; border-top: 1px solid var(--line);
+  padding: 10px 20px calc(env(safe-area-inset-bottom) + 20px); transform: translateY(100%); transition: transform .22s ease; }
+.sheet.open { transform: translateY(0); }
+.sheet .grab { width: 40px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 10px; }
+.sheet .sclose { position: absolute; right: 14px; top: 10px; border: 0; background: var(--raised); color: var(--ink);
+  width: 32px; height: 32px; border-radius: 50%; font-size: 20px; line-height: 1; }
+.sheet .store { font-size: 13px; display: flex; gap: 8px; align-items: center; }
+.sname-big { font: 800 24px/1.2 var(--display); margin: 8px 40px 4px 0; letter-spacing: -0.01em; }
+.sprice { display: flex; align-items: baseline; gap: 10px; margin: 14px 0 6px; }
+.sprice .price { font-size: 34px; }
+.sgrid { margin: 14px 0; border-top: 1px solid var(--line); }
+.srow { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.srow span { color: var(--muted); }
+.srow small { color: var(--muted); font-weight: 500; }
+.sactions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.sactions .btn { flex: 1 1 auto; text-align: center; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; }
+.sactions small { opacity: .75; font-weight: 500; }
+body.noscroll { overflow: hidden; }
+.catx { color: #a99cff; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -186,6 +204,8 @@ header.compact .sub { max-height: 0; opacity: 0; margin: 0; }
   </div>
 </header>
 <main id="view"></main>
+<div id="sheetBack" class="sheet-back" hidden></div>
+<section id="sheet" class="sheet" role="dialog" aria-modal="true" aria-label="Detail akcie" hidden></section>
 <nav>
   <button data-tab="deals" aria-current="page">Akcie</button>
   <button data-tab="list">Nákup<span id="listBadge"></span></button>
@@ -334,6 +354,7 @@ async function init() {
   try {
     const r = await fetch("deals.json?v=" + Date.now(), { cache: "no-store" });
     state.data = await r.json();
+    state.data.deals.forEach((d, i) => d._i = i);
   } catch (e) {
     $("#validity").textContent = "Nepodarilo sa načítať akcie. Skontroluj pripojenie.";
   }
@@ -382,7 +403,7 @@ function dealCard(d, showStore = true) {
   const sv = state.data.stores?.[d.store] || {};
   const differs = (d.valid_from && d.valid_from !== sv.valid_from) || (d.valid_to && d.valid_to !== sv.valid_to);
   const dates = differs ? `len ${fmtDate(d.valid_from || sv.valid_from)}–${fmtDate(d.valid_to || sv.valid_to)}` : "";
-  return `<article class="deal ${isWatched(d) ? "watched" : ""} ${expired(d) ? "expired" : ""}">
+  return `<article class="deal ${isWatched(d) ? "watched" : ""} ${expired(d) ? "expired" : ""}" data-idx="${d._i}">
     ${showStore || expired(d) ? `<div>${showStore ? `<span class="store ${esc(d.store)}">${esc(d.store)}</span>` : ""}${expired(d) ? ' <span class="meta">skončila</span>' : ""}</div>` : ""}
     <div class="prices">
       ${empPrice(d) != null ? `
@@ -397,7 +418,7 @@ function dealCard(d, showStore = true) {
       `}
     </div>
     <div class="name">${esc(d.name)}</div>
-    <div class="meta">${[d.brand, d.unit, dates].filter(Boolean).map(esc).join(" · ")}</div>
+    <div class="meta">${[d.brand, d.unit, dates].filter(Boolean).map(esc).join(" · ")}${d.category && d.category !== "Ostatné" ? `${d.brand || d.unit || dates ? " · " : ""}<span class="catx">${esc(d.category)}</span>` : ""}</div>
     ${unitText(d) || endsTag(d) || state.best?.has(d) || histTag(d) ? `<div class="tags">
       ${state.best?.has(d) ? `<span class="tag best">najlacnejšie</span>` : ""}
       ${histTag(d) ? `<span class="tag ${histTag(d).good ? "best" : "hist"}">${histTag(d).text}</span>` : ""}
@@ -409,6 +430,57 @@ function dealCard(d, showStore = true) {
       <button class="addbtn ${inList ? "on" : ""}" data-add="${esc(keyOf(d))}" aria-label="${inList ? "Odobrať z nákupu" : "Pridať do nákupu"}">${inList ? "✓" : "+"}</button>
     </div>
   </article>`;
+}
+
+function flyerLink(d) {
+  const web = state.data.stores?.[d.store]?.web; if (!web) return null;
+  if (!d.page || d.upcoming) return web;
+  if (d.store === "Tesco") return web.replace(/\/\d+$/, "/" + d.page);
+  if (d.store === "Lidl") return web.replace(/\/ar\/0$/, "/view/flyer/page/" + d.page);
+  return web;
+}
+function openSheet(d) {
+  const inList = L().some(i => i.key === keyOf(d));
+  const sv = state.data.stores?.[d.store] || {};
+  const from = d.valid_from || sv.valid_from, to = d.valid_to || sv.valid_to;
+  const h = d.hist, ht = histTag(d), link = flyerLink(d);
+  const row = (label, value) => value ? `<div class="srow"><span>${label}</span><b>${value}</b></div>` : "";
+  $("#sheet").innerHTML = `
+    <div class="grab"></div>
+    <button class="sclose" id="sheetClose" aria-label="Zavrieť">×</button>
+    <div class="store ${esc(d.store)}">${esc(d.store)}${d.category && d.category !== "Ostatné" ? ` <span class="cat">${esc(d.category)}</span>` : ""}</div>
+    <h2 class="sname-big">${esc(d.name)}</h2>
+    <div class="meta">${[d.brand, d.unit].filter(Boolean).map(esc).join(" · ")}</div>
+    <div class="sprice">
+      <div class="price ${empPrice(d) != null ? "emp" : ""}">${eur(payPrice(d))}</div>
+      ${d.old_price ? `<span class="old">${eur(d.old_price)}</span>` : ""}
+      ${d.old_price ? `<span class="pct">−${Math.round((1 - payPrice(d) / d.old_price) * 100)} %</span>` : d.discount ? `<span class="pct">−${d.discount} %</span>` : ""}
+    </div>
+    ${d.note ? `<div class="note">${esc(d.note)}</div>` : ""}
+    <div class="sgrid">
+      ${empPrice(d) != null ? row("Akciová cena", eur(d.price)) : ""}
+      ${row(d.club_price != null && d.club_price < d.price ? (STORE_CLUB[d.store] || "S kartou") : "", d.club_price != null && d.club_price < d.price ? eur(d.club_price) : "")}
+      ${empPrice(d) != null ? row("So zamestnaneckou kartou", eur(empPrice(d))) : ""}
+      ${row("Cena za jednotku", unitText(d))}
+      ${row("Platí", from ? `${fmtDate(from)}–${fmtDate(to)}${endsTag(d) ? " · " + endsTag(d) : ""}` : "")}
+      ${h ? row("Doteraz najnižšia", `${eur(h.min)} <small>(od ${fmtDate(h.since)}, ${h.n}× v akcii)</small>`) : ""}
+      ${h ? row("Minulá akcia", eur(h.last)) : ""}
+    </div>
+    ${ht ? `<div class="tags"><span class="tag ${ht.good ? "best" : "hist"}">${ht.text}</span></div>` : ""}
+    <div class="sactions">
+      <button class="btn ${inList ? "on" : "primary"}" data-add="${esc(keyOf(d))}">${inList ? "✓ V nákupe" : "+ Do nákupu"}${sync.code ? ` <small>(${isShared() ? "spoločný" : "môj"})</small>` : ""}</button>
+      <button class="btn ${isWatched(d) ? "on" : ""}" data-watchname="${esc(d.name)}">${isWatched(d) ? "Sledované ✓" : "Sledovať"}</button>
+      ${link ? `<a class="btn" href="${esc(link)}" target="_blank" rel="noopener">Pozrieť v letáku</a>` : ""}
+    </div>`;
+  $("#sheet").dataset.idx = d._i;
+  $("#sheet").hidden = false; $("#sheetBack").hidden = false;
+  requestAnimationFrame(() => { $("#sheet").classList.add("open"); $("#sheetBack").classList.add("open"); });
+  document.body.classList.add("noscroll");
+}
+function closeSheet() {
+  $("#sheet").classList.remove("open"); $("#sheetBack").classList.remove("open");
+  document.body.classList.remove("noscroll");
+  setTimeout(() => { $("#sheet").hidden = true; $("#sheetBack").hidden = true; }, 220);
 }
 
 const STORE_ORDER = ["Tesco", "Billa", "Lidl", "Kaufland"];
@@ -544,7 +616,32 @@ document.querySelector("nav").addEventListener("click", e => {
   state.tab = t; render(); window.scrollTo(0, 0);
 });
 $("#view").addEventListener("click", e => {
-  const t = e.target;
+  const card = e.target.closest(".deal");
+  if (card && !e.target.closest("button, a") && card.dataset.idx) { openSheet(state.data.deals[+card.dataset.idx]); return; }
+});
+$("#sheetBack").addEventListener("click", closeSheet);
+$("#sheet").addEventListener("click", e => {
+  if (e.target.id === "sheetClose") return closeSheet();
+  if (e.target.closest("[data-add], [data-watchname]")) {
+    const btn = e.target.closest("[data-add], [data-watchname]");
+    handleAction(btn);
+    openSheet(state.data.deals[+$("#sheet").dataset.idx]);
+  }
+});
+let sheetY = null;
+$("#sheet").addEventListener("touchstart", e => { sheetY = $("#sheet").scrollTop <= 0 ? e.touches[0].clientY : null; }, { passive: true });
+$("#sheet").addEventListener("touchmove", e => {
+  if (sheetY == null) return; const dy = e.touches[0].clientY - sheetY;
+  if (dy > 0) $("#sheet").style.transform = `translateY(${dy}px)`;
+}, { passive: true });
+$("#sheet").addEventListener("touchend", e => {
+  if (sheetY == null) return; const dy = e.changedTouches[0].clientY - sheetY; sheetY = null;
+  $("#sheet").style.transform = ""; if (dy > 90) closeSheet();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#sheet").hidden) closeSheet(); });
+$("#view").addEventListener("click", e => { if (e.target.dataset.del) e.preventDefault(); handleAction(e.target); });
+function handleAction(target) {
+  const t = target;
   if (t.dataset.add) {
     const i = L().findIndex(x => x.key === t.dataset.add);
     if (i >= 0) { markDeleted(L()[i].key); L().splice(i, 1); }
@@ -562,7 +659,7 @@ $("#view").addEventListener("click", e => {
     else { state.watch.push(t.dataset.watchname); watchMeta[t.dataset.watchname] = now(); }
     save("akcie.watch", state.watch); save("akcie.watchMeta", watchMeta); save("akcie.tomb", tomb); render(); syncSoon();
   } else if (t.dataset.del) {
-    e.preventDefault();
+    
     markDeleted(t.dataset.del);
     setL(L().filter(i => i.key !== t.dataset.del)); saveL(); render(); syncSoon();
   } else if (t.dataset.unwatch) {
@@ -584,7 +681,8 @@ $("#view").addEventListener("click", e => {
     if (navigator.share) navigator.share({ text }).catch(() => {});
     else navigator.clipboard?.writeText(text).then(() => { t.textContent = "Skopírované ✓"; });
   }
-});
+}
+
 $("#view").addEventListener("toggle", e => {
   const s = e.target.dataset?.shop; if (!s || state.q) return;
   e.target.open ? closed.delete(s) : closed.add(s);
