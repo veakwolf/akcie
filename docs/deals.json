@@ -1,6 +1,6 @@
 {
  "week": "2026-11-02",
- "generated": "2026-11-02T22:02:00",
+ "generated": "2026-11-02T22:35:39",
  "source": "ai",
  "complete": true,
  "stores": {
@@ -13699,7 +13699,13 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 6.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 12.99,
+    "last": 12.99,
+    "since": "2026-10-27"
+   }
   },
   {
    "store": "Tesco",

@@ -97,12 +97,38 @@ def find_lidl(today, upcoming=False):
                 web=f"https://www.lidl.sk/l/sk/letak/{slug}/ar/0")
 
 
-FINDERS = {"tesco": find_tesco, "billa": find_billa, "lidl": find_lidl}
+def find_kaufland(today, upcoming=False):
+    """Kaufland's shop site lists flyer IDs (same Schwarz flyer system as Lidl); the weekly one is *_KDZ_*.
+    The default store on the page is Poprad; the weekly KDZ flyer is the same nationwide."""
+    html = get("https://predajne.kaufland.sk/aktualna-ponuka/letak.html")
+    ids = sorted(set(re.findall(r"SK_sk_KDZ_\d+_[A-Za-z0-9\-]+", html)))
+    flyers = []
+    for fid in ids:
+        region = fid.split("_")[3]
+        f = json.loads(get(f"https://endpoints.leaflets.schwarz/v4/flyer?flyer_identifier={fid}"
+                           f"&region_id={region}&region_code={region}"))["flyer"]
+        start = dt.date.fromisoformat(f.get("offerStartDate") or f["startDate"])
+        end = dt.date.fromisoformat(f.get("offerEndDate") or f["endDate"])
+        flyers.append((start, end, f["pdfUrl"], fid, region))
+    flyers.sort()
+    if upcoming:
+        pick = [x for x in flyers if x[0] > today]
+    else:
+        pick = [x for x in flyers if x[0] <= today <= x[1]] or [x for x in flyers if x[0] <= today]
+        pick = pick[-1:] if pick else []
+    if not pick:
+        return None
+    start, end, pdf, fid, region = pick[0]
+    return dict(pdf=pdf, valid_from=iso(start), valid_to=iso(end),
+                web=f"https://leaflets.kaufland.com/sk-SK/{fid}/ar/{region}")
+
+
+FINDERS = {"tesco": find_tesco, "billa": find_billa, "lidl": find_lidl, "kaufland": find_kaufland}
 # (folder, store, upcoming): current flyers plus next week's Tesco and Billa when already published.
-TARGETS = [("tesco", "tesco", False), ("billa", "billa", False), ("lidl", "lidl", False),
-           ("tesco_next", "tesco", True), ("billa_next", "billa", True)]
-IMAGE_STORES = {"lidl"}
-NAMES = {"tesco": "Tesco", "billa": "Billa", "lidl": "Lidl"}
+TARGETS = [("tesco", "tesco", False), ("billa", "billa", False), ("lidl", "lidl", False), ("kaufland", "kaufland", False),
+           ("tesco_next", "tesco", True), ("billa_next", "billa", True), ("kaufland_next", "kaufland", True)]
+IMAGE_STORES = {"lidl", "kaufland"}
+NAMES = {"tesco": "Tesco", "billa": "Billa", "lidl": "Lidl", "kaufland": "Kaufland"}
 
 
 # ---------------------------------------------------------------- extraction

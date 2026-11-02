@@ -19,7 +19,7 @@
   --bg: #f3f2fa; --card: #ffffff; --raised: #ebe9f7; --ink: #171433; --muted: #5e5a86; --line: #dddbee;
   --accent: #4b2fb8; --accent-soft: #e9e4ff; --on-accent: #ffffff;
   --sale: #cf3f2c; --sale-soft: #fde4e0;
-  --tesco: #d6202f; --billa: #a06e00; --lidl: #0050aa; --watch: #a06e00; --watch-soft: #fff1cc;
+  --tesco: #d6202f; --billa: #a06e00; --lidl: #0050aa; --kaufland: #c2410c; --watch: #a06e00; --watch-soft: #fff1cc;
   --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
   --tabs-h: 62px;
@@ -29,7 +29,7 @@
     --bg: #09080f; --card: #14121f; --raised: #1d1a2e; --ink: #ecebf5; --muted: #8f8cad; --line: #26233a;
     --accent: #8b6cff; --accent-soft: #231c45; --on-accent: #ffffff;
     --sale: #ff7466; --sale-soft: #33181b;
-    --tesco: #ff6b6b; --billa: #f4c152; --lidl: #5aa2ff; --watch: #f4c152; --watch-soft: #2c2412;
+    --tesco: #ff6b6b; --billa: #f4c152; --lidl: #5aa2ff; --kaufland: #ff8a3d; --watch: #f4c152; --watch-soft: #2c2412;
   }
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -53,6 +53,8 @@ h1 { margin: 0; font: 800 30px/1.1 var(--display); letter-spacing: -0.02em; }
 .sname.Tesco, .shopchip.Tesco { color: var(--tesco); }
 .sname.Billa, .shopchip.Billa { color: var(--billa); }
 .sname.Lidl, .shopchip.Lidl { color: var(--lidl); }
+.sname.Kaufland, .shopchip.Kaufland { color: var(--kaufland); }
+.shopchip.Kaufland[aria-pressed="true"] { background: var(--kaufland); color: #fff; }
 .shopchip.Tesco[aria-pressed="true"] { background: var(--tesco); color: #fff; }
 .shopchip.Billa[aria-pressed="true"] { background: var(--billa); color: #1a1405; }
 .shopchip.Lidl[aria-pressed="true"] { background: var(--lidl); color: #fff; }
@@ -67,7 +69,7 @@ main { padding: 4px 16px calc(env(safe-area-inset-bottom) + var(--tabs-h) + 24px
 .deal.watched { border-color: var(--watch); box-shadow: 0 0 0 1px var(--watch) inset; }
 .deal.expired { opacity: .5; }
 .store { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
-.store.Tesco { color: var(--tesco); } .store.Billa { color: var(--billa); } .store.Lidl { color: var(--lidl); }
+.store.Tesco { color: var(--tesco); } .store.Billa { color: var(--billa); } .store.Lidl { color: var(--lidl); } .store.Kaufland { color: var(--kaufland); }
 .name { font-weight: 650; font-size: 16px; line-height: 1.3; overflow-wrap: anywhere; }
 .meta { color: var(--muted); font-size: 13px; }
 .note { font-size: 13px; color: var(--sale); }
@@ -131,6 +133,7 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .unitp { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .tag { font-size: 11px; font-weight: 800; border-radius: 6px; padding: 2px 7px; letter-spacing: .02em; }
 .tag.best { background: #1d3b2c; color: #5ee0ae; }
+.tag.hist { background: var(--raised); color: var(--muted); }
 .tag.soon { background: var(--sale-soft); color: var(--sale); }
 @media (prefers-color-scheme: light) { .tag.best { background: #d9f6e9; color: #0f8f62; } }
 .seg { margin: 10px 0 0; }
@@ -156,6 +159,13 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
     <div class="row seg" id="weeks"></div>
     <input class="search" id="q" type="search" placeholder="Hľadať, napr. maslo, kuracie, pivo" autocomplete="off">
     <div class="row" id="stores"></div>
+    <div class="row" id="quick">
+      <button class="chip" data-quick="watched" aria-pressed="false">👁 Sledované</button>
+      <button class="chip" data-quick="big" aria-pressed="false">−30 % a viac</button>
+      <button class="chip" data-quick="food" aria-pressed="false">Potraviny</button>
+      <button class="chip" data-quick="drug" aria-pressed="false">Drogéria</button>
+      <button class="chip" data-quick="low" aria-pressed="false">Najnižšia cena</button>
+    </div>
     <div class="row">
       <select class="chip" id="cat" aria-label="Kategória"><option value="">Všetky kategórie</option></select>
       <select class="chip" id="sort" aria-label="Zoradenie">
@@ -176,7 +186,7 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 </nav>
 <script>
 const EYE = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`;
-const STORE_CLUB = { Tesco: "Clubcard", Billa: "Bonus", Lidl: "Lidl Plus" };
+const STORE_CLUB = { Tesco: "Clubcard", Billa: "Bonus", Lidl: "Lidl Plus", Kaufland: "Kaufland Card" };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const norm = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -189,7 +199,7 @@ function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value
 
 const state = {
   data: { deals: [], stores: {} }, tab: "deals",
-  week: "now", q: "", stores: new Set(load("akcie.stores", [])), cat: "", sort: load("akcie.sort", "disc"),
+  week: "now", quick: new Set(), q: "", stores: new Set(load("akcie.stores", [])), cat: "", sort: load("akcie.sort", "disc"),
   shared: load("akcie.list", []), mine: load("akcie.mylist", []), target: load("akcie.target", "mine"), watch: load("akcie.watch", []), emp: load("akcie.emp", false),
 };
 const EMP_DISCOUNT = 0.15;
@@ -205,6 +215,14 @@ const isNext = d => d.upcoming && d.valid_from && d.valid_from > today;
 const unitPay = d => d.unit_price == null ? null : Math.round(d.unit_price * payPrice(d) / d.price * 100) / 100;
 const unitText = d => { const u = unitPay(d); if (u == null) return "";
   return d.unit_basis === "pranie" ? `${eur(u)} / pranie` : `${eur(u)} / ${d.unit_basis}`; };
+// Price history (from docs/history.json via merge.py): how this price compares to earlier flyers.
+const histTag = d => {
+  const h = d.hist; if (!h) return null;
+  const weeks = Math.max(1, Math.round((new Date(d.valid_from) - new Date(h.since)) / 6048e5));
+  if (d.price < h.min - 0.005) return { good: true, text: `najnižšia cena za ${weeks} týž.` };
+  if (d.price <= h.min + 0.005) return { good: true, text: `ako najlacnejšie (${weeks} týž.)` };
+  return { good: false, text: `už bolo za ${eur(h.min)}` };
+};
 const endsTag = d => d.valid_to === today ? "končí dnes" : d.valid_to === tomorrow ? "končí zajtra" : "";
 
 // ---------- Shared household (Supabase): shopping list + watch list synced by a secret code
@@ -335,6 +353,11 @@ function filtered() {
   const q = norm(state.q).split(/\s+/).filter(Boolean);
   let list = state.data.deals.filter(d =>
     (state.week === "next" ? isNext(d) : !isNext(d)) &&
+    (!state.quick.has("watched") || isWatched(d)) &&
+    (!state.quick.has("big") || (d.discount ?? 0) >= 30) &&
+    (!state.quick.has("food") || !["Drogéria a čistenie", "Ostatné"].includes(d.category)) &&
+    (!state.quick.has("drug") || d.category === "Drogéria a čistenie") &&
+    (!state.quick.has("low") || histTag(d)?.good) &&
     (!state.stores.size || state.stores.has(d.store)) &&
     (!state.cat || d.category === state.cat) &&
     q.every(w => norm(`${d.name} ${d.brand || ""} ${d.unit || ""} ${d.category || ""}`).includes(w)));
@@ -368,8 +391,9 @@ function dealCard(d, showStore = true) {
     </div>
     <div class="name">${esc(d.name)}</div>
     <div class="meta">${[d.brand, d.unit, dates].filter(Boolean).map(esc).join(" · ")}</div>
-    ${unitText(d) || endsTag(d) || state.best?.has(d) ? `<div class="tags">
+    ${unitText(d) || endsTag(d) || state.best?.has(d) || histTag(d) ? `<div class="tags">
       ${state.best?.has(d) ? `<span class="tag best">najlacnejšie</span>` : ""}
+      ${histTag(d) ? `<span class="tag ${histTag(d).good ? "best" : "hist"}">${histTag(d).text}</span>` : ""}
       ${endsTag(d) ? `<span class="tag soon">${endsTag(d)}</span>` : ""}
       ${unitText(d) ? `<span class="unitp">${unitText(d)}</span>` : ""}</div>` : ""}
     ${d.note ? `<div class="note">${esc(d.note)}</div>` : ""}
@@ -380,7 +404,7 @@ function dealCard(d, showStore = true) {
   </article>`;
 }
 
-const STORE_ORDER = ["Tesco", "Billa", "Lidl"];
+const STORE_ORDER = ["Tesco", "Billa", "Lidl", "Kaufland"];
 const closed = new Set(load("akcie.closed", []));
 
 function renderDeals() {
@@ -484,6 +508,15 @@ $("#emp").setAttribute("aria-pressed", state.emp);
 $("#emp").addEventListener("click", e => {
   state.emp = !state.emp; save("akcie.emp", state.emp);
   e.target.setAttribute("aria-pressed", state.emp); render();
+});
+$("#quick").addEventListener("click", e => {
+  const q = e.target.dataset.quick; if (!q) return;
+  if (state.quick.has(q)) state.quick.delete(q); else {
+    state.quick.add(q);
+    if (q === "food") state.quick.delete("drug"); if (q === "drug") state.quick.delete("food");
+  }
+  document.querySelectorAll("#quick .chip").forEach(c => c.setAttribute("aria-pressed", state.quick.has(c.dataset.quick)));
+  render();
 });
 $("#weeks").addEventListener("click", e => {
   const w = e.target.dataset.week; if (!w) return;

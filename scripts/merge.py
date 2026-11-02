@@ -102,6 +102,33 @@ def check(row):
                 page=row.get("page")), None
 
 
+HISTORY = ROOT / "docs" / "history.json"
+
+
+def hist_key(d):
+    return f"{d['store']}|{_norm(d['name'])}|{_norm(d.get('unit'))}"
+
+
+def update_history(deals):
+    """Remember each flyer's price per product, and attach a short summary of earlier flyers to each deal.
+
+    history.json: {key: [[valid_from, price, unit_price], ...]} with one entry per flyer (by start date).
+    """
+    hist = json.loads(HISTORY.read_text(encoding="utf-8")) if HISTORY.exists() else {}
+    for d in deals:
+        if not d.get("valid_from"):
+            continue
+        rows = hist.setdefault(hist_key(d), [])
+        rows[:] = [r for r in rows if r[0] != d["valid_from"]] + [[d["valid_from"], d["price"], d.get("unit_price")]]
+        rows.sort()
+        del rows[:-60]  # about a year
+    for d in deals:
+        earlier = [r for r in hist.get(hist_key(d), []) if d.get("valid_from") and r[0] < d["valid_from"]]
+        if earlier:
+            d["hist"] = dict(n=len(earlier), min=min(r[1] for r in earlier), last=earlier[-1][1], since=earlier[0][0])
+    HISTORY.write_text(json.dumps(hist, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
 def main():
     week = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else sorted(p for p in (ROOT / "weeks").iterdir() if p.is_dir())[-1]
     fallback = rules.build(week)
@@ -147,6 +174,8 @@ def main():
     for d in deals:
         d.pop("_dir", None)
         d["unit_price"], d["unit_basis"] = unit_price(d.get("unit"), d["price"])
+    if any_ai:  # only learn prices from the checked AI list, not the rough fallback
+        update_history(deals)
     out = dict(week=week.name, generated=dt.datetime.now().isoformat(timespec="seconds"),
                source="ai" if any_ai else "rules", complete=complete, stores=stores, deals=deals)
     (ROOT / "docs" / "deals.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

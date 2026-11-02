@@ -8,19 +8,19 @@ into clean deals for the app.
 
 1. Use the **newest** folder in `weeks/`. Check its `status.json`; if a store
    failed (errors), tell the user and continue with the rest.
-2. For each store folder (`tesco`, `billa`, `lidl`, and `tesco_next` /
+2. For each store folder (`tesco`, `billa`, `lidl`, `kaufland`, and `tesco_next` /
    `billa_next` when present: next week's flyers) that is not finished yet,
    work through the pages in batches of about 8 pages. A folder is finished
    when `ai_pages.txt` lists every page of `meta.json` → `pages_kept` (folders
    reused from last run already are):
    - Read the batch's `pNNN.txt` files.
-   - **Lidl** (`meta.json` has `"images": true`): its text lists price boxes out
+   - **Lidl and Kaufland** (`meta.json` has `"images": true`): its text lists price boxes out
      of order, so also look at each page's image and take the **pairing of
      product ↔ price from the image**, the spelling from the text. The images
      are on the `stranky` branch:
      `git fetch origin stranky && git worktree add ../stranky stranky`, then
-     `../stranky/<date>/lidl/img/pNNN.jpg`. If the images are missing, skip
-     Lidl and say so in the reply.
+     `../stranky/<date>/<store folder>/img/pNNN.jpg`. If the images are missing, skip
+     that store and say so in the reply.
    - For each **deal** (a product with a sale price) append **one line** of JSON
      to `weeks/<date>/<store>/ai.jsonl` (format below).
    - Append the page numbers of the batch to `weeks/<date>/<store>/ai_pages.txt`
@@ -31,7 +31,7 @@ into clean deals for the app.
 3. Run `python3 scripts/merge.py`. It checks every row, drops invalid ones and
    writes `docs/deals.json`. Read its report: fix any `pages NOT processed` and
    look at the rejected rows.
-4. Commit `weeks/` and `docs/deals.json` with the message `AI akcie <date>` and push.
+4. Commit `weeks/`, `docs/deals.json` and `docs/history.json` with the message `AI akcie <date>` and push.
 5. Reply to the user in Slovak in 2–3 sentences: how many deals per store, and
    whether something failed.
 
