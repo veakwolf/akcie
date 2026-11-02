@@ -2,7 +2,7 @@ name: Stiahnuť letáky
 
 on:
   schedule:
-    - cron: "17 5 * * 1,3"   # Monday (new Lidl + next Tesco/Billa) and Wednesday (Tesco/Billa start) ~06:17 Bratislava
+    - cron: "17 5 * * *"   # every morning ~06:17 Bratislava: Kaufland daily offers; unchanged flyers are reused, so no extra AI work
   workflow_dispatch: {}    # "Run workflow" button for a manual run
 
 permissions:
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install poppler (pdftotext)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils && (pip install -q --break-system-packages beautifulsoup4 || pip install -q beautifulsoup4)
 
       - name: Download flyers and extract text
         run: python3 scripts/fetch.py

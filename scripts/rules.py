@@ -65,21 +65,22 @@ DURABLE = re.compile(r"(stolík|stôl|stoličk|kreslo|pohovk|polic|skrin|LED|svi
                      r"slúchadl|nabíjačk|kábel|reproduktor|bicykel|kolobežk|motokár)", re.I)
 CATEGORY_RULES = [
     ("Drogéria a čistenie", r"prac[íi]|aviváž|toaletn|papierov|čistiac|umývačk|šampón|sprchov|zubn|mydl|plienk|"
-                            r"vrecia|dezodor|kapsul|gél na pranie|jar\b|savo|wc\b"),
-    ("Alkohol", r"pivo|víno|vodka|rum|whisk|borovičk|slivovic|likér|šumiv|prosecco|fľaša.*%|\d+(,\d)? ?%"),
-    ("Nápoje", r"minerál|voda|džús|limonád|kofola|coca|pepsi|sirup|káva|čaj|nápoj"),
-    ("Mäso a ryby", r"mäs|bravč|hovädz|kurac|kurč|morč|kač|husac|teľac|šunk|saláma|klobás|párk|slanin|"
-                    r"ryb|losos|tuniak|filet|tilapi|pstruh|krevet|tresk|tresč|krkovič|karé|stehn|pliec|rezne|pečienk"),
-    ("Mliečne a vajcia", r"mlieko|jogurt|syr|maslo|smotan|tvaroh|bryndz|vajc|kefír|mozzarell|eidam|niva|"
-                         r"hermelín|pribináč|acidk|grana|parmez|gouda"),
+                            r"vrecia|dezodor|kapsul|gél na pranie|\bjar\b|savo|\bwc\b|medzizub|vreckovk|vlhčen|holiac"),
+    ("Nápoje", r"nealko|minerál|\bvoda\b|džús|šťav|nektár|limonád|kofola|coca|pepsi|sirup|káva\b|kávovin|\bčaj|nápoj|radler"),
+    ("Alkohol", r"\bpivo|ležiak|\bvín[oa]?\b|vodka|\brum\b|whisk|brandy|koňak|destilát|liehovin|borovičk|slivovic|"
+                r"likér|šumiv|prosecco|\bgin\b|tequil|\balk\.|\bvol\."),
+    ("Mäso a ryby", r"mäs|bravč|hovädz|kurac|kurč|morč|kačac|kačic|husac|teľac|šunk|saláma|klobás|párk|slanin|huspenin|"
+                    r"\bryb|losos|tuniak|filet|tilapi|pstruh|krevet|tresk|tresč|krkovič|karé|stehn|pliec|rezne|pečienk|mortadel"),
+    ("Mliečne a vajcia", r"mlieko|jogurt|\bsyr|tavený|maslo|smotan|tvaroh|bryndz|vajc|kefír|mozzarell|eidam|niva|"
+                         r"hermelín|pribináč|acidk|grana|parmez|gouda|dezert"),
     ("Mrazené", r"mrazen|zmrzlin|nanuk|pizza"),
     ("Pečivo", r"chlieb|rožk|bagety|bageta|pečivo|koláč|vianočk|croissant|buchty|toast|kaizerk|donut|zákusok|tramezzino"),
     ("Ovocie a zelenina", r"jablk|hrušk|banán|mango|kivi|kaki|pomaranč|mandarín|citrón|hrozno|kapust|zemiak|cibuľ|mrkv|petržl|"
-                          r"paradajk|uhork|paprik|šalát|brokolic|tekvic|gaštan|granát|zelenin|ovocie|kiwi|avokád"),
-    ("Sladké a slané", r"čokolád|sušienk|oblátk|cukrík|bonbón|chips|lupienk|tyčink|keks|bábovk|orech|praclík|"
-                       r"popcorn|kakaov|rez\b|rezy|kinder|pom-bär"),
-    ("Trvanlivé potraviny", r"múk|cukor|ryža|cestovin|olej|konzerv|kečup|horčic|omáčk|polievk|cereál|müsli|"
-                            r"ocot|korenie|džem|med\b|fazuľ|šošovic|hotové jedl"),
+                          r"paradajk|uhork|paprik|šalát|brokolic|tekvic|gaštan|granát|zelenin|ovocie|ovocn|kiwi|avokád|čučoried|malin|jahod"),
+    ("Sladké a slané", r"čokolád|sušienk|oblátk|cukrík|bonbón|chips|lupienk|tyčink|keks|bábovk|orech|praclík|piškót|"
+                       r"popcorn|kakaov|rez\b|rezy|kinder|milka|pom-bär|žuvačk|arašid|pistác|chrumk|mandl|kešu|protein"),
+    ("Trvanlivé potraviny", r"múk|cukor|ryža|cestovin|cesto|knedľ|lasagn|tortell|olej|konzerv|kečup|horčic|omáčk|polievk|"
+                            r"cereál|müsli|ocot|korenie|džem|\bmed\b|fazuľ|šošovic|hotové jedl|kukuric"),
 ]
 
 

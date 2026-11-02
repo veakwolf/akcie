@@ -125,9 +125,9 @@ def find_kaufland(today, upcoming=False):
 
 FINDERS = {"tesco": find_tesco, "billa": find_billa, "lidl": find_lidl, "kaufland": find_kaufland}
 # (folder, store, upcoming): current flyers plus next week's Tesco and Billa when already published.
-TARGETS = [("tesco", "tesco", False), ("billa", "billa", False), ("lidl", "lidl", False), ("kaufland", "kaufland", False),
-           ("tesco_next", "tesco", True), ("billa_next", "billa", True), ("kaufland_next", "kaufland", True)]
-IMAGE_STORES = {"lidl", "kaufland"}
+TARGETS = [("tesco", "tesco", False), ("billa", "billa", False), ("lidl", "lidl", False),
+           ("tesco_next", "tesco", True), ("billa_next", "billa", True)]
+IMAGE_STORES = {"lidl"}
 NAMES = {"tesco": "Tesco", "billa": "Billa", "lidl": "Lidl", "kaufland": "Kaufland"}
 
 
@@ -153,7 +153,7 @@ def reuse(folder, pdf_url, week_dir):
                 out = week_dir / folder
                 if out.exists():
                     shutil.rmtree(out)
-                shutil.copytree(cand, out, ignore=shutil.ignore_patterns("img"))
+                shutil.copytree(cand, out)
                 return json.loads(meta.read_text(encoding="utf-8")), cand
     return None, None
 
@@ -221,6 +221,30 @@ def main():
             except Exception as e:  # one broken store must not stop the others
                 errors[folder] = f"{type(e).__name__}: {e}"
                 print(f"{folder}: FAILED {errors[folder]}", file=sys.stderr)
+    # Kaufland: read the offers straight from its website (structured, no AI step needed).
+    for folder, week in (("kaufland", "current"), ("kaufland_next", "next")):
+        try:
+            sys.path.insert(0, str(ROOT / "scripts"))
+            import kaufland_web, rules
+            deals, vf, vt = kaufland_web.parse(get(kaufland_web.URL.format(week=week)), today,
+                                               rules.categorize, rules.DURABLE)
+            if folder == "kaufland_next" and (not vf or vf <= today.isoformat() or vf == metas.get("kaufland", {}).get("valid_from")):
+                print("kaufland_next: not published yet")
+                continue
+            out = week_dir / folder
+            if out.exists():
+                shutil.rmtree(out)
+            out.mkdir(parents=True)
+            (out / "ai.jsonl").write_text("".join(json.dumps(d, ensure_ascii=False) + "\n" for d in deals), encoding="utf-8")
+            (out / "ai_pages.txt").write_text("", encoding="utf-8")
+            metas[folder] = dict(store="Kaufland", pdf=None, valid_from=vf, valid_to=vt, web=kaufland_web.URL.format(week=week),
+                                 pages_total=0, pages_kept=[], images=False, source="web")
+            (out / "meta.json").write_text(json.dumps(metas[folder], ensure_ascii=False, indent=1), encoding="utf-8")
+            print(f"{folder}: {len(deals)} deals from the website, valid {vf} – {vt}")
+        except Exception as e:
+            errors[folder] = f"{type(e).__name__}: {e}"
+            print(f"{folder}: FAILED {errors[folder]}", file=sys.stderr)
+
     (week_dir / "status.json").write_text(json.dumps(dict(fetched=today.isoformat(), errors=errors),
                                                       ensure_ascii=False, indent=1), encoding="utf-8")
 
