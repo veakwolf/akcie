@@ -5,7 +5,14 @@ This repo powers the "Akcie Trnava" app (https://veakwolf.github.io/akcie/).
 When the user asks to **"spracuj akcie"** (process this week's deals), follow
 [`SPRACOVANIE.md`](SPRACOVANIE.md) exactly:
 
-- Work on the newest folder in `weeks/`.
+- Work on the newest folder in `weeks/`. First `git pull`.
+  - If it is older than 7 days, the Wednesday download didn't run: tell the
+    user to start it (GitHub → akcie → Actions → Stiahnuť letáky → Run
+    workflow) and stop.
+  - If `docs/deals.json` already has `"source": "ai"` and `"week"` equal to
+    that folder's name, this week is already done: say so in Slovak and stop.
+  - If some pages already have results (`ai_pages.txt`), continue from the
+    missing pages instead of starting over.
 - Write one JSON line per deal to `weeks/<date>/<store>/ai.jsonl` and the
   processed page numbers to `ai_pages.txt`.
 - For Lidl, take the product ↔ price pairing from the page images on the
@@ -14,7 +21,8 @@ When the user asks to **"spracuj akcie"** (process this week's deals), follow
   never furniture, tools, clothes, toys, electronics, decorations.
 - Never invent a price; skip unclear products.
 - Run `python3 scripts/merge.py`, fix what its report flags, then commit
-  `weeks/` and `docs/deals.json`.
+  `weeks/` and `docs/deals.json` and **push to `main`**.
+- On Windows, `python3` may be called `python`.
 - Reply in Slovak, 2–3 sentences: deals per store and anything that failed.
 
 Do not change `scripts/`, `docs/index.html` or `.github/` during this task.
