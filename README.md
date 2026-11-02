@@ -9,11 +9,11 @@ plochu)
 
 ## Ako to funguje
 
-1. **Každú stredu ráno** GitHub Action (`.github/workflows/letaky.yml`) stiahne
-   aktuálne letáky, vytiahne text strán s potravinami do `weeks/<dátum>/` a
+1. **Každý pondelok a stredu ráno** GitHub Action (`.github/workflows/letaky.yml`) stiahne
+   aktuálne letáky (v pondelok aj budúce letáky Tesco a Billa), vytiahne text strán s potravinami do `weeks/<dátum>/` a
    urobí základný zoznam akcií (časť Tesco a Billa) do `docs/deals.json`.
    Obrázky strán Lidla idú do vetvy `stranky` (každý týždeň sa prepíše).
-2. **Raz týždenne** v Claude (model Haiku 5.5) napíšeš „spracuj akcie“. Claude
+2. **V pondelok večer** Codex (naplánovaná úloha) alebo Claude spracuje nové letáky („spracuj akcie“); v stredu sa použije pondelkové spracovanie a nové sa nemusí robiť. Claude
    podľa [`SPRACOVANIE.md`](SPRACOVANIE.md) prečíta letáky, vytvorí úplný zoznam
    akcií a uloží ho. Bez tohto kroku appka ukazuje len základný zoznam.
 3. Appka (`docs/index.html`) číta `docs/deals.json`. Nákupný zoznam a sledované

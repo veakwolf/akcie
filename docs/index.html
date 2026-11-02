@@ -127,6 +127,19 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .addbtn.on { background: var(--accent); color: var(--on-accent); font-size: 16px; }
 .addbtn.eye.on { background: var(--watch); color: #1a1405; }
 .addbtn svg { pointer-events: none; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 3px; }
+.unitp { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tag { font-size: 11px; font-weight: 800; border-radius: 6px; padding: 2px 7px; letter-spacing: .02em; }
+.tag.best { background: #1d3b2c; color: #5ee0ae; }
+.tag.soon { background: var(--sale-soft); color: var(--sale); }
+@media (prefers-color-scheme: light) { .tag.best { background: #d9f6e9; color: #0f8f62; } }
+.seg { margin: 10px 0 0; }
+.summary { display: flex; justify-content: flex-end; gap: 22px; margin: 14px 2px 4px; }
+.summary > div { display: flex; flex-direction: column; align-items: flex-end; }
+.summary b { font: 800 22px/1.1 var(--display); }
+.summary .savings { color: #5ee0ae; }
+@media (prefers-color-scheme: light) { .summary .savings { color: #0f8f62; } }
+.group .meta { font-weight: 500; }
 </style>
 </head>
 <body>
@@ -134,6 +147,7 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
   <h1 id="title">Akcie</h1>
   <div class="sub" id="validity">Načítavam…</div>
   <div id="controls">
+    <div class="row seg" id="weeks"></div>
     <input class="search" id="q" type="search" placeholder="Hľadať, napr. maslo, kuracie, pivo" autocomplete="off">
     <div class="row" id="stores"></div>
     <div class="row">
@@ -141,6 +155,7 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
       <select class="chip" id="sort" aria-label="Zoradenie">
         <option value="disc">Najväčšia zľava</option>
         <option value="price">Najnižšia cena</option>
+        <option value="unit">Najlacnejšie za kg / l</option>
         <option value="name">Podľa názvu</option>
       </select>
       <button class="chip" id="emp" aria-pressed="false">Zamestnanecká karta Tesco −15 %</button>
@@ -168,7 +183,7 @@ function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value
 
 const state = {
   data: { deals: [], stores: {} }, tab: "deals",
-  q: "", stores: new Set(load("akcie.stores", [])), cat: "", sort: load("akcie.sort", "disc"),
+  week: "now", q: "", stores: new Set(load("akcie.stores", [])), cat: "", sort: load("akcie.sort", "disc"),
   list: load("akcie.list", []), watch: load("akcie.watch", []), emp: load("akcie.emp", false),
 };
 const EMP_DISCOUNT = 0.15;
@@ -179,6 +194,12 @@ const payPrice = d => empPrice(d) ?? d.price;
 const keyOf = d => `${d.store}|${d.name}|${d.price}`;
 const isWatched = d => state.watch.some(w => norm(d.name + " " + (d.brand || "")).includes(norm(w)));
 const expired = d => d.valid_to && d.valid_to < today;
+const tomorrow = new Date(Date.now() + 864e5).toISOString().slice(0, 10);
+const isNext = d => d.upcoming && d.valid_from && d.valid_from > today;
+const unitPay = d => d.unit_price == null ? null : Math.round(d.unit_price * payPrice(d) / d.price * 100) / 100;
+const unitText = d => { const u = unitPay(d); if (u == null) return "";
+  return d.unit_basis === "pranie" ? `${eur(u)} / pranie` : `${eur(u)} / ${d.unit_basis}`; };
+const endsTag = d => d.valid_to === today ? "končí dnes" : d.valid_to === tomorrow ? "končí zajtra" : "";
 
 async function init() {
   try {
@@ -193,6 +214,11 @@ async function init() {
   const cats = [...new Set(state.data.deals.map(d => d.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, "sk"));
   $("#cat").innerHTML = `<option value="">Všetky kategórie</option>` + cats.map(c => `<option>${esc(c)}</option>`).join("");
   $("#sort").value = state.sort;
+  const nextFrom = Object.values(state.data.stores || {}).map(v => v.next_from).filter(Boolean).sort()[0];
+  const hasNext = state.data.deals.some(isNext);
+  $("#weeks").innerHTML = hasNext ? `<button class="chip" data-week="now" aria-pressed="true">Tento týždeň</button>
+    <button class="chip" data-week="next" aria-pressed="false">Budúci týždeň${nextFrom ? " · od " + fmtDate(nextFrom) : ""}</button>` : "";
+  $("#weeks").style.display = hasNext ? "" : "none";
   $("#validity").innerHTML = stores.map(s => {
     const v = state.data.stores[s] || {};
     return `<b class="sname ${esc(s)}">${esc(s)}</b> ${v.valid_from ? fmtDate(v.valid_from) + "–" + fmtDate(v.valid_to) : ""}`;
@@ -203,6 +229,7 @@ async function init() {
 function filtered() {
   const q = norm(state.q).split(/\s+/).filter(Boolean);
   let list = state.data.deals.filter(d =>
+    (state.week === "next" ? isNext(d) : !isNext(d)) &&
     (!state.stores.size || state.stores.has(d.store)) &&
     (!state.cat || d.category === state.cat) &&
     q.every(w => norm(`${d.name} ${d.brand || ""} ${d.unit || ""} ${d.category || ""}`).includes(w)));
@@ -210,6 +237,7 @@ function filtered() {
     disc: (a, b) => (b.discount ?? -1) - (a.discount ?? -1),
     price: (a, b) => payPrice(a) - payPrice(b),
     name: (a, b) => a.name.localeCompare(b.name, "sk"),
+    unit: (a, b) => (unitPay(a) ?? 1e9) - (unitPay(b) ?? 1e9),
   }[state.sort];
   return list.sort((a, b) => (expired(a) - expired(b)) || by(a, b));
 }
@@ -235,6 +263,10 @@ function dealCard(d, showStore = true) {
     </div>
     <div class="name">${esc(d.name)}</div>
     <div class="meta">${[d.brand, d.unit, dates].filter(Boolean).map(esc).join(" · ")}</div>
+    ${unitText(d) || endsTag(d) || state.best?.has(d) ? `<div class="tags">
+      ${state.best?.has(d) ? `<span class="tag best">najlacnejšie</span>` : ""}
+      ${endsTag(d) ? `<span class="tag soon">${endsTag(d)}</span>` : ""}
+      ${unitText(d) ? `<span class="unitp">${unitText(d)}</span>` : ""}</div>` : ""}
     ${d.note ? `<div class="note">${esc(d.note)}</div>` : ""}
     <div class="btncol">
       <button class="addbtn eye ${isWatched(d) ? "on" : ""}" data-watchname="${esc(d.name)}" aria-label="${isWatched(d) ? "Prestať sledovať" : "Sledovať"}">${EYE}</button>
@@ -248,8 +280,18 @@ const closed = new Set(load("akcie.closed", []));
 
 function renderDeals() {
   const list = filtered();
-  const rulesNote = state.data.source === "rules"
-    ? `<div class="notice">Tento týždeň ešte nie je spracovaný naplno – zobrazuje sa len časť akcií Tesco a Billa. Úplný zoznam (aj Lidl) pribudne po týždennom spracovaní.</div>` : "";
+  state.best = new Set();
+  if (state.q.trim()) {
+    const live = list.filter(d => !expired(d) && unitPay(d) != null);
+    for (const basis of new Set(live.map(d => d.unit_basis))) {
+      const same = live.filter(d => d.unit_basis === basis);
+      if (same.length < 2) continue;
+      const min = Math.min(...same.map(unitPay));
+      same.filter(d => unitPay(d) === min).forEach(d => state.best.add(d));
+    }
+  }
+  const rulesNote = state.data.complete === false || state.data.source === "rules"
+    ? `<div class="notice">Nové letáky ešte nie sú spracované naplno – niektoré akcie chýbajú. Úplný zoznam pribudne po týždennom spracovaní.</div>` : "";
   const stores = [...new Set([...STORE_ORDER, ...list.map(d => d.store)])].filter(s => list.some(d => d.store === s));
   const sections = stores.map(s => {
     const items = list.filter(d => d.store === s);
@@ -257,7 +299,9 @@ function renderDeals() {
     const open = state.q || !closed.has(s);
     return `<details class="shop" data-shop="${esc(s)}" ${open ? "open" : ""}>
       <summary><span class="store ${esc(s)}">${esc(s)}</span>
-        <span class="meta">${items.length} akcií${v.valid_from ? ` · ${fmtDate(v.valid_from)}–${fmtDate(v.valid_to)}` : ""}</span></summary>
+        <span class="meta">${items.length} akcií${state.week === "next"
+          ? (v.next_from ? ` · ${fmtDate(v.next_from)}–${fmtDate(v.next_to)}` : "")
+          : (v.valid_from ? ` · ${fmtDate(v.valid_from)}–${fmtDate(v.valid_to)}` : "")}</span></summary>
       ${items.map(d => dealCard(d, false)).join("")}
     </details>`;
   }).join("");
@@ -267,30 +311,52 @@ function renderDeals() {
 function renderList() {
   const groups = {};
   state.list.forEach(i => (groups[i.store || "Vlastné"] ??= []).push(i));
-  const total = state.list.filter(i => !i.done && i.price).reduce((s, i) => s + i.price, 0);
+  const open = state.list.filter(i => !i.done && i.price);
+  const sum = items => items.reduce((s, i) => s + i.price, 0);
+  const saved = items => items.reduce((s, i) => s + (i.old_price ? i.old_price - i.price : 0), 0);
+  const order = [...STORE_ORDER, "Vlastné"].filter(g => groups[g]).concat(Object.keys(groups).filter(g => ![...STORE_ORDER, "Vlastné"].includes(g)));
   $("#view").innerHTML = `
     <form class="addrow" id="addForm"><input id="addText" placeholder="Pridať vlastnú položku" autocomplete="off">
       <button class="btn primary">Pridať</button></form>
-    ${Object.keys(groups).sort().map(g => `<div class="group"><span class="store ${esc(g)}">${esc(g)}</span></div>` +
+    ${order.map(g => {
+      const left = groups[g].filter(i => !i.done && i.price);
+      return `<div class="group"><span class="store ${esc(g)}">${esc(g)}</span>
+        ${left.length ? `<span class="meta">${eur(sum(left))}${saved(left) > 0.005 ? ` · ušetríš ${eur(saved(left))}` : ""}</span>` : ""}</div>` +
       groups[g].map(i => `<label class="item ${i.done ? "done" : ""}">
         <input type="checkbox" data-done="${esc(i.key)}" ${i.done ? "checked" : ""}>
         <div class="grow"><div class="name">${esc(i.name)}</div>
-          ${i.price ? `<div class="meta">${eur(i.price)}${i.unit ? " · " + esc(i.unit) : ""}</div>` : ""}</div>
-        <button class="x" data-del="${esc(i.key)}" aria-label="Odstrániť">×</button></label>`).join("")).join("")
-      || `<div class="empty">Nákupný zoznam je prázdny.<br>Pridaj akcie tlačidlom „+ Do nákupu“.</div>`}
-    ${state.list.length ? `<div class="total">Spolu (nekúpené akcie): <b>${eur(total)}</b></div>
-      <div class="actions" style="justify-content:flex-end"><button class="btn" id="clearDone">Vymazať kúpené</button></div>` : ""}`;
+          ${i.price ? `<div class="meta">${eur(i.price)}${i.old_price ? ` <s>${eur(i.old_price)}</s>` : ""}${i.unit ? " · " + esc(i.unit) : ""}</div>` : ""}</div>
+        <button class="x" data-del="${esc(i.key)}" aria-label="Odstrániť">×</button></label>`).join("");
+    }).join("")
+      || `<div class="empty">Nákupný zoznam je prázdny.<br>Pridaj akcie tlačidlom +.</div>`}
+    ${state.list.length ? `<div class="summary">
+        <div><span class="meta">Spolu</span><b>${eur(sum(open))}</b></div>
+        ${saved(open) > 0.005 ? `<div><span class="meta">Ušetríš</span><b class="savings">${eur(saved(open))}</b></div>` : ""}
+      </div>
+      <div class="actions" style="justify-content:flex-end">
+        <button class="btn" id="clearDone">Vymazať kúpené</button>
+        <button class="btn primary" id="shareList">Zdieľať zoznam</button>
+      </div>` : ""}`;
+}
+
+function listText() {
+  const groups = {};
+  state.list.filter(i => !i.done).forEach(i => (groups[i.store || "Vlastné"] ??= []).push(i));
+  return "Nákup:\n" + Object.entries(groups).map(([g, items]) =>
+    `\n${g}\n` + items.map(i => `• ${i.name}${i.unit ? ` (${i.unit})` : ""}${i.price ? ` – ${eur(i.price)}` : ""}`).join("\n")).join("\n");
 }
 
 function renderWatch() {
-  const matches = state.data.deals.filter(d => !expired(d) && isWatched(d));
+  const matches = state.data.deals.filter(d => !expired(d) && !isNext(d) && isWatched(d));
+  const soon = state.data.deals.filter(d => isNext(d) && isWatched(d));
   $("#view").innerHTML = `
     <p class="meta">Napíš, čo bežne kupuješ. Keď je to v akcii, zvýrazní sa to v zozname akcií.</p>
     <form class="addrow" id="watchForm"><input id="watchText" placeholder="napr. maslo, Pilsner, kuracie prsia" autocomplete="off">
       <button class="btn primary">Sledovať</button></form>
     <div>${state.watch.map(w => `<span class="kw">${esc(w)}<button class="x" data-unwatch="${esc(w)}" aria-label="Prestať sledovať">×</button></span>`).join("")}</div>
     <div class="group">Tento týždeň v akcii (${matches.length})</div>
-    ${matches.map(dealCard).join("") || `<div class="empty">${state.watch.length ? "Nič zo sledovaného nie je teraz v akcii." : "Zatiaľ nič nesleduješ."}</div>`}`;
+    ${matches.map(dealCard).join("") || `<div class="empty">${state.watch.length ? "Nič zo sledovaného nie je teraz v akcii." : "Zatiaľ nič nesleduješ."}</div>`}
+    ${soon.length ? `<div class="group">Budúci týždeň (${soon.length})</div>${soon.map(dealCard).join("")}` : ""}`;
 }
 
 function render() {
@@ -298,7 +364,7 @@ function render() {
   ({ deals: renderDeals, list: renderList, watch: renderWatch })[state.tab]();
   const open = state.list.filter(i => !i.done).length;
   $("#listBadge").innerHTML = open ? `<span class="badge">${open}</span>` : "";
-  const hits = state.data.deals.filter(d => !expired(d) && isWatched(d)).length;
+  const hits = state.data.deals.filter(d => !expired(d) && !isNext(d) && isWatched(d)).length;
   $("#watchBadge").innerHTML = hits ? `<span class="badge">${hits}</span>` : "";
   document.querySelectorAll("nav button").forEach(b => b.toggleAttribute("aria-current", b.dataset.tab === state.tab));
   document.querySelectorAll("nav button[aria-current]").forEach(b => b.setAttribute("aria-current", "page"));
@@ -309,6 +375,12 @@ $("#emp").setAttribute("aria-pressed", state.emp);
 $("#emp").addEventListener("click", e => {
   state.emp = !state.emp; save("akcie.emp", state.emp);
   e.target.setAttribute("aria-pressed", state.emp); render();
+});
+$("#weeks").addEventListener("click", e => {
+  const w = e.target.dataset.week; if (!w) return;
+  state.week = w;
+  document.querySelectorAll("#weeks .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.week === w));
+  render();
 });
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; save("akcie.sort", state.sort); render(); });
@@ -329,7 +401,7 @@ $("#view").addEventListener("click", e => {
     if (i >= 0) state.list.splice(i, 1);
     else {
       const d = state.data.deals.find(d => keyOf(d) === t.dataset.add);
-      state.list.push({ key: keyOf(d), name: d.name, store: d.store, price: payPrice(d), unit: d.unit, done: false });
+      state.list.push({ key: keyOf(d), name: d.name, store: d.store, price: payPrice(d), old_price: d.old_price, unit: d.unit, done: false });
     }
     save("akcie.list", state.list); render();
   } else if (t.dataset.watchname) {
@@ -342,6 +414,10 @@ $("#view").addEventListener("click", e => {
     state.list = state.list.filter(i => i.key !== t.dataset.del); save("akcie.list", state.list); render();
   } else if (t.dataset.unwatch) {
     state.watch = state.watch.filter(w => w !== t.dataset.unwatch); save("akcie.watch", state.watch); render();
+  } else if (t.id === "shareList") {
+    const text = listText();
+    if (navigator.share) navigator.share({ text }).catch(() => {});
+    else navigator.clipboard?.writeText(text).then(() => { t.textContent = "Skopírované ✓"; setTimeout(() => t.textContent = "Zdieľať zoznam", 1500); });
   } else if (t.id === "clearDone") {
     state.list = state.list.filter(i => !i.done); save("akcie.list", state.list); render();
   }

@@ -98,8 +98,13 @@ def build(week_dir):
     stores, deals = {}, []
     for store_dir in sorted(p for p in week_dir.iterdir() if p.is_dir()):
         meta = json.loads((store_dir / "meta.json").read_text(encoding="utf-8"))
-        stores[meta["store"]] = {k: meta.get(k) for k in ("valid_from", "valid_to", "web")}
-        parser = PARSERS.get(store_dir.name)
+        upcoming = store_dir.name.endswith("_next")
+        entry = stores.setdefault(meta["store"], {})
+        if upcoming:
+            entry.update(next_from=meta.get("valid_from"), next_to=meta.get("valid_to"))
+        else:
+            entry.update({k: meta.get(k) for k in ("valid_from", "valid_to", "web")})
+        parser = PARSERS.get(store_dir.name.removesuffix("_next"))
         if not parser:
             continue
         for f in sorted((store_dir / "pages").glob("p*.txt")):
@@ -110,6 +115,7 @@ def build(week_dir):
                 if DURABLE.search(text):
                     continue
                 deals.append(dict(store=meta["store"], category=categorize(text), club_price=None, note=None,
-                                  valid_from=meta.get("valid_from"), valid_to=meta.get("valid_to"), **d))
+                                  valid_from=meta.get("valid_from"), valid_to=meta.get("valid_to"),
+                                  upcoming=upcoming, _dir=store_dir.name, **d))
     return dict(week=week_dir.name, generated=dt.datetime.now().isoformat(timespec="seconds"),
                 source="rules", stores=stores, deals=deals)

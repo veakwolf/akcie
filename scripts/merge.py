@@ -20,6 +20,44 @@ CATEGORIES = ["Ovocie a zelenina", "Mäso a ryby", "Mliečne a vajcia", "Pečivo
               "Sladké a slané", "Nápoje", "Alkohol", "Mrazené", "Drogéria a čistenie", "Ostatné"]
 
 
+import re
+
+SIZE = re.compile(r"(?<![\d×x] )(?<![\d,.])(\d+(?:[,.]\d+)?)\s?(kg|g|ml|l)\b", re.I)
+EXPLICIT = re.compile(r"1\s?(kg|l)\s?=\s?(\d+(?:[,.]\d+)?)", re.I)
+WASHES = re.compile(r"(\d+)\s?(?:praní|pracích dávok|PD)\b", re.I)
+
+
+def unit_price(unit, price):
+    """Price per kg / l / wash from the pack size text. Returns (value, basis) or (None, None).
+
+    Only unambiguous cases: an explicit "1 kg = 4,48", "cena za 100 g", or one plain size
+    ("500 g", "0,75 l"). Multipacks ("10 × 0,5 l") and ranges ("385–450 g") are skipped,
+    because the flyer price is often per piece there.
+    """
+    u = (unit or "").replace("\u00a0", " ")
+    m = EXPLICIT.search(u)
+    if m:
+        return round(float(m.group(2).replace(",", ".")), 2), m.group(1).lower()
+    if re.search(r"cena za 100 ?g", u, re.I):
+        return round(price * 10, 2), "kg"
+    if re.search(r"cena za 1 ?kg|^1 ?kg\b", u, re.I):
+        return round(price, 2), "kg"
+    w = WASHES.search(u)
+    if w and int(w.group(1)) > 0:
+        return round(price / int(w.group(1)), 3), "pranie"
+    if re.search(r"[×x]\s?\d|\d\s?[–-]\s?\d+\s?(g|kg|ml|l)\b", u, re.I):
+        return None, None
+    sizes = SIZE.findall(u)
+    if len(sizes) != 1:
+        return None, None
+    qty, unit_ = float(sizes[0][0].replace(",", ".")), sizes[0][1].lower()
+    factor = {"g": 1000, "kg": 1, "ml": 1000, "l": 1}[unit_]
+    if qty <= 0:
+        return None, None
+    basis = "kg" if unit_ in ("g", "kg") else "l"
+    return round(price / qty * factor, 2), basis
+
+
 def _norm(s):
     import unicodedata
     s = unicodedata.normalize("NFD", str(s or "")).encode("ascii", "ignore").decode().lower()
@@ -68,14 +106,16 @@ def main():
     week = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else sorted(p for p in (ROOT / "weeks").iterdir() if p.is_dir())[-1]
     fallback = rules.build(week)
     stores, deals, report = fallback["stores"], [], []
-    any_ai = False
+    any_ai, complete = False, True
     for store_dir in sorted(p for p in week.iterdir() if p.is_dir()):
         meta = json.loads((store_dir / "meta.json").read_text(encoding="utf-8"))
         store, ai = meta["store"], store_dir / "ai.jsonl"
+        upcoming = store_dir.name.endswith("_next")
         if not ai.exists():
-            rows = [d for d in fallback["deals"] if d["store"] == store]
+            complete = False
+            rows = [d for d in fallback["deals"] if d["_dir"] == store_dir.name]
             deals += rows
-            report.append(f"{store}: no ai.jsonl, using {len(rows)} rule-based deals")
+            report.append(f"{store_dir.name}: no ai.jsonl, using {len(rows)} rule-based deals")
             continue
         any_ai = True
         ok, bad, seen = 0, [], set()
@@ -95,19 +135,23 @@ def main():
             seen.add(key)
             row["valid_from"] = row["valid_from"] or meta.get("valid_from")
             row["valid_to"] = row["valid_to"] or meta.get("valid_to")
-            deals.append(dict(store=store, **row))
+            deals.append(dict(store=store, upcoming=upcoming, **row))
             ok += 1
         done = sorted({int(p) for p in ([] if not (store_dir / "ai_pages.txt").exists() else
                                         (store_dir / "ai_pages.txt").read_text().split())})
         missing = [p for p in meta["pages_kept"] if p not in done]
-        report.append(f"{store}: {ok} deals, {len(bad)} rejected"
+        complete = complete and not missing
+        report.append(f"{store_dir.name}: {ok} deals, {len(bad)} rejected"
                       + (f", pages NOT processed: {missing}" if missing else ", all pages processed"))
         report += bad[:15]
+    for d in deals:
+        d.pop("_dir", None)
+        d["unit_price"], d["unit_basis"] = unit_price(d.get("unit"), d["price"])
     out = dict(week=week.name, generated=dt.datetime.now().isoformat(timespec="seconds"),
-               source="ai" if any_ai else "rules", stores=stores, deals=deals)
+               source="ai" if any_ai else "rules", complete=complete, stores=stores, deals=deals)
     (ROOT / "docs" / "deals.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print("\n".join(report))
-    print(f"TOTAL {len(deals)} deals -> docs/deals.json")
+    print(f"TOTAL {len(deals)} deals -> docs/deals.json ({'all flyers processed' if complete else 'NOT all flyers processed yet'})")
 
 
 if __name__ == "__main__":

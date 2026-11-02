@@ -40,11 +40,17 @@ def iso(d):
 
 # ---------------------------------------------------------------- discovery
 
-def find_tesco(today):
+def find_tesco(today, upcoming=False):
     html = get("https://www.tesco.sk/akciove-ponuky/letaky-a-katalogy")
     slugs = sorted(set(re.findall(r"hypermarkety/tesco-letak-(\d{4}-\d{2}-\d{2})", html)))
-    started = [s for s in slugs if dt.date.fromisoformat(s) <= today] or slugs
-    slug = started[-1]
+    if upcoming:
+        future = [s for s in slugs if dt.date.fromisoformat(s) > today]
+        if not future:
+            return None
+        slug = future[0]
+    else:
+        started = [s for s in slugs if dt.date.fromisoformat(s) <= today] or slugs
+        slug = started[-1]
     page = get(f"https://www.tesco.sk/akciove-ponuky/letaky-a-katalogy/hypermarkety/tesco-letak-{slug}/1")
     pdf = re.search(r'"leafletUrl":"([^"]+\.pdf)"', page).group(1)
     vf = re.search(r'"validFrom":"(\d{4}-\d{2}-\d{2})', page)
@@ -53,7 +59,7 @@ def find_tesco(today):
                 web=f"https://www.tesco.sk/akciove-ponuky/letaky-a-katalogy/hypermarkety/tesco-letak-{slug}/1")
 
 
-def find_billa(today):
+def find_billa(today, upcoming=False):
     html = get("https://www.billa.sk/letaky-a-akcie/letaky").replace("\\u002F", "/")
     found = []
     for m in re.finditer(r"view\.publitas\.com/\d+/\d+/pdfs/[0-9a-f\-]+\.pdf", html):
@@ -65,12 +71,20 @@ def find_billa(today):
         start = dt.date(y if m1 <= m2 else y - 1, m1, d1)
         found.append((start, dt.date(y, m2, d2), "https://" + m.group(0)))
     found = sorted(set(found))
-    current = [f for f in found if f[0] <= today <= f[1]] or [f for f in found if f[0] > today] or found
-    start, end, pdf = current[0]
+    if upcoming:
+        future = [f for f in found if f[0] > today]
+        if not future:
+            return None
+        start, end, pdf = future[0]
+    else:
+        current = [f for f in found if f[0] <= today <= f[1]] or [f for f in found if f[0] > today] or found
+        start, end, pdf = current[0]
     return dict(pdf=pdf, valid_from=iso(start), valid_to=iso(end), web="https://www.billa.sk/letaky-a-akcie/letaky")
 
 
-def find_lidl(today):
+def find_lidl(today, upcoming=False):
+    if upcoming:
+        return None  # Lidl publishes only the current flyer
     html = get("https://www.lidl.sk/c/online-letak/s10008489")
     ids = set(re.findall(r"/l/sk/letak/(online-letak-platny-od-(\d{2})-(\d{2})-(\d{4}))", html))
     dated = sorted((dt.date(int(y), int(m), int(d)), slug) for slug, d, m, y in ids)
@@ -84,6 +98,9 @@ def find_lidl(today):
 
 
 FINDERS = {"tesco": find_tesco, "billa": find_billa, "lidl": find_lidl}
+# (folder, store, upcoming): current flyers plus next week's Tesco and Billa when already published.
+TARGETS = [("tesco", "tesco", False), ("billa", "billa", False), ("lidl", "lidl", False),
+           ("tesco_next", "tesco", True), ("billa_next", "billa", True)]
 IMAGE_STORES = {"lidl"}
 NAMES = {"tesco": "Tesco", "billa": "Billa", "lidl": "Lidl"}
 
@@ -100,8 +117,23 @@ def page_text(pdf, p):
                           capture_output=True, text=True).stdout
 
 
-def extract(store, pdf, info, week_dir):
-    out = week_dir / store
+def reuse(folder, pdf_url, week_dir):
+    """If an earlier week already has this exact flyer (e.g. Monday's *_next that started on
+    Wednesday), copy that folder, including its AI results, instead of processing it again."""
+    for old in sorted((p for p in WEEKS.iterdir() if p.is_dir() and p != week_dir), reverse=True):
+        for cand in old.iterdir():
+            meta = cand / "meta.json"
+            if cand.is_dir() and meta.exists() and json.loads(meta.read_text(encoding="utf-8")).get("pdf") == pdf_url:
+                out = week_dir / folder
+                if out.exists():
+                    shutil.rmtree(out)
+                shutil.copytree(cand, out, ignore=shutil.ignore_patterns("img"))
+                return json.loads(meta.read_text(encoding="utf-8")), cand
+    return None, None
+
+
+def extract(store, pdf, info, week_dir, folder=None):
+    out = week_dir / (folder or store)
     if out.exists():
         shutil.rmtree(out)
     (out / "pages").mkdir(parents=True)
@@ -134,37 +166,44 @@ def main():
     week_dir.mkdir(parents=True, exist_ok=True)
     metas, errors = {}, {}
     with tempfile.TemporaryDirectory() as tmp:
-        for store, finder in FINDERS.items():
+        for folder, store, upcoming in TARGETS:
             try:
                 if store in local:
+                    if upcoming:
+                        continue
                     info, pdf = dict(pdf=str(local[store]), valid_from=None, valid_to=None, web=None), local[store]
                 else:
-                    info = finder(today)
-                    pdf = pathlib.Path(tmp) / f"{store}.pdf"
+                    info = FINDERS[store](today, upcoming=upcoming)
+                    if info is None:
+                        print(f"{folder}: not published yet")
+                        continue
+                    meta, src = reuse(folder, info["pdf"], week_dir)
+                    if meta:
+                        metas[folder] = meta
+                        print(f"{folder}: same flyer as {src.parent.name}/{src.name}, reused (incl. AI results)")
+                        continue
+                    pdf = pathlib.Path(tmp) / f"{folder}.pdf"
                     pdf.write_bytes(get(info["pdf"], binary=True))
-                metas[store] = extract(store, pdf, info, week_dir)
-                print(f"{store}: {len(metas[store]['pages_kept'])}/{metas[store]['pages_total']} pages, "
+                metas[folder] = extract(store, pdf, info, week_dir, folder)
+                print(f"{folder}: {len(metas[folder]['pages_kept'])}/{metas[folder]['pages_total']} pages, "
                       f"valid {info['valid_from']} – {info['valid_to']}")
             except Exception as e:  # one broken store must not stop the others
-                errors[store] = f"{type(e).__name__}: {e}"
-                print(f"{store}: FAILED {errors[store]}", file=sys.stderr)
+                errors[folder] = f"{type(e).__name__}: {e}"
+                print(f"{folder}: FAILED {errors[folder]}", file=sys.stderr)
     (week_dir / "status.json").write_text(json.dumps(dict(fetched=today.isoformat(), errors=errors),
                                                       ensure_ascii=False, indent=1), encoding="utf-8")
 
-    # Rule-based fallback, only if this week has no AI-made data yet.
-    sys.path.insert(0, str(ROOT / "scripts"))
-    import rules
+    # Publish what we have: reused AI results where available, rule-based fallback elsewhere.
     deals_path = ROOT / "docs" / "deals.json"
     current = json.loads(deals_path.read_text(encoding="utf-8")) if deals_path.exists() else {}
     if current.get("week") == today.isoformat() and current.get("source") == "ai":
-        print("AI deals for this week already exist; fallback skipped.")
+        print("AI deals for this week already exist; not rebuilt.")
     else:
-        deals_path.write_text(json.dumps(rules.build(week_dir), ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"fallback deals written: {deals_path}")
+        subprocess.run([sys.executable, str(ROOT / "scripts" / "merge.py"), str(week_dir)], check=False)
 
     for old in sorted(p for p in WEEKS.iterdir() if p.is_dir())[:-KEEP_WEEKS]:
         shutil.rmtree(old)
-    if len(errors) == len(FINDERS):
+    if errors and not metas:
         sys.exit(1)
 
 
