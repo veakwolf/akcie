@@ -20,6 +20,22 @@ CATEGORIES = ["Ovocie a zelenina", "Mäso a ryby", "Mliečne a vajcia", "Pečivo
               "Sladké a slané", "Nápoje", "Alkohol", "Mrazené", "Drogéria a čistenie", "Ostatné"]
 
 
+def _norm(s):
+    import unicodedata
+    s = unicodedata.normalize("NFD", str(s or "")).encode("ascii", "ignore").decode().lower()
+    return " ".join(s.replace("&", "a").split())
+
+
+def match_category(value):
+    """Tolerate small spelling slips ("Ovocie a zeleniny") instead of dumping them into Ostatné."""
+    import difflib
+    if value in CATEGORIES:
+        return value
+    by_norm = {_norm(c): c for c in CATEGORIES}
+    hit = difflib.get_close_matches(_norm(value), list(by_norm), n=1, cutoff=0.8)
+    return by_norm[hit[0]] if hit else "Ostatné"
+
+
 def check(row):
     """Return (clean_row, None) or (None, reason)."""
     try:
@@ -41,7 +57,7 @@ def check(row):
     if old:
         calc = round((1 - price / old) * 100)
         disc = calc if disc in (None, "") or abs(int(disc) - calc) > 3 else int(disc)
-    cat = row.get("category") if row.get("category") in CATEGORIES else "Ostatné"
+    cat = match_category(row.get("category"))
     return dict(name=name, brand=row.get("brand") or None, unit=(row.get("unit") or "").strip(),
                 price=price, old_price=old, discount=disc, club_price=club, category=cat,
                 note=row.get("note") or None, valid_from=row.get("valid_from"), valid_to=row.get("valid_to"),
