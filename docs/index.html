@@ -141,13 +141,17 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .syncbox > summary::-webkit-details-marker { display: none; }
 .syncbox p { margin: 10px 0 4px; }
 .syncbox .code { font-family: ui-monospace, Menlo, monospace; letter-spacing: .03em; user-select: all; }
-#controls { max-height: 400px; transition: max-height .25s ease, opacity .2s ease; overflow: hidden; }
-header h1 { transition: font-size .2s ease; }
-header.compact #controls { max-height: 0; opacity: 0; pointer-events: none; }
-header.compact { padding-bottom: 8px; cursor: pointer; }
-header.compact h1 { font-size: 22px; }
-header .sub { max-height: 80px; transition: max-height .25s ease, opacity .2s ease, margin .2s ease; overflow: hidden; }
-header.compact .sub { max-height: 0; opacity: 0; margin: 0; }
+/* Collapsing header: only transform/opacity animate, so the list underneath never shifts. */
+header { transition: transform .3s cubic-bezier(.2,.8,.2,1), opacity .25s ease; will-change: transform; }
+header.compact { transform: translateY(-105%); opacity: 0; pointer-events: none; }
+.minibar { position: fixed; top: 0; left: 0; right: 0; z-index: 6; padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 10px; cursor: pointer;
+  transform: translateY(-105%); transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+.minibar.show { transform: translateY(0); }
+.minibar b { font: 800 20px/1 var(--display); letter-spacing: -0.01em; }
+.minibar span { color: var(--muted); font-size: 13px; margin-left: auto; }
+.shop > summary { transition: top .3s cubic-bezier(.2,.8,.2,1); }
 .cat { font-size: 11px; font-weight: 700; letter-spacing: .03em; color: var(--muted); background: var(--raised);
   border-radius: 6px; padding: 2px 7px; text-transform: none; }
 .deal { cursor: pointer; }
@@ -203,6 +207,7 @@ body.noscroll { overflow: hidden; }
     </div>
   </div>
 </header>
+<div class="minibar" id="minibar" aria-hidden="true"><b>Akcie</b><span>hľadať ↑</span></div>
 <main id="view"></main>
 <div id="sheetBack" class="sheet-back" hidden></div>
 <section id="sheet" class="sheet" role="dialog" aria-modal="true" aria-label="Detail akcie" hidden></section>
@@ -339,7 +344,7 @@ const markDeleted = key => { if (isShared()) { tomb["l:" + key] = now(); save("a
 if (!sync.code && state.shared.length && !state.mine.length) { state.mine = state.shared; state.shared = []; saveL(); }
 
 function syncPanel() {
-  if (!sync.code) return `<details class="syncbox"><summary>👥 Zdieľať zoznam s ďalšími (napr. partnerka)</summary>
+  if (!sync.code) return `<details class="syncbox"><summary>👥 Zdieľať zoznam s ďalšími</summary>
     <p class="meta">Vznikne spoločný nákupný zoznam pre všetkých, ktorí majú rovnaký kód. Tvoj vlastný zoznam a sledované ostanú len tvoje.</p>
     <div class="actions"><button class="btn primary" id="syncNew">Vytvoriť zdieľaný zoznam</button></div>
     <form class="addrow" id="joinForm"><input id="joinText" placeholder="alebo zadaj kód, napr. ab12-cd34-…" autocomplete="off">
@@ -689,19 +694,25 @@ $("#view").addEventListener("toggle", e => {
   save("akcie.closed", [...closed]);
 }, true);
 // Collapse search + filters while scrolling down the deals; bring them back near the top.
-let lastY = 0;
+let lastY = 0, ticking = false;
+function setCompact(on) {
+  const hdr = $("header");
+  if (hdr.classList.contains("compact") === on) return;
+  hdr.classList.toggle("compact", on);
+  $("#minibar").classList.toggle("show", on);
+  document.documentElement.style.setProperty("--hdr", (on ? $("#minibar").offsetHeight : hdr.offsetHeight) + "px");
+}
 function onScroll() {
-  const y = window.scrollY, hdr = $("header");
-  if (state.tab !== "deals" || document.activeElement === $("#q")) { hdr.classList.remove("compact"); lastY = y; return; }
-  if (y > 140 && y > lastY) hdr.classList.add("compact");
-  else if (y < 80) hdr.classList.remove("compact");
+  ticking = false;
+  const y = window.scrollY;
+  if (state.tab !== "deals" || document.activeElement === $("#q")) { setCompact(false); lastY = y; return; }
+  if (y > 160 && y > lastY + 4) setCompact(true);
+  else if (y < 90) setCompact(false);
   lastY = y;
 }
-window.addEventListener("scroll", onScroll, { passive: true });
-$("header").addEventListener("click", e => {
-  if ($("header").classList.contains("compact")) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); $("header").classList.remove("compact"); }
-});
-const setHeaderHeight = () => document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px");
+window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+$("#minibar").addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
+const setHeaderHeight = () => { if (!$("header").classList.contains("compact")) document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px"); };
 new ResizeObserver(setHeaderHeight).observe($("header"));
 $("#view").addEventListener("change", e => {
   const k = e.target.dataset.done; if (!k) return;
