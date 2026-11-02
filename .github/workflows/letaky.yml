@@ -1,0 +1,47 @@
+name: Stiahnuť letáky
+
+on:
+  schedule:
+    - cron: "17 5 * * 3"   # every Wednesday ~06:17 Bratislava time (new Tesco/Billa flyers start Wednesday)
+  workflow_dispatch: {}    # "Run workflow" button for a manual run
+
+permissions:
+  contents: write
+
+concurrency:
+  group: letaky
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install poppler (pdftotext)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - name: Download flyers and extract text
+        run: python3 scripts/fetch.py
+
+      - name: Commit
+        run: |
+          git config user.name "akcie-bot"
+          git config user.email "akcie-bot@users.noreply.github.com"
+          git add weeks docs/deals.json
+          git diff --cached --quiet && echo "Nothing new" && exit 0
+          git commit -m "Letáky $(date +%Y-%m-%d)"
+          git push
+
+      - name: Publish page images to the "stranky" branch (replaced every week)
+        run: |
+          WEEK=$(ls -d weeks/*/ | sort | tail -1)
+          mkdir -p /tmp/stranky && cp -r "$WEEK" /tmp/stranky/
+          cd /tmp/stranky
+          find . -name '*.txt' -delete
+          git init -q -b stranky
+          git config user.name "akcie-bot"
+          git config user.email "akcie-bot@users.noreply.github.com"
+          git add -A && git commit -qm "Obrázky strán $(basename $WEEK)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" stranky

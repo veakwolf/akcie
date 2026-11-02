@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Akcie Trnava</title>
+<meta name="theme-color" content="#166534">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Akcie">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root {
+  --bg: #f6f5f1; --card: #ffffff; --ink: #1c1b18; --muted: #6b6860; --line: #e4e1d8;
+  --accent: #166534; --accent-soft: #dcfce7; --sale: #c2410c; --sale-soft: #ffedd5;
+  --tesco: #00539f; --billa: #d4a400; --lidl: #0050aa; --watch: #a16207; --watch-soft: #fef3c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141412; --card: #1f1e1b; --ink: #f1efe9; --muted: #a29f96; --line: #33312c;
+    --accent: #4ade80; --accent-soft: #14301f; --sale: #fb923c; --sale-soft: #3a2314;
+    --tesco: #60a5fa; --billa: #facc15; --lidl: #93c5fd; --watch: #fbbf24; --watch-soft: #3a2f10;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-text-size-adjust: 100%; }
+button, input, select { font: inherit; color: inherit; }
+header { position: sticky; top: 0; z-index: 5; background: var(--bg);
+  padding: calc(env(safe-area-inset-top) + 10px) 16px 8px; border-bottom: 1px solid var(--line); }
+h1 { margin: 0; font-size: 22px; letter-spacing: -0.01em; }
+.sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.search { width: 100%; margin-top: 10px; padding: 11px 14px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--card); font-size: 16px; }
+.row { display: flex; gap: 6px; overflow-x: auto; margin-top: 8px; padding-bottom: 2px; scrollbar-width: none; }
+.row::-webkit-scrollbar { display: none; }
+.chip { flex: none; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--card);
+  font-size: 14px; white-space: nowrap; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+select.chip { appearance: none; -webkit-appearance: none; padding-right: 26px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 14px) 55%, calc(100% - 9px) 55%; background-size: 5px 5px; background-repeat: no-repeat; }
+main { padding: 10px 16px calc(env(safe-area-inset-bottom) + 84px); max-width: 720px; margin: 0 auto; }
+.notice { background: var(--watch-soft); color: var(--ink); border-radius: 12px; padding: 10px 12px; font-size: 14px; margin-bottom: 10px; }
+.count { color: var(--muted); font-size: 13px; margin: 4px 2px 8px; }
+.deal { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px; margin-bottom: 8px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; }
+.deal.watched { border-color: var(--watch); box-shadow: inset 3px 0 0 var(--watch); }
+.deal.expired { opacity: .55; }
+.store { font-size: 12px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; }
+.store.Tesco { color: var(--tesco); } .store.Billa { color: var(--billa); } .store.Lidl { color: var(--lidl); }
+.name { font-weight: 600; font-size: 16px; overflow-wrap: anywhere; }
+.meta { color: var(--muted); font-size: 13px; }
+.note { font-size: 13px; color: var(--sale); }
+.prices { text-align: right; grid-row: span 3; align-self: start; }
+.price { font-size: 22px; font-weight: 750; font-variant-numeric: tabular-nums; }
+.old { color: var(--muted); text-decoration: line-through; font-size: 13px; font-variant-numeric: tabular-nums; }
+.pct { display: inline-block; background: var(--sale-soft); color: var(--sale); font-weight: 700; font-size: 13px;
+  border-radius: 6px; padding: 1px 6px; margin-top: 2px; }
+.club { font-size: 12px; color: var(--accent); background: var(--accent-soft); border-radius: 6px; padding: 1px 6px; margin-top: 4px; display: inline-block; }
+.actions { grid-column: 1 / -1; display: flex; gap: 8px; margin-top: 6px; }
+.btn { border: 1px solid var(--line); background: transparent; border-radius: 10px; padding: 7px 12px; font-size: 14px; min-height: 36px; }
+.btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 6; display: flex; background: var(--card);
+  border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
+nav button { flex: 1; border: 0; background: none; padding: 10px 4px 12px; font-size: 13px; color: var(--muted); }
+nav button[aria-current="page"] { color: var(--accent); font-weight: 700; }
+nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radius: 9px; background: var(--sale); color: #fff; font-size: 11px; margin-left: 3px; }
+.empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+.group { font-weight: 700; margin: 14px 2px 6px; display: flex; justify-content: space-between; }
+.item { display: flex; gap: 10px; align-items: center; background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; padding: 10px 12px; margin-bottom: 6px; }
+.item input { width: 22px; height: 22px; accent-color: var(--accent); flex: none; }
+.item .grow { flex: 1; min-width: 0; }
+.item.done .name { text-decoration: line-through; color: var(--muted); }
+.x { border: 0; background: none; color: var(--muted); font-size: 20px; padding: 4px 8px; }
+.addrow { display: flex; gap: 8px; margin: 8px 0 12px; }
+.addrow input { flex: 1; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); min-width: 0; }
+.kw { display: inline-flex; align-items: center; gap: 4px; background: var(--watch-soft); border-radius: 999px; padding: 4px 4px 4px 12px; margin: 0 6px 6px 0; font-size: 14px; }
+.total { text-align: right; color: var(--muted); font-size: 14px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Akcie</h1>
+  <div class="sub" id="validity">Načítavam…</div>
+  <div id="controls">
+    <input class="search" id="q" type="search" placeholder="Hľadať, napr. maslo, kuracie, pivo" autocomplete="off">
+    <div class="row" id="stores"></div>
+    <div class="row">
+      <select class="chip" id="cat" aria-label="Kategória"><option value="">Všetky kategórie</option></select>
+      <select class="chip" id="sort" aria-label="Zoradenie">
+        <option value="disc">Najväčšia zľava</option>
+        <option value="price">Najnižšia cena</option>
+        <option value="name">Podľa názvu</option>
+      </select>
+    </div>
+  </div>
+</header>
+<main id="view"></main>
+<nav>
+  <button data-tab="deals" aria-current="page">Akcie</button>
+  <button data-tab="list">Nákup<span id="listBadge"></span></button>
+  <button data-tab="watch">Sledované<span id="watchBadge"></span></button>
+</nav>
+<script>
+const STORE_CLUB = { Tesco: "Clubcard", Billa: "Bonus", Lidl: "Lidl Plus" };
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const norm = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const eur = n => n == null ? "" : n.toFixed(2).replace(".", ",") + " €";
+const today = new Date().toISOString().slice(0, 10);
+const fmtDate = s => { if (!s) return ""; const [y, m, d] = s.split("-"); return `${+d}. ${+m}.`; };
+
+function load(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
+function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
+
+const state = {
+  data: { deals: [], stores: {} }, tab: "deals",
+  q: "", stores: new Set(load("akcie.stores", [])), cat: "", sort: load("akcie.sort", "disc"),
+  list: load("akcie.list", []), watch: load("akcie.watch", []),
+};
+const keyOf = d => `${d.store}|${d.name}|${d.price}`;
+const isWatched = d => state.watch.some(w => norm(d.name + " " + (d.brand || "")).includes(norm(w)));
+const expired = d => d.valid_to && d.valid_to < today;
+
+async function init() {
+  try {
+    const r = await fetch("deals.json?v=" + Date.now(), { cache: "no-store" });
+    state.data = await r.json();
+  } catch (e) {
+    $("#validity").textContent = "Nepodarilo sa načítať akcie. Skontroluj pripojenie.";
+  }
+  const stores = Object.keys(state.data.stores || {}).sort();
+  $("#stores").innerHTML = stores.map(s =>
+    `<button class="chip" data-store="${esc(s)}" aria-pressed="${state.stores.has(s)}">${esc(s)}</button>`).join("");
+  const cats = [...new Set(state.data.deals.map(d => d.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, "sk"));
+  $("#cat").innerHTML = `<option value="">Všetky kategórie</option>` + cats.map(c => `<option>${esc(c)}</option>`).join("");
+  $("#sort").value = state.sort;
+  $("#validity").innerHTML = stores.map(s => {
+    const v = state.data.stores[s] || {};
+    return `${esc(s)} ${v.valid_from ? fmtDate(v.valid_from) + "–" + fmtDate(v.valid_to) : ""}`;
+  }).join(" · ") || "Zatiaľ žiadne akcie";
+  render();
+}
+
+function filtered() {
+  const q = norm(state.q).split(/\s+/).filter(Boolean);
+  let list = state.data.deals.filter(d =>
+    (!state.stores.size || state.stores.has(d.store)) &&
+    (!state.cat || d.category === state.cat) &&
+    q.every(w => norm(`${d.name} ${d.brand || ""} ${d.unit || ""} ${d.category || ""}`).includes(w)));
+  const by = {
+    disc: (a, b) => (b.discount ?? -1) - (a.discount ?? -1),
+    price: (a, b) => a.price - b.price,
+    name: (a, b) => a.name.localeCompare(b.name, "sk"),
+  }[state.sort];
+  return list.sort((a, b) => (expired(a) - expired(b)) || (isWatched(b) - isWatched(a)) || by(a, b));
+}
+
+function dealCard(d) {
+  const inList = state.list.some(i => i.key === keyOf(d));
+  const dates = d.valid_from || d.valid_to ? `platí ${fmtDate(d.valid_from)}–${fmtDate(d.valid_to)}` : "";
+  return `<article class="deal ${isWatched(d) ? "watched" : ""} ${expired(d) ? "expired" : ""}">
+    <div><span class="store ${esc(d.store)}">${esc(d.store)}</span>${expired(d) ? ' <span class="meta">· skončila</span>' : ""}</div>
+    <div class="prices">
+      <div class="price">${eur(d.price)}</div>
+      ${d.old_price ? `<div class="old">${eur(d.old_price)}</div>` : ""}
+      ${d.discount ? `<div class="pct">−${d.discount} %</div>` : ""}
+      ${d.club_price != null && d.club_price < d.price ? `<div><span class="club">${STORE_CLUB[d.store] || "Karta"} ${eur(d.club_price)}</span></div>` : ""}
+    </div>
+    <div class="name">${esc(d.name)}</div>
+    <div class="meta">${[d.brand, d.unit, dates].filter(Boolean).map(esc).join(" · ")}</div>
+    ${d.note ? `<div class="note">${esc(d.note)}</div>` : ""}
+    <div class="actions">
+      <button class="btn ${inList ? "on" : ""}" data-add="${esc(keyOf(d))}">${inList ? "✓ V nákupe" : "+ Do nákupu"}</button>
+    </div>
+  </article>`;
+}
+
+function renderDeals() {
+  const list = filtered();
+  const rulesNote = state.data.source === "rules"
+    ? `<div class="notice">Tento týždeň ešte nie je spracovaný naplno – zobrazuje sa len časť akcií Tesco a Billa. Úplný zoznam (aj Lidl) pribudne po týždennom spracovaní.</div>` : "";
+  $("#view").innerHTML = rulesNote + `<div class="count">${list.length} akcií</div>` +
+    (list.map(dealCard).join("") || `<div class="empty">Nič sa nenašlo.</div>`);
+}
+
+function renderList() {
+  const groups = {};
+  state.list.forEach(i => (groups[i.store || "Vlastné"] ??= []).push(i));
+  const total = state.list.filter(i => !i.done && i.price).reduce((s, i) => s + i.price, 0);
+  $("#view").innerHTML = `
+    <form class="addrow" id="addForm"><input id="addText" placeholder="Pridať vlastnú položku" autocomplete="off">
+      <button class="btn primary">Pridať</button></form>
+    ${Object.keys(groups).sort().map(g => `<div class="group"><span class="store ${esc(g)}">${esc(g)}</span></div>` +
+      groups[g].map(i => `<label class="item ${i.done ? "done" : ""}">
+        <input type="checkbox" data-done="${esc(i.key)}" ${i.done ? "checked" : ""}>
+        <div class="grow"><div class="name">${esc(i.name)}</div>
+          ${i.price ? `<div class="meta">${eur(i.price)}${i.unit ? " · " + esc(i.unit) : ""}</div>` : ""}</div>
+        <button class="x" data-del="${esc(i.key)}" aria-label="Odstrániť">×</button></label>`).join("")).join("")
+      || `<div class="empty">Nákupný zoznam je prázdny.<br>Pridaj akcie tlačidlom „+ Do nákupu“.</div>`}
+    ${state.list.length ? `<div class="total">Spolu (nekúpené akcie): <b>${eur(total)}</b></div>
+      <div class="actions" style="justify-content:flex-end"><button class="btn" id="clearDone">Vymazať kúpené</button></div>` : ""}`;
+}
+
+function renderWatch() {
+  const matches = state.data.deals.filter(d => !expired(d) && isWatched(d));
+  $("#view").innerHTML = `
+    <p class="meta">Napíš, čo bežne kupuješ. Keď je to v akcii, zvýrazní sa to v zozname akcií.</p>
+    <form class="addrow" id="watchForm"><input id="watchText" placeholder="napr. maslo, Pilsner, kuracie prsia" autocomplete="off">
+      <button class="btn primary">Sledovať</button></form>
+    <div>${state.watch.map(w => `<span class="kw">${esc(w)}<button class="x" data-unwatch="${esc(w)}" aria-label="Prestať sledovať">×</button></span>`).join("")}</div>
+    <div class="group">Tento týždeň v akcii (${matches.length})</div>
+    ${matches.map(dealCard).join("") || `<div class="empty">${state.watch.length ? "Nič zo sledovaného nie je teraz v akcii." : "Zatiaľ nič nesleduješ."}</div>`}`;
+}
+
+function render() {
+  $("#controls").style.display = state.tab === "deals" ? "" : "none";
+  ({ deals: renderDeals, list: renderList, watch: renderWatch })[state.tab]();
+  const open = state.list.filter(i => !i.done).length;
+  $("#listBadge").innerHTML = open ? `<span class="badge">${open}</span>` : "";
+  const hits = state.data.deals.filter(d => !expired(d) && isWatched(d)).length;
+  $("#watchBadge").innerHTML = hits ? `<span class="badge">${hits}</span>` : "";
+  document.querySelectorAll("nav button").forEach(b => b.toggleAttribute("aria-current", b.dataset.tab === state.tab));
+  document.querySelectorAll("nav button[aria-current]").forEach(b => b.setAttribute("aria-current", "page"));
+}
+
+$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+$("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; save("akcie.sort", state.sort); render(); });
+$("#stores").addEventListener("click", e => {
+  const s = e.target.dataset.store; if (!s) return;
+  state.stores.has(s) ? state.stores.delete(s) : state.stores.add(s);
+  e.target.setAttribute("aria-pressed", state.stores.has(s));
+  save("akcie.stores", [...state.stores]); render();
+});
+document.querySelector("nav").addEventListener("click", e => {
+  const t = e.target.closest("button")?.dataset.tab; if (!t) return;
+  state.tab = t; render(); window.scrollTo(0, 0);
+});
+$("#view").addEventListener("click", e => {
+  const t = e.target;
+  if (t.dataset.add) {
+    const i = state.list.findIndex(x => x.key === t.dataset.add);
+    if (i >= 0) state.list.splice(i, 1);
+    else {
+      const d = state.data.deals.find(d => keyOf(d) === t.dataset.add);
+      state.list.push({ key: keyOf(d), name: d.name, store: d.store, price: d.price, unit: d.unit, done: false });
+    }
+    save("akcie.list", state.list); render();
+  } else if (t.dataset.del) {
+    e.preventDefault();
+    state.list = state.list.filter(i => i.key !== t.dataset.del); save("akcie.list", state.list); render();
+  } else if (t.dataset.unwatch) {
+    state.watch = state.watch.filter(w => w !== t.dataset.unwatch); save("akcie.watch", state.watch); render();
+  } else if (t.id === "clearDone") {
+    state.list = state.list.filter(i => !i.done); save("akcie.list", state.list); render();
+  }
+});
+$("#view").addEventListener("change", e => {
+  const k = e.target.dataset.done; if (!k) return;
+  const i = state.list.find(i => i.key === k); i.done = e.target.checked;
+  save("akcie.list", state.list); render();
+});
+$("#view").addEventListener("submit", e => {
+  e.preventDefault();
+  if (e.target.id === "addForm") {
+    const v = $("#addText").value.trim(); if (!v) return;
+    state.list.push({ key: "own|" + v + "|" + Date.now(), name: v, store: "Vlastné", price: null, done: false });
+    save("akcie.list", state.list);
+  } else if (e.target.id === "watchForm") {
+    const v = $("#watchText").value.trim(); if (!v || state.watch.includes(v)) return;
+    state.watch.push(v); save("akcie.watch", state.watch);
+  }
+  render();
+});
+init();
+</script>
+</body>
+</html>

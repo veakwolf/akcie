@@ -1,0 +1,4 @@
+# Page images live on the "stranky" branch (overwritten weekly), not in main's history.
+weeks/*/*/img/
+*.pdf
+__pycache__/
