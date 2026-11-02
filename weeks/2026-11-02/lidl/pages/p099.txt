@@ -1,19 +1,18 @@
-Akcia
-Šťastný víkend
+Akcia Šťastný víkend
 S Lidl Plus
 5.00*
-1 + 1
+1+1
 zadarmo
-*Cena za kus pri kúpe 2 kusov = 5,00 €.
-**Cena za kus pri kúpe 1 kusa = 9,99 €.
-Cena za 2 kusy = 9,99 €.
+*Cenazakusprikúpe2kusov=5,00€.
+**Cenazakusprikúpe1kusa=9,99€.
+Cenaza2kusy=9,99 €.
 9.99**
 Angus
-Striploin Steak
+StriploinSteak
 250 g balenie
 (1 kg = 20,00)
-Special Club
-Dry Gin
+SpecialClub
+DryGin
 0,7 l
 37,5 % alkoholu
 (1 l = 9,27)
@@ -29,12 +28,12 @@ obal 0,15 €
 (1 l = 1,18)
 0.59
 -40﹪ 0.99
-Guacamole nátierka
+Guacamolenátierka
 150 g, rôzne druhy
 (100 g = 1,33)
 1.99
 -20﹪ 2.49
-Teekanne čaje
+Teekannečaje
 20 x 1,75/2,25/2,50 g = 35/45/50 g
 rôzne druhy
 (100 g = 3,69/2,87/2,58)
@@ -44,7 +43,7 @@ x.xx
 -26﹪
 S Lidl Plus
 Žemľa
-s tekvicovými
+stekvicovými
 jadierkami
 80 g
 (100 g = 0,49) 0.39
@@ -56,10 +55,9 @@ pece
 Supercena
 2.99
 Supercena
-S Lidl Plus
-S Lidl Plus
+S Lidl Plus S Lidl Plus
 Cherry
-paradajky datľové
+paradajkydatľové
 250 g balenie
 (1 kg = 7,56) 1.89
 -29﹪
@@ -69,22 +67,18 @@ až do
 Vybrané
 proteínové
 produkty
-Bravčový bôčik
+Bravčovýbôčik
 cena za 1 kg
-s kosťou a s kožou Biele hrozno
+s kosťou a s kožou Bielehrozno
 bezjadierkové
 500 g balenie
 (1 kg = 3,58)
--33 %
-1.79
-2.69
-od soboty 7. 11. do 8. 11.
-REGIÓN SK
+-33%
+1.79 2.69
+od soboty 7.11.do 8.11.
+REGIÓNSK
 45/2026
-Ponuka tovaru v letáku platí od 7.11.do 8.11.2026 alebo do vypredania zásob.
-Chyby v tlači vyhradené.Ceny sú bez dekorácie.Firma LIDLsi vyhradzuje právo zmien
-v baleniach a variantoch ponúkaného tovaru.Odbermožný v obvyklom množstve.
-Lidl_letak_SV_165x280_7_11_sk.indd 63
-Lidl_letak_SV_165x280_7_11_sk.indd 63 26/10/2026 09:44
-26/10/2026 09:44
-
+Ponukatovaruvletákuplatíod7.11.do8.11.2026alebodovypredaniazásob.
+Chybyvtlačivyhradené.Cenysúbezdekorácie.FirmaLIDLsivyhradzujeprávozmien
+vbaleniachavariantochponúkanéhotovaru.Odbermožnývobvyklommnožstve.
+Lidl_letak_SV_165x280_7_11_sk.indd 63 Lidl_letak_SV_165x280_7_11_sk.indd 63 26/10/2026 09:44 26/10/2026 09:44

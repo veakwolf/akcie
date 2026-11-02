@@ -1,123 +1,111 @@
-20 * 
-Zálohsauplatňujenavýrobkyzabalenévzálohovanýchjednorazovýchplastovýchakovovýchobalochnanápoje.
+20 * Zálohsauplatňujenavýrobkyzabalenévzálohovanýchjednorazovýchplastovýchakovovýchobalochnanápoje.
 074
 Rajec
-pramenitá voda
-viac druhov, 1,5 l
-1 l = 0,300 €, 1 l = 0,000 €
+pramenitávoda
+viacdruhov,1,5l
+1l=0,300€,1l= 0,000 €
 + záloh za fľašu 0,15 €*
 045
 -39%
-bez BILLA Bonus
+bezBILLABonus
 199
 Kofola
-viac druhov, 1,5 l
-1 l = 0,860 €, 1 l = 1,327 €
+viacdruhov,1,5l
+1l=0,860€,1l= 1,327 €
 + záloh za fľašu 0,15 €*
 129
 -35%
-bez BILLA Bonus
+bezBILLABonus
 SUPER
 CENA
 Relax
 100%pomarančový
 džús
-1 l
+1l
 bežná cena: 2,39 €
-cena za 1 ks pri kúpe od 2 ks
+cenaza1ksprikúpeod2ks
 Vakciovejponuke
 ajostatnédruhy
 139
 239
 -41%
 XXL PONUKA
-OD 2 KS
+OD 2KS
 Drobček
-dojčenská voda
-2 l
-1 l = 0,195 €
+dojčenskávoda
+2l
+1l=0,195€
 + záloh za fľašu 0,15 €*
 039
 049
 -20%
 Xixo
-nealkoholický nápoj
-rôzne druhy
-0,25 l
-1 l = 2,360 €
+nealkoholickýnápoj
+rôznedruhy
+0,25l
+1l=2,360€
 +zálohzaplechovku0,15€*
 059
 NAŠA
 CENA
 Tiger
-energetický nápoj
-viac druhov
-0,5 l
-1 l = 1,900 €
+energetickýnápoj
+viacdruhov
+0,5l
+1l=1,900€
 + záloh za plechovku 0,15 €*
 095
 139
 -31%
-Jupí Extra
+JupíExtra
 sirup
-viac druhov
-0,7 l
-1 l = 3,786 €
+viacdruhov
+0,7l
+1l=3,786€
 265
 NAŠA
 CENA
-Hello Viva
-100 % jablkový džús
-1 l
+HelloViva
+100%jablkovýdžús
+1l
 V akciovej ponuke
 aj ostatné druhy
 119
 NAŠA
 CENA
 2 litre
-OD 2KS
+OD2KS
 XXL PONUKA
 Coca-Cola,
-Coca-Cola Zero,
+Coca-ColaZero,
 Fanta
-rôzne druhy, 2 l
-cena za 1 ks pri kúpe od 2 ks
-1 l = 0,875 €, 1 l = 1,495 €
+rôznedruhy,2l
+cenaza1ksprikúpeod2ks
+1l=0,875€,1l= 1,495 €
 + záloh za fľašu 0,15 €*
 175
 299
 -41%
-Nie
-je
-vhodné
-pre
-deti
-a
-mládež
-do
-18
-rokov
+Nie je vhodné pre deti a mládež do 18 rokov
 079
 099
 -20%
-Kubík Waterrr
-rôzne druhy
-0,5 l
-1 l = 1,580 €
+KubíkWaterrr
+rôznedruhy
+0,5l
+1l=1,580€
 + záloh za fľašu 0,15 €*
-OD 6KS
+OD6KS
 XXL PONUKA
 Staropramen
-svetlé pivo, 10 %
-plechovka, 0,5 l
+svetlépivo,10%
+plechovka,0,5l
 cenaza1ksprikúpeod6ks
-1 l = 1,100 €, 1 l = 1,780 €
+1l=1,100€,1l= 1,780 €
 +zálohzaplechovku0,15€*
 Vakciovejponukeajfľaška
 +zálohzafľašku0,13€
 055
 089
 -38%
-1,39
-39
-
+1,39 39

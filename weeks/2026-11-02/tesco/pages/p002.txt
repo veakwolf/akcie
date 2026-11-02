@@ -47,7 +47,7 @@ Clubcard
 −44%
 2
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 Clubcard
 cena
@@ -87,7 +87,7 @@ kečup
 jemný, 700 g
 Bežná cena:
 4,85 (1 kg = 6,93)
-S Clubcard: 1 kg = 4,27
+SClubcard:1kg=4,27
 S kupónom:
 1 kg = 3,84
 Clubcard
@@ -117,5 +117,4 @@ Bežná cena:
 S Clubcard: 1 l = 1,18
 S kupónom: 1 l = 0,98
 Záloha za vratný
-obal 0,15
-
+obal 0,15

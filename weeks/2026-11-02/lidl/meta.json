@@ -1,6 +1,6 @@
 {
  "store": "Lidl",
- "pdf": null,
+ "pdf": "https://assets.leaflets.schwarz/leaflets/pdfs/01a1884a-2299-7cc0-a7a5-7c64199b275e/Aktualny-letak-Platny-od-02-11-2026-01.pdf",
  "valid_from": "2026-11-02",
  "valid_to": "2026-11-08",
  "web": "https://www.lidl.sk/l/sk/letak/online-letak-platny-od-02-11-2026/ar/0",
@@ -64,11 +64,9 @@
   81,
   82,
   83,
-  85,
   88,
   92,
   93,
-  98,
   99,
   100,
   101

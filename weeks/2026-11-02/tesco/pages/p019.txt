@@ -11,10 +11,10 @@ Pri praní na 20 °C šetríte nielen energiu, ale aj svoju peňaženku.
 Silný na škvrny,
 šetrný k energiám.
 Ceny platia
-od 27. 10. do 23. 11. 2026
+od 27. 10.do 23. 11.2026
 alebo do vypredania zásob.
 Ceny platia
-od 27. 10. do 23. 11. 2026
+od 27. 10.do 23. 11.2026
 alebo do vypredania zásob.
 Clubcard
 cena
@@ -88,7 +88,7 @@ cena
 14,99
 Somat
 kapsuly
-do umývačky
+doumývačky
 riadu
 54 dávok
 Bežná cena:
@@ -96,7 +96,7 @@ Bežná cena:
 (1 dávka =
 0,28)
 S Clubcard:
-1 dávka = 0,25
+1dávka=0,25
 Clubcard
 cena
 Bežná
@@ -104,18 +104,18 @@ cena
 2,49
 −37%
 3,99
-Fa Calming Divine
+FaCalmingDivine
 Camelia
-sprchovací gél
-400 ml
-Bežná cena:
-3,99 (1 l = 9,98)
-S Clubcard: 1 l = 6,23
-V ponuke tiež Fa
-Pistachio & Honey
-sprchovací gél
-400 ml s Clubcard
-zľavou 40 %
+sprchovacígél
+400ml
+Bežnácena:
+3,99(1l=9,98)
+SClubcard:1l=6,23
+VponuketiežFa
+Pistachio&Honey
+sprchovacígél
+400mlsClubcard
+zľavou40%
 Clubcard
 cena
 Bežná
@@ -157,7 +157,7 @@ Nettle Freshness
 Bežná cena:
 4,15 (1 l = 10,38)
 S Clubcard: 1 l = 7,48
-0,22–0,18 €
+0,22–0,18€
 1 pranie
 0,22 €
 1 pranie
@@ -166,7 +166,7 @@ S Clubcard: 1 l = 7,48
 0,07 €
 1 pranie
 27. 10. – 17. 11. 2026
-27. 10. – 3. 11. 2026
+27.10.–3.11.2026
 27. 10. – 2. 11. 2026
 27. 10. –
 2. 11. 2026
@@ -176,5 +176,4 @@ Bežná
 cena
 1,99
 −16%
-2,39
-
+2,39

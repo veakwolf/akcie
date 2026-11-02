@@ -1,6 +1,6 @@
 27
 Ceny platia
-od 21. 10. do 3. 11. 2026
+od 21. 10.do 3. 11.2026
 alebo do vypredania zásob.
 Clubcard
 cena
@@ -174,5 +174,4 @@ Halloween
 Bežná cena:
 3,99 (1 kg = 31,17)
 S Clubcard:
-1 kg = 24,92
-
+1 kg = 24,92

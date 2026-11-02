@@ -1,13 +1,13 @@
 28
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 Ponuka je platná od 28. 10. do 3. 11. 2026 alebo do vypredania zásob. Ponuka sa v jednotlivých obchodoch môže líšiť.
 -30%
 Vybrané rumy
 Clubcard
 ceny
-až do
+aždo
 Clubcard
 cena
 Bežná
@@ -155,5 +155,4 @@ Bežná cena: 4,99 (1 kg = 36,69)
 S Clubcard:
 1 kg = 29,34
 Cenaprevšetkých
-**Neplatí pre hypermarkety: Bratislava Saratovská, Devínska Nová Ves, Nitra Prior, Veľký Meder
-
+**Neplatí pre hypermarkety: Bratislava Saratovská, Devínska Nová Ves, Nitra Prior, Veľký Meder

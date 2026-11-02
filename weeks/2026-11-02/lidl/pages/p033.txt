@@ -1,15 +1,15 @@
 XXL
-K2R Pracie
+K2RPracie
 obrúsky
 stop zafarbeniu
 (1 kus = 0,11) 8.⁹⁹
-80 kusov
-Nivea Krém
-na tvár
+80kusov
+NiveaKrém
+natvár
 rôzne druhy
 5.⁴⁹
-100 ml
-Head & Shoulders
+100ml
+Head&Shoulders
 šampón
 500 ml
 rôzne druhy
@@ -26,29 +26,29 @@ Indulona
 125 ml
 rôzne druhy
 (100 ml = 1,59)
-*Cena za kus pri kúpe 2 kusov = 1,97 €.
-**Cena za kus pri kúpe 1 kusa = 3,95 €.
-Cena za 2 kusy = 3,95 €.
+*Cenazakusprikúpe2kusov=1,97€.
+**Cenazakusprikúpe1kusa=3,95€.
+Cenaza2kusy=3,95€.
 S Lidl Plus
 1.⁹⁷*
-1 + 1
+1+1
 zadarmo
 3.95**
-Zubné kefky
+Zubnékefky
 Ultrasoft
 3 kusy
 (1 kus = 0,66)
-*Cena za kus pri kúpe 3 kusov = 1,12 €.
-**Cena za kus pri kúpe 1 kusa = 1,69 €.
-Cena za 3 kusy = 3,38 €.
+*Cenazakusprikúpe3kusov=1,12€.
+**Cenazakusprikúpe1kusa=1,69 €.
+Cenaza3kusy=3,38€.
 S Lidl Plus
 1.¹²*
-2 + 1
+2+1
 zadarmo
 1.69**
 Colgate
 zubná
-pasta MAX
+pastaMAX
 75 ml
 (100 ml = 1,49)
 DIXI
@@ -60,13 +60,12 @@ rôzne druhy
 x.xx
 2.19
 -42﹪
-S Lidl Plus
-500 ml
+SLidlPlus
+500ml
 400 ml
-Ponuka tovaru v letáku platí od 2.11.do 8.11.2026 alebo do vypredania zásob.
-Chyby v tlači vyhradené.Ceny sú bez dekorácie.Firma LIDLsi vyhradzuje právo zmien
-v baleniach a variantoch ponúkaného tovaru.Odbermožný v obvyklom množstve.
-REGIÓN SK
+Ponukatovaruvletákuplatíod2.11.do8.11.2026alebodovypredaniazásob.
+Chybyvtlačivyhradené.Cenysúbezdekorácie.FirmaLIDLsivyhradzujeprávozmien
+vbaleniachavariantochponúkanéhotovaru.Odbermožnývobvyklommnožstve.
+REGIÓNSK
 45/2026
-od pondelka 2. 11. do 8. 11.
-
+odpondelka2.11.do8.11.

@@ -1,6 +1,6 @@
 29
 Ceny platia
-od 28. 10. do 10. 11. 2026
+od 28. 10.do 10. 11.2026
 alebo do vypredania zásob.
 Montepulciano z regiónu Abruzzo
 ponúka plnú a harmonickú chuť
@@ -164,5 +164,4 @@ Bežná cena:
 S Clubcard:
 1 l = 2,39
 Záloha za vratný
-obal 0,15
-
+obal 0,15

@@ -7,14 +7,14 @@ orieškov*
 2.15
 2.65
 ALESTO
-Kešu oriešky
+Kešuoriešky
 200 g
 (100 g = 1,08)
 -18﹪
-S Lidl Plus
+SLidlPlus
 ALESTO
 Talianske
-lieskové orechy
+lieskovéorechy
 200 g
 rôzne druhy
 (100 g = 2,00)
@@ -23,20 +23,20 @@ Supercena
 2.99
 3.59
 -16﹪
-S Lidl Plus
+SLidlPlus
 ALESTO
-Vlašské orechy
+Vlašskéorechy
 200 g
 (100 g = 1,50)
 2.49
 3.49
 ALESTO
-Kešu oriešky
+Kešuoriešky
 150 g
 rôzne druhy
 (100 g = 1,66)
 -28﹪
-S Lidl Plus
+SLidlPlus
 3.29
 3.79
 ALESTO
@@ -46,10 +46,9 @@ pražené,
 solené/nesolené
 (1 kg = 13,16)
 -13﹪
-S Lidl Plus
-REGIÓN SK
+SLidlPlus
+REGIÓNSK
 45/2026
-Ponuka tovaru v letáku platí od 2.11.do vypredania zásob.
-Chyby v tlači vyhradené.Ceny sú bez dekorácie.Firma LIDLsi vyhradzuje právo zmien
-v baleniach a variantoch ponúkaného tovaru.Odbermožný v obvyklom množstve.
-
+Ponukatovaruvletákuplatíod2.11.dovypredaniazásob.
+Chybyvtlačivyhradené.Cenysúbezdekorácie.FirmaLIDLsivyhradzujeprávozmien
+vbaleniachavariantochponúkanéhotovaru.Odbermožnývobvyklommnožstve.

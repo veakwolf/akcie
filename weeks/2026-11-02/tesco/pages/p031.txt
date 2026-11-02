@@ -1,6 +1,6 @@
 31
 Ceny platia
-od 27. 10. do 9. 11. 2026
+od 27. 10.do 9. 11.2026
 alebo do vypredania zásob.
 Ponuka je platná od 27. 10. do 2. 11. 2026 alebo do vypredania zásob. Ponuka sa v jednotlivých obchodoch môže líšiť.
 -45%
@@ -8,7 +8,7 @@ Vybrané šampóny
 na vlasy
 Clubcard
 ceny
-až do
+aždo
 Clubcard
 cena
 Bežná
@@ -40,7 +40,7 @@ za 1 ks platí
 pri kúpe 4 ks
 3+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 Relax ovocné pyré
 200 g, viac druhov
 Bežná cena za 1 ks
@@ -169,5 +169,4 @@ S Clubcard: 1 l = 42,60
 Senica, Snina, Trebišov, Žiar nad Hronom
 ***Neplatí pre hypermarket Bratislava Kamenné námestie
 ****Neplatí pre hypermarkety: Bratislava Kamenné námestie, Bratislava Saratovská,
-Devínska Nová Ves, Fiľakovo, Nitra Prior, Veľký Meder, Vráble
-
+Devínska Nová Ves, Fiľakovo, Nitra Prior, Veľký Meder, Vráble

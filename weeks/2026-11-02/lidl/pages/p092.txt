@@ -1,12 +1,12 @@
-Kuchyňa a domácnosť
-Ponuka tovaru v letáku platí od 5. 11. do vypredania zásob.
-Chyby v tlači vyhradené. Ceny sú bez dekorácie. Firma LIDL si vyhradzuje právo zmien
-v baleniach a variantoch ponúkaného tovaru. Odber možný v obvyklom množstve.
-REGIÓN SK
+Kuchyňaadomácnosť
+Ponuka tovaru v letáku platí od 5.11.do vypredania zásob.
+Chyby v tlači vyhradené.Ceny sú bez dekorácie.Firma LIDLsi vyhradzuje právo zmien
+v baleniach a variantoch ponúkaného tovaru.Odbermožný v obvyklom množstve.
+REGIÓNSK
 45/2026
-od štvrtka 5. 11.
+odštvrtka5.11.
 SILVERCREST
-Forma na pečenie
+Formanapečenie
 kus
 v imitácii granitu
 A: 29 x 23 x 7 cm
@@ -27,7 +27,7 @@ pomôcka
 kus
 1.⁹⁹
 SILVERCREST
-Súprava na matchu
+Súpravanamatchu
 5-dielna súprava
 miska, držiak na metličku a bambusová
 metlička sú odolné voči teplotám
@@ -42,5 +42,4 @@ A
 B
 A
 B
-C
-
+C

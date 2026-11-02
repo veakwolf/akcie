@@ -5,7 +5,7 @@ Lepší výber
 Zistiť viac
 21
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 Clubcard
 cena
@@ -143,5 +143,4 @@ cena
 1,19
 −33%
 1,79
-**Neplatí pre hypermarkety: Bratislava Saratovská, Fiľakovo, Nitra Prior, Veľký Meder, Vráble
-
+**Neplatí pre hypermarkety: Bratislava Saratovská, Fiľakovo, Nitra Prior, Veľký Meder, Vráble

@@ -2,14 +2,14 @@ ZADARMO
 K NÁKUPU
 15
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 Cena 0,46 €
 za 1 ks platí
 pri kúpe 3 ks
 2+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 Olma pudingový
 krém so šľahačkou
 vanilka alebo
@@ -23,7 +23,7 @@ za 1 ks platí
 pri kúpe 6 ks
 4+2
 zadarmo
-Clubcard ceny
+Clubcardceny
 Budiš
 minerálna voda
 viac druhov, 1,5 l
@@ -43,7 +43,7 @@ za 1 ks platí
 pri kúpe 3 ks
 2+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 KX Blue Spark
 viac druhov, 250 ml
 Bežná cena za 1 ks 0,59 (1 l = 2,36)
@@ -54,7 +54,7 @@ za 1 ks platí
 pri kúpe 3 ks
 2+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 Dru slané tyčinky
 90 g
 Bežná cena za 1 ks
@@ -65,7 +65,7 @@ za 1 ks platí
 pri kúpe 3 ks
 2+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 Opavia Brumík
 viac druhov, 30 g
 Bežná cena za 1 ks 0,57 (1 kg = 19,00)
@@ -75,17 +75,16 @@ za 1 ks platí
 pri kúpe 2 ks
 1+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 Cena 0,65 €
 za 1 ks platí
 pri kúpe 2 ks
 1+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 Tauris Maťko
 šunková pena
 balená, 100 g
 Bežná cena za 1 ks
 1,29 (1 kg = 12,90)
-S Clubcard: 1 kg = 6,50
-
+S Clubcard: 1 kg = 6,50

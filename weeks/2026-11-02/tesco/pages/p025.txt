@@ -1,6 +1,6 @@
 25
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 2,69
 2,19
@@ -132,5 +132,4 @@ Cenaprevšetkých Cenaprevšetkých
 **Neplatí pre hypermarkety: Bratislava Saratovská, Fiľakovo, Komárno, Revúca,
 Trebišov, Veľký Meder, Vráble
 ***Neplatí pre hypermarkety: Bardejov, Bratislava Saratovská, Devínska Nová Ves,
-Fiľakovo, Komárno, Revúca, Trebišov, Veľký Meder, Vráble
-
+Fiľakovo, Komárno, Revúca, Trebišov, Veľký Meder, Vráble

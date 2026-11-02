@@ -5,9 +5,9 @@ Vybrané
 čaje a medy
 Clubcard
 ceny
-až do
+aždo
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 1,99
 1,69
@@ -138,8 +138,6 @@ Cenaprevšetkých
 Cenaprevšetkých
 Kúpte 3 ks
 a zaplaťte:
-0,70
-za 1 ks
+0,70 za 1 ks
 2+1 zadarmo
-**Neplatí pre hypermarkety Tesco Extra Banská Bystrica a Myjava
-
+**Neplatí pre hypermarkety Tesco Extra Banská Bystrica a Myjava

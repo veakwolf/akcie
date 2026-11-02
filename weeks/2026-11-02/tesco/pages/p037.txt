@@ -2,13 +2,10 @@ NOVÉ
 Vyber si intenzitu
 Bez alkoholu
 MILD INTENSE
-1
-1
-Na základe NIQ RMS dát v kategórii ÚSTNE VODY v hodnote predaja za obdobie posledných 52 týždňov
-Na základe NIQ RMS dát v kategórii ÚSTNE VODY v hodnote predaja za obdobie posledných 52 týždňov
-končiacich 25. 1. 2026 na slovenskom maloobchodnom trhu (Copyright © 2026, ACNielsen Slovakia, s. r. o.).
-končiacich 25. 1. 2026 na slovenskom maloobchodnom trhu (Copyright © 2026, ACNielsen Slovakia, s. r. o.).
-www.tesco.sk ID: 2026/35_HM_CHM
+1 1
+Na základe NIQ RMS dát v kategórii ÚSTNE VODY v hodnote predaja za obdobie posledných 52 týždňov Na základe NIQ RMS dát v kategórii ÚSTNE VODY v hodnote predaja za obdobie posledných 52 týždňov
+končiacich 25. 1. 2026 na slovenskom maloobchodnom trhu (Copyright © 2026, ACNielsen Slovakia, s. r. o.). končiacich 25. 1. 2026 na slovenskom maloobchodnom trhu (Copyright © 2026, ACNielsen Slovakia, s. r. o.).
+www.tesco.sk ID:2026/35_HM_CHM
 Clubcard
 cena
 Bežná
@@ -38,5 +35,4 @@ Bežná cena:
 S Clubcard:
 1 l = 11,98
 27. 10. – 9. 11. 2026
-**Neplatí pre hypermarkety: Bratislava Saratovská, Devínska Nová Ves, Fiľakovo, Nitra Prior, Veľký Meder, Vráble
-
+**Neplatí pre hypermarkety: Bratislava Saratovská, Devínska Nová Ves, Fiľakovo, Nitra Prior, Veľký Meder, Vráble

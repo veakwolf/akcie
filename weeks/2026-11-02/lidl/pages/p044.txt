@@ -1,15 +1,15 @@
 Kinder
-Mix Adventný
+MixAdventný
 kalendár
 113 g
 (100 g = 7,96)
 9.99
-Chupa Chups
-Adventný kalendár
+ChupaChups
+Adventnýkalendár
 225 g
 (100 g = 4,44)
 9.99
-Milka adventný
+Milkaadventný
 kalendár
 200 g
 (100 g = 5,00)
@@ -18,11 +18,11 @@ Nádielka
 288 g
 (1 kg = 24,27)
 Kinder
-Mix vlak
+Mixvlak
 226 g
 (100 g = 5,31)
 11.99
-Kinder Mix
+KinderMix
 Adventný
 kalendár
 151 g
@@ -34,16 +34,15 @@ Po
 8.99
 Cenový
 hit
-4
-*Úsp
+4 *Úsp
 t.j.b
 13.99
 Ušetri*
 -12﹪
 *Úsporaznajniž.bežnejpredaj.ceny,t.j.bez
 akciovýchcien,zistenýchzberomciendňa12.10.2026.
-Kinder Bueno
-Adventný kalendár
+KinderBueno
+Adventnýkalendár
 181 g
 (100 g = 7,73)
 6.99
@@ -58,13 +57,12 @@ Ušetri*
 t.j.bezakciovýchcien,zistenýchzberomciendňa14.10.2026.
 Mikuláš sa blíži.
 Je sa na čo tešiť!
-REGIÓN SK
+REGIÓNSK
 45/2026
 Pon
 Chy
-v ba
-Ponuka tovaru v letáku platí od 2.11.do 8.11.2026 alebo do vypredania zásob.
-Chyby v tlači vyhradené.Ceny sú bez dekorácie.Firma LIDLsi vyhradzuje právo zmien
-v baleniach a variantoch ponúkaného tovaru.Odbermožný v obvyklom množstve.
-od pondelka 2. 11. do 8. 11.
-
+vba
+Ponukatovaruvletákuplatíod2.11.do8.11.2026alebodovypredaniazásob.
+Chybyvtlačivyhradené.Cenysúbezdekorácie.FirmaLIDLsivyhradzujeprávozmien
+vbaleniachavariantochponúkanéhotovaru.Odbermožnývobvyklommnožstve.
+od pondelka 2.11.do 8.11.

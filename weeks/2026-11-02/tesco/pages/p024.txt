@@ -1,6 +1,6 @@
 24
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 Clubcard
 cena
@@ -147,7 +147,7 @@ za 1 ks platí
 pri kúpe 2 ks
 1+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 Dr. Oetker pizza La Mia Grande Margherita
 mrazená, 360 g
 Bežná cena za 1 ks 4,99 (1 kg = 13,86)
@@ -164,8 +164,7 @@ za 1 ks platí
 pri kúpe 3 ks
 2+1
 zadarmo
-Clubcard ceny
+Clubcardceny
 **Neplatí pre hypermarkety: Bardejov, Bratislava Saratovská, Devínska Nová Ves, Fiľakovo,
 Komárno, Košice-Nad Jazerom, Revúca, Snina, Trebišov, Veľký Meder, Vranov nad Topľou, Vráble
-***Neplatí pre hypermarket Myjava
-
+***Neplatí pre hypermarket Myjava

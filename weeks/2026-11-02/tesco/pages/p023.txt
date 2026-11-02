@@ -1,6 +1,6 @@
 23
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 Clubcard
 cena
@@ -207,5 +207,4 @@ S Clubcard: 1 kg = 5,81
 21. 10. – 3. 11. 2026
 1 pranie
 0,14 €
-**Neplatí pre hypermarket Bratislava Kamenné námestie
-
+**Neplatí pre hypermarket Bratislava Kamenné námestie

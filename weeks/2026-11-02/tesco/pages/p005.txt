@@ -1,6 +1,6 @@
 5
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 1,79
 0,85
@@ -73,5 +73,4 @@ Cenaprevšetkých
 Cenaprevšetkých
 Cenaprevšetkých
 Cenaprevšetkých
-Cenaprevšetkých
-
+Cenaprevšetkých

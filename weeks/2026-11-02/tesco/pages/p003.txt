@@ -41,7 +41,7 @@ Clubcard
 −44%
 3
 Ceny platia
-od 29. 10. do 1. 11. 2026
+od 29. 10.do 1. 11.2026
 alebo do vypredania zásob.
 4,89
 7,59
@@ -95,5 +95,4 @@ S Clubcard: 1 l = 10,70
 S kupónom:
 1 l = 9,99
 Cenaprevšetkých
-*Akcia neplatí pre obchody uvedené v pravidlách vo vnútri letáka.
-
+*Akcia neplatí pre obchody uvedené v pravidlách vo vnútri letáka.

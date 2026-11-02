@@ -1,6 +1,6 @@
 11
 Ceny platia
-od 28. 10. do 3. 11. 2026
+od 28. 10.do 3. 11.2026
 alebo do vypredania zásob.
 21. 10. – 3. 11. 2026
 Clubcard
@@ -134,5 +134,4 @@ Bežná cena:
 8,39 (1 kg = 83,90)
 S Clubcard:
 1 kg = 69,90
-**Neplatí pre hypermarkety: Bratislava Saratovská, Devínska Nová Ves, Nitra Prior, Trebišov, Veľký Meder
-
+**Neplatí pre hypermarkety: Bratislava Saratovská, Devínska Nová Ves, Nitra Prior, Trebišov, Veľký Meder

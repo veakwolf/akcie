@@ -1,65 +1,65 @@
-** Morčacie
-horné stehno
-bez kosti a kože
+**Morčacie
+hornéstehno
+bezkostiakože
 Kubus
-vákuovo balené
-cena za 1 kg
+vákuovobalené
+cenaza1kg
 629
 769
 -18%
-** Kačacie stehná
-s kožou
+**Kačaciestehná
+skožou
 DMI
-vákuovo balené
-cena za 100 g
-1 kg = 7,900 €
+vákuovobalené
+cenaza100g
+1kg=7,900€
 Do vypredania zásob
 079
 155
 -49%
-* Kurča a dve
-stehenné štvrte
-Mäsiarov výber
+*Kurčaadve
+stehennéštvrte
+Mäsiarovvýber
 chladené
-cena za 1 kg
+cenaza1kg
 239
 329
 -27%
-* Kuracie stehná
-horné, dolné
-Mäsiarov výber,
+*Kuraciestehná
+horné,dolné
+Mäsiarovvýber,
 Domäsko
-v ochrannej atmosfére
-cena za 1 kg
+vochrannejatmosfére
+cenaza1kg
 299
 399
 -25%
-** Kuracie
+**Kuracie
 pečienky
-Mäsiarov výber,
+Mäsiarovvýber,
 Domäsko
-v ochrannej atmosfére
+vochrannejatmosfére
 cena za 1 kg
 249
 339
 -26%
-Akciová ponuka neplatí pre predajňu: * Bratislava – Carlton * BILLA Valaská, Strážske *Bratislava–Záhradnícka
-** Tilapia
-fileta bez kože
+Akciováponukaneplatíprepredajňu: *Bratislava–Carlton *BILLAValaská,Strážske *Bratislava–Záhradnícka
+**Tilapia
+filetabezkože
 chladená
-cca 300 g/1 bal.
-cena za 100 g
-1 kg = 10,900 €
+cca300g/1bal.
+cenaza100g
+1kg=10,900€
 109
 139
 -21%
 SUPER
 CENA
-* Kačica
-bez drobkov
+*Kačica
+bezdrobkov
 Hungerit
 chladená
-cena za 1 kg
+cenaza1kg
 bežná cena: 5,69 €
 Do vypredania zásob
 329
@@ -67,6 +67,4 @@ Do vypredania zásob
 -42%
 Bez drobkov
 6
-3,29
-29
-
+3,29 29

@@ -4,7 +4,7 @@ Objavte exotickú
 SOS Jasmine Brown
 18
 Ceny platia
-od 28. 10. do 10. 11. 2026
+od 28. 10.do 10. 11.2026
 alebo do vypredania zásob.
 Clubcard
 cena
@@ -47,7 +47,7 @@ cena
 −23%
 3,65 Familia
 Premium
-vodka 38 %**
+vodka38%**
 0,2 l
 Bežná cena:
 3,65
@@ -61,12 +61,12 @@ cena
 14,39
 −26%
 19,49
-Jan II gin
-London Dry 40 %***
-0,7 l
-Bežná cena:
-19,49 (1 l = 27,84)
-S Clubcard: 1 l = 20,56
+JanIIgin
+LondonDry40%***
+0,7l
+Bežnácena:
+19,49(1l=27,84)
+SClubcard:1l=20,56
 Clubcard
 cena
 Bežná
@@ -106,5 +106,4 @@ Bežná cena:
 S Clubcard: 1 l = 20,56
 28. 10. – 3. 11. 2026
 **Neplatí pre hypermarkety: Bratislava Saratovská, Devínska Nová Ves, Nitra Prior, Trebišov, Veľký Meder
-***Neplatí pre hypermarkety Fiľakovo a Myjava
-
+***Neplatí pre hypermarkety Fiľakovo a Myjava
