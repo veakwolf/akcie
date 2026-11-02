@@ -140,6 +140,11 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .summary .savings { color: #5ee0ae; }
 @media (prefers-color-scheme: light) { .summary .savings { color: #0f8f62; } }
 .group .meta { font-weight: 500; }
+.syncbox { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; margin: 6px 0 10px; }
+.syncbox > summary { font-weight: 650; cursor: pointer; list-style: none; }
+.syncbox > summary::-webkit-details-marker { display: none; }
+.syncbox p { margin: 10px 0 4px; }
+.syncbox .code { font-family: ui-monospace, Menlo, monospace; letter-spacing: .03em; user-select: all; }
 </style>
 </head>
 <body>
@@ -201,6 +206,101 @@ const unitText = d => { const u = unitPay(d); if (u == null) return "";
   return d.unit_basis === "pranie" ? `${eur(u)} / pranie` : `${eur(u)} / ${d.unit_basis}`; };
 const endsTag = d => d.valid_to === today ? "končí dnes" : d.valid_to === tomorrow ? "končí zajtra" : "";
 
+// ---------- Shared household (Supabase): shopping list + watch list synced by a secret code
+const SB_URL = "https://dlbgfzjgkuwubomihkux.supabase.co";
+const SB_KEY = "sb_publishable_mp28D-V0T8ZAHW410MStGw_KWIFq5Dw";
+const sync = { code: load("akcie.code", ""), status: "", busy: false, timer: null };
+// Deleted items are kept as tombstones for a while so a delete on one phone wins over an old copy on another.
+let tomb = load("akcie.tomb", {});            // key -> time of deletion
+let watchMeta = load("akcie.watchMeta", {});  // keyword -> time added
+const now = () => Date.now();
+
+async function rpc(fn, body) {
+  const r = await fetch(`${SB_URL}/rest/v1/rpc/${fn}`, {
+    method: "POST", headers: { apikey: SB_KEY, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error(`${r.status} ${await r.text()}`);
+  return r.json();
+}
+function localDoc() {
+  return {
+    list: state.list.map(i => ({ ...i, t: i.t || 0 })),
+    watch: state.watch.map(w => ({ w, t: watchMeta[w] || 0 })),
+    tomb,
+  };
+}
+function mergeDocs(a, b) {
+  const tombs = { ...(a.tomb || {}) };
+  for (const [k, t] of Object.entries(b.tomb || {})) tombs[k] = Math.max(tombs[k] || 0, t);
+  const weekAgo = now() - 30 * 864e5;
+  for (const k of Object.keys(tombs)) if (tombs[k] < weekAgo) delete tombs[k];
+  const list = new Map();
+  for (const i of [...(a.list || []), ...(b.list || [])]) {
+    const cur = list.get(i.key);
+    if (!cur || (i.t || 0) > (cur.t || 0)) list.set(i.key, i);
+  }
+  const watch = new Map();
+  for (const w of [...(a.watch || []), ...(b.watch || [])]) {
+    const cur = watch.get(w.w);
+    if (!cur || (w.t || 0) > (cur.t || 0)) watch.set(w.w, w);
+  }
+  return {
+    list: [...list.values()].filter(i => !(tombs["l:" + i.key] > (i.t || 0))),
+    watch: [...watch.values()].filter(w => !(tombs["w:" + w.w] > (w.t || 0))),
+    tomb: tombs,
+  };
+}
+function applyDoc(doc) {
+  state.list = doc.list; state.watch = doc.watch.map(w => w.w);
+  watchMeta = Object.fromEntries(doc.watch.map(w => [w.w, w.t])); tomb = doc.tomb;
+  save("akcie.list", state.list); save("akcie.watch", state.watch);
+  save("akcie.watchMeta", watchMeta); save("akcie.tomb", tomb);
+}
+async function syncNow() {
+  if (!sync.code || sync.busy) return;
+  sync.busy = true;
+  try {
+    const remote = await rpc("get_household", { p_code: sync.code });
+    const merged = mergeDocs(remote?.data || {}, localDoc());
+    const changedLocal = JSON.stringify(merged.list) !== JSON.stringify(localDoc().list) ||
+                         JSON.stringify(merged.watch.map(w => w.w)) !== JSON.stringify(state.watch);
+    applyDoc(merged);
+    if (JSON.stringify(merged) !== JSON.stringify(remote?.data || null)) await rpc("save_household", { p_code: sync.code, p_data: merged });
+    sync.status = "ok " + new Date().toLocaleTimeString("sk", { hour: "2-digit", minute: "2-digit" });
+    if (changedLocal || state.tab === "list") render();
+  } catch (e) {
+    sync.status = "error"; console.warn("sync failed", e);
+    if (state.tab === "list") render();
+  } finally { sync.busy = false; }
+}
+function syncSoon() { clearTimeout(sync.timer); sync.timer = setTimeout(syncNow, 400); }
+function newCode() {
+  const a = "abcdefghjkmnpqrstuvwxyz23456789", r = crypto.getRandomValues(new Uint8Array(16));
+  return [...r].map(x => a[x % a.length]).join("").replace(/(.{4})(?=.)/g, "$1-");
+}
+function joinCode(c) {
+  c = String(c || "").trim().toLowerCase();
+  if (c.replace(/-/g, "").length < 12) { alert("Kód je príliš krátky."); return; }
+  sync.code = c; save("akcie.code", c); syncNow();
+}
+const shareLink = () => `${location.origin}${location.pathname}#k=${sync.code}`;
+function joinFromLink() { const m = location.hash.match(/k=([a-z0-9-]{12,})/i);
+  if (m) { history.replaceState(null, "", location.pathname); if (m[1] !== sync.code && confirm("Pripojiť sa k zdieľanému zoznamu?")) joinCode(m[1]); } }
+joinFromLink(); window.addEventListener("hashchange", joinFromLink);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) syncNow(); });
+setInterval(() => { if (!document.hidden) syncNow(); }, 20000);
+
+function syncPanel() {
+  if (!sync.code) return `<details class="syncbox"><summary>👥 Zdieľať zoznam s ďalšími (napr. partnerka)</summary>
+    <p class="meta">Nákup aj sledované sa budú synchronizovať medzi všetkými, ktorí majú rovnaký kód.</p>
+    <div class="actions"><button class="btn primary" id="syncNew">Vytvoriť zdieľaný zoznam</button></div>
+    <form class="addrow" id="joinForm"><input id="joinText" placeholder="alebo zadaj kód, napr. ab12-cd34-…" autocomplete="off">
+      <button class="btn">Pripojiť</button></form></details>`;
+  const st = sync.status.startsWith("ok") ? `synchronizované ${sync.status.slice(3)}` : sync.status === "error" ? "⚠️ bez pripojenia – skúsim znova" : "synchronizujem…";
+  return `<details class="syncbox"><summary>👥 Zdieľaný zoznam · <span class="meta">${st}</span></summary>
+    <p class="meta">Kód: <b class="code">${esc(sync.code)}</b></p>
+    <div class="actions"><button class="btn primary" id="syncShare">Poslať pozvánku</button><button class="btn" id="syncLeave">Odpojiť</button></div></details>`;
+}
+
 async function init() {
   try {
     const r = await fetch("deals.json?v=" + Date.now(), { cache: "no-store" });
@@ -224,6 +324,7 @@ async function init() {
     return `<b class="sname ${esc(s)}">${esc(s)}</b> ${v.valid_from ? fmtDate(v.valid_from) + "–" + fmtDate(v.valid_to) : ""}`;
   }).join(' <span style="opacity:.4">|</span> ') || "Zatiaľ žiadne akcie";
   render();
+  syncNow();
 }
 
 function filtered() {
@@ -315,7 +416,7 @@ function renderList() {
   const sum = items => items.reduce((s, i) => s + i.price, 0);
   const saved = items => items.reduce((s, i) => s + (i.old_price ? i.old_price - i.price : 0), 0);
   const order = [...STORE_ORDER, "Vlastné"].filter(g => groups[g]).concat(Object.keys(groups).filter(g => ![...STORE_ORDER, "Vlastné"].includes(g)));
-  $("#view").innerHTML = `
+  $("#view").innerHTML = syncPanel() + `
     <form class="addrow" id="addForm"><input id="addText" placeholder="Pridať vlastnú položku" autocomplete="off">
       <button class="btn primary">Pridať</button></form>
     ${order.map(g => {
@@ -349,7 +450,7 @@ function listText() {
 function renderWatch() {
   const matches = state.data.deals.filter(d => !expired(d) && !isNext(d) && isWatched(d));
   const soon = state.data.deals.filter(d => isNext(d) && isWatched(d));
-  $("#view").innerHTML = `
+  $("#view").innerHTML = syncPanel() + `
     <p class="meta">Napíš, čo bežne kupuješ. Keď je to v akcii, zvýrazní sa to v zozname akcií.</p>
     <form class="addrow" id="watchForm"><input id="watchText" placeholder="napr. maslo, Pilsner, kuracie prsia" autocomplete="off">
       <button class="btn primary">Sledovať</button></form>
@@ -398,28 +499,40 @@ $("#view").addEventListener("click", e => {
   const t = e.target;
   if (t.dataset.add) {
     const i = state.list.findIndex(x => x.key === t.dataset.add);
-    if (i >= 0) state.list.splice(i, 1);
+    if (i >= 0) { tomb["l:" + state.list[i].key] = now(); state.list.splice(i, 1); save("akcie.tomb", tomb); }
     else {
       const d = state.data.deals.find(d => keyOf(d) === t.dataset.add);
-      state.list.push({ key: keyOf(d), name: d.name, store: d.store, price: payPrice(d), old_price: d.old_price, unit: d.unit, done: false });
+      state.list.push({ key: keyOf(d), name: d.name, store: d.store, price: payPrice(d), old_price: d.old_price, unit: d.unit, done: false, t: now() });
     }
-    save("akcie.list", state.list); render();
+    save("akcie.list", state.list); render(); syncSoon();
   } else if (t.dataset.watchname) {
     const d = state.data.deals.find(x => x.name === t.dataset.watchname);
-    if (d && isWatched(d)) state.watch = state.watch.filter(w => !norm(d.name + " " + (d.brand || "")).includes(norm(w)));
-    else state.watch.push(t.dataset.watchname);
-    save("akcie.watch", state.watch); render();
+    if (d && isWatched(d)) state.watch = state.watch.filter(w => {
+      const hit = norm(d.name + " " + (d.brand || "")).includes(norm(w)); if (hit) tomb["w:" + w] = now(); return !hit; });
+    else { state.watch.push(t.dataset.watchname); watchMeta[t.dataset.watchname] = now(); }
+    save("akcie.watch", state.watch); save("akcie.watchMeta", watchMeta); save("akcie.tomb", tomb); render(); syncSoon();
   } else if (t.dataset.del) {
     e.preventDefault();
-    state.list = state.list.filter(i => i.key !== t.dataset.del); save("akcie.list", state.list); render();
+    tomb["l:" + t.dataset.del] = now();
+    state.list = state.list.filter(i => i.key !== t.dataset.del); save("akcie.list", state.list); save("akcie.tomb", tomb); render(); syncSoon();
   } else if (t.dataset.unwatch) {
-    state.watch = state.watch.filter(w => w !== t.dataset.unwatch); save("akcie.watch", state.watch); render();
+    tomb["w:" + t.dataset.unwatch] = now();
+    state.watch = state.watch.filter(w => w !== t.dataset.unwatch); save("akcie.watch", state.watch); save("akcie.tomb", tomb); render(); syncSoon();
   } else if (t.id === "shareList") {
     const text = listText();
     if (navigator.share) navigator.share({ text }).catch(() => {});
     else navigator.clipboard?.writeText(text).then(() => { t.textContent = "Skopírované ✓"; setTimeout(() => t.textContent = "Zdieľať zoznam", 1500); });
   } else if (t.id === "clearDone") {
-    state.list = state.list.filter(i => !i.done); save("akcie.list", state.list); render();
+    state.list.filter(i => i.done).forEach(i => tomb["l:" + i.key] = now());
+    state.list = state.list.filter(i => !i.done); save("akcie.list", state.list); save("akcie.tomb", tomb); render(); syncSoon();
+  } else if (t.id === "syncNew") {
+    joinCode(newCode());
+  } else if (t.id === "syncLeave") {
+    if (confirm("Odpojiť tento telefón od zdieľaného zoznamu? Položky ostanú v telefóne.")) { sync.code = ""; save("akcie.code", ""); render(); }
+  } else if (t.id === "syncShare") {
+    const text = `Pridaj sa k nášmu nákupnému zoznamu v appke Akcie: ${shareLink()}`;
+    if (navigator.share) navigator.share({ text }).catch(() => {});
+    else navigator.clipboard?.writeText(text).then(() => { t.textContent = "Skopírované ✓"; });
   }
 });
 $("#view").addEventListener("toggle", e => {
@@ -431,18 +544,19 @@ const setHeaderHeight = () => document.documentElement.style.setProperty("--hdr"
 new ResizeObserver(setHeaderHeight).observe($("header"));
 $("#view").addEventListener("change", e => {
   const k = e.target.dataset.done; if (!k) return;
-  const i = state.list.find(i => i.key === k); i.done = e.target.checked;
-  save("akcie.list", state.list); render();
+  const i = state.list.find(i => i.key === k); i.done = e.target.checked; i.t = now();
+  save("akcie.list", state.list); render(); syncSoon();
 });
 $("#view").addEventListener("submit", e => {
   e.preventDefault();
+  if (e.target.id === "joinForm") { joinCode($("#joinText").value); return render(); }
   if (e.target.id === "addForm") {
     const v = $("#addText").value.trim(); if (!v) return;
-    state.list.push({ key: "own|" + v + "|" + Date.now(), name: v, store: "Vlastné", price: null, done: false });
-    save("akcie.list", state.list);
+    state.list.push({ key: "own|" + v + "|" + Date.now(), name: v, store: "Vlastné", price: null, done: false, t: now() });
+    save("akcie.list", state.list); syncSoon();
   } else if (e.target.id === "watchForm") {
     const v = $("#watchText").value.trim(); if (!v || state.watch.includes(v)) return;
-    state.watch.push(v); save("akcie.watch", state.watch);
+    state.watch.push(v); watchMeta[v] = now(); save("akcie.watch", state.watch); save("akcie.watchMeta", watchMeta); syncSoon();
   }
   render();
 });
