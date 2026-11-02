@@ -167,7 +167,7 @@ async function init() {
   $("#validity").innerHTML = stores.map(s => {
     const v = state.data.stores[s] || {};
     return `<b class="sname ${esc(s)}">${esc(s)}</b> ${v.valid_from ? fmtDate(v.valid_from) + "–" + fmtDate(v.valid_to) : ""}`;
-  }).join(" · ") || "Zatiaľ žiadne akcie";
+  }).join(" | ") || "Zatiaľ žiadne akcie";
   render();
 }
 
