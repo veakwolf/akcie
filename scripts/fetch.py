@@ -203,6 +203,11 @@ def main():
                     if info is None:
                         print(f"{folder}: not published yet")
                         continue
+                    here = week_dir / folder / "meta.json"
+                    if here.exists() and json.loads(here.read_text(encoding="utf-8")).get("pdf") == info["pdf"]:
+                        metas[folder] = json.loads(here.read_text(encoding="utf-8"))
+                        print(f"{folder}: already downloaded today, kept (incl. AI results)")
+                        continue
                     meta, src = reuse(folder, info["pdf"], week_dir)
                     if meta:
                         metas[folder] = meta
