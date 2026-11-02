@@ -53,7 +53,9 @@ main { padding: 10px 16px calc(env(safe-area-inset-bottom) + 84px); max-width: 7
 .name { font-weight: 600; font-size: 16px; overflow-wrap: anywhere; }
 .meta { color: var(--muted); font-size: 13px; }
 .note { font-size: 13px; color: var(--sale); }
-.prices { text-align: right; grid-row: span 3; align-self: start; }
+.prices { text-align: right; grid-column: 2; grid-row: 1 / span 3; align-self: start; }
+.deal > :not(.prices) { grid-column: 1; }
+.deal > .actions { grid-column: 1 / -1; }
 .price { font-size: 22px; font-weight: 750; font-variant-numeric: tabular-nums; }
 .old { color: var(--muted); text-decoration: line-through; font-size: 13px; font-variant-numeric: tabular-nums; }
 .pct { display: inline-block; background: var(--sale-soft); color: var(--sale); font-weight: 700; font-size: 13px;
@@ -80,6 +82,13 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .addrow input { flex: 1; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); min-width: 0; }
 .kw { display: inline-flex; align-items: center; gap: 4px; background: var(--watch-soft); border-radius: 999px; padding: 4px 4px 4px 12px; margin: 0 6px 6px 0; font-size: 14px; }
 .total { text-align: right; color: var(--muted); font-size: 14px; margin-top: 6px; }
+.shop { margin-bottom: 6px; }
+.shop > summary { list-style: none; display: flex; align-items: baseline; gap: 10px; padding: 12px 2px 8px; cursor: pointer;
+  position: sticky; top: var(--hdr, 0px); background: var(--bg); z-index: 2; }
+.shop > summary::-webkit-details-marker { display: none; }
+.shop > summary .store { font-size: 17px; }
+.shop > summary::after { content: "▾"; margin-left: auto; color: var(--muted); transition: transform .15s; }
+.shop:not([open]) > summary::after { transform: rotate(-90deg); }
 </style>
 </head>
 <body>
@@ -160,11 +169,11 @@ function filtered() {
   return list.sort((a, b) => (expired(a) - expired(b)) || (isWatched(b) - isWatched(a)) || by(a, b));
 }
 
-function dealCard(d) {
+function dealCard(d, showStore = true) {
   const inList = state.list.some(i => i.key === keyOf(d));
   const dates = d.valid_from || d.valid_to ? `platí ${fmtDate(d.valid_from)}–${fmtDate(d.valid_to)}` : "";
   return `<article class="deal ${isWatched(d) ? "watched" : ""} ${expired(d) ? "expired" : ""}">
-    <div><span class="store ${esc(d.store)}">${esc(d.store)}</span>${expired(d) ? ' <span class="meta">· skončila</span>' : ""}</div>
+    ${showStore || expired(d) ? `<div>${showStore ? `<span class="store ${esc(d.store)}">${esc(d.store)}</span>` : ""}${expired(d) ? ' <span class="meta">skončila</span>' : ""}</div>` : ""}
     <div class="prices">
       <div class="price">${eur(d.price)}</div>
       ${d.old_price ? `<div class="old">${eur(d.old_price)}</div>` : ""}
@@ -180,12 +189,25 @@ function dealCard(d) {
   </article>`;
 }
 
+const STORE_ORDER = ["Tesco", "Billa", "Lidl"];
+const closed = new Set(load("akcie.closed", []));
+
 function renderDeals() {
   const list = filtered();
   const rulesNote = state.data.source === "rules"
     ? `<div class="notice">Tento týždeň ešte nie je spracovaný naplno – zobrazuje sa len časť akcií Tesco a Billa. Úplný zoznam (aj Lidl) pribudne po týždennom spracovaní.</div>` : "";
-  $("#view").innerHTML = rulesNote + `<div class="count">${list.length} akcií</div>` +
-    (list.map(dealCard).join("") || `<div class="empty">Nič sa nenašlo.</div>`);
+  const stores = [...new Set([...STORE_ORDER, ...list.map(d => d.store)])].filter(s => list.some(d => d.store === s));
+  const sections = stores.map(s => {
+    const items = list.filter(d => d.store === s);
+    const v = state.data.stores?.[s] || {};
+    const open = state.q || !closed.has(s);
+    return `<details class="shop" data-shop="${esc(s)}" ${open ? "open" : ""}>
+      <summary><span class="store ${esc(s)}">${esc(s)}</span>
+        <span class="meta">${items.length} akcií${v.valid_from ? ` · ${fmtDate(v.valid_from)}–${fmtDate(v.valid_to)}` : ""}</span></summary>
+      ${items.map(d => dealCard(d, false)).join("")}
+    </details>`;
+  }).join("");
+  $("#view").innerHTML = rulesNote + (sections || `<div class="empty">Nič sa nenašlo.</div>`);
 }
 
 function renderList() {
@@ -260,6 +282,13 @@ $("#view").addEventListener("click", e => {
     state.list = state.list.filter(i => !i.done); save("akcie.list", state.list); render();
   }
 });
+$("#view").addEventListener("toggle", e => {
+  const s = e.target.dataset?.shop; if (!s || state.q) return;
+  e.target.open ? closed.delete(s) : closed.add(s);
+  save("akcie.closed", [...closed]);
+}, true);
+const setHeaderHeight = () => document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px");
+new ResizeObserver(setHeaderHeight).observe($("header"));
 $("#view").addEventListener("change", e => {
   const k = e.target.dataset.done; if (!k) return;
   const i = state.list.find(i => i.key === k); i.done = e.target.checked;

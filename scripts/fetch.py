@@ -24,7 +24,8 @@ KEEP_WEEKS = 3
 UA = {"User-Agent": "Mozilla/5.0 (akcie weekly flyer reader; personal use)"}
 
 FOOD = re.compile(r"(\b\d+(?:[,.]\d+)? ?(?:g|kg|ml|l)\b|cena za|chladen|mrazen|pultov|voľn|čerstv|mäso|syr|"
-                  r"jogurt|pivo|víno|káva|čokolád|ovoc|zelenin|pečivo|nápoj)", re.I)
+                  r"jogurt|pivo|víno|káva|čokolád|ovoc|zelenin|pečivo|nápoj|prac[íi]|praní|aviváž|toaletn|"
+                  r"papierov|čistiac|umývačk|šampón|sprchov|zubn|plienk|vrecia na odpad)", re.I)
 
 
 def get(url, binary=False):

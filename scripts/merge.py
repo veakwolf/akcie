@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import rules  # noqa: E402
 
 CATEGORIES = ["Ovocie a zelenina", "Mäso a ryby", "Mliečne a vajcia", "Pečivo", "Trvanlivé potraviny",
-              "Sladké a slané", "Nápoje", "Alkohol", "Mrazené", "Drogéria a domácnosť", "Ostatné"]
+              "Sladké a slané", "Nápoje", "Alkohol", "Mrazené", "Drogéria a čistenie", "Ostatné"]
 
 
 def check(row):

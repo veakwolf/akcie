@@ -62,7 +62,11 @@ into clean deals for the app.
     the pack price (0,5 l → 0,49) and check it against the big "−NN %" number.
 - `category`: exactly one of: `Ovocie a zelenina`, `Mäso a ryby`,
   `Mliečne a vajcia`, `Pečivo`, `Trvanlivé potraviny`, `Sladké a slané`,
-  `Nápoje`, `Alkohol`, `Mrazené`, `Drogéria a domácnosť`, `Ostatné`.
+  `Nápoje`, `Alkohol`, `Mrazené`, `Drogéria a čistenie`, `Ostatné`.
+  `Drogéria a čistenie` = laundry detergent, softener, toilet paper, paper
+  towels, cleaning products, dishwasher tabs, soap, shampoo, toothpaste,
+  diapers, garbage bags. `Ostatné` = other **consumables** only (pet food,
+  batteries, candles…).
 - `note`: short and only if important: `"len s Clubcard"`, `"pri kúpe 2 ks"`,
   `"platí len 29. 10. – 1. 11."`, `"neplatí v predajni …"` (mention the
   exclusion only if it applies to **Trnava** or to all small stores), else `null`.
@@ -76,6 +80,9 @@ into clean deals for the app.
   products without a price.
 - Never invent a price. If the text is ambiguous and you can't tell which number
   is the price, skip the product.
-- Non-food (tools, clothes, furniture) only if it's on a food page: give it
-  category `Ostatné`.
+- **Only things a household uses up**: food, drinks, alcohol, drugstore and
+  cleaning products (see the category list). **Skip completely** anything
+  durable: furniture, tools, garden, clothes, shoes, toys, electronics,
+  kitchenware, decorations, lights, bedding, sports gear, gift sets of
+  non-consumables. If unsure whether something gets used up, skip it.
 - Don't stop to ask the user anything during steps 1–4.

@@ -59,6 +59,37 @@ def billa(page, L):
     return out
 
 
+DURABLE = re.compile(r"(stolík|stôl|stoličk|kreslo|pohovk|polic|skrin|LED|svietid|lamp|vianočný stromček|dekorác|"
+                     r"náradi|vŕtačk|skrutkov|záhradn|mikin|tričk|nohavic|bund|ponožk|obuv|topánk|hračk|"
+                     r"hrnc|panvic|tanier|pohár(?! ?\d)|príbor|nôž|posteľn|vankúš|paplón|uterák|deka|"
+                     r"slúchadl|nabíjačk|kábel|reproduktor|bicykel|kolobežk|motokár)", re.I)
+CATEGORY_RULES = [
+    ("Drogéria a čistenie", r"prac[íi]|aviváž|toaletn|papierov|čistiac|umývačk|šampón|sprchov|zubn|mydl|plienk|"
+                            r"vrecia|dezodor|kapsul|gél na pranie|jar\b|savo|wc\b"),
+    ("Alkohol", r"pivo|víno|vodka|rum|whisk|borovičk|slivovic|likér|šumiv|prosecco|fľaša.*%|\d+(,\d)? ?%"),
+    ("Nápoje", r"minerál|voda|džús|limonád|kofola|coca|pepsi|sirup|káva|čaj|nápoj"),
+    ("Mäso a ryby", r"mäs|bravč|hovädz|kurac|kurč|morč|kač|husac|teľac|šunk|saláma|klobás|párk|slanin|"
+                    r"ryb|losos|tuniak|filet|tilapi|pstruh|krevet|tresk|tresč|krkovič|karé|stehn|pliec|rezne|pečienk"),
+    ("Mliečne a vajcia", r"mlieko|jogurt|syr|maslo|smotan|tvaroh|bryndz|vajc|kefír|mozzarell|eidam|niva|"
+                         r"hermelín|pribináč|acidk|grana|parmez|gouda"),
+    ("Mrazené", r"mrazen|zmrzlin|nanuk|pizza"),
+    ("Pečivo", r"chlieb|rožk|bagety|bageta|pečivo|koláč|vianočk|croissant|buchty|toast|kaizerk|donut|zákusok|tramezzino"),
+    ("Ovocie a zelenina", r"jablk|hrušk|banán|mango|kivi|kaki|pomaranč|mandarín|citrón|hrozno|kapust|zemiak|cibuľ|mrkv|petržl|"
+                          r"paradajk|uhork|paprik|šalát|brokolic|tekvic|gaštan|granát|zelenin|ovocie|kiwi|avokád"),
+    ("Sladké a slané", r"čokolád|sušienk|oblátk|cukrík|bonbón|chips|lupienk|tyčink|keks|bábovk|orech|praclík|"
+                       r"popcorn|kakaov|rez\b|rezy|kinder|pom-bär"),
+    ("Trvanlivé potraviny", r"múk|cukor|ryža|cestovin|olej|konzerv|kečup|horčic|omáčk|polievk|cereál|müsli|"
+                            r"ocot|korenie|džem|med\b|fazuľ|šošovic|hotové jedl"),
+]
+
+
+def categorize(text):
+    for cat, pattern in CATEGORY_RULES:
+        if re.search(pattern, text, re.I):
+            return cat
+    return "Ostatné"
+
+
 PARSERS = {"tesco": tesco, "billa": billa}  # Lidl's text is too jumbled for rules; AI pass only.
 
 
@@ -75,7 +106,10 @@ def build(week_dir):
             page = int(f.stem[1:])
             lines = [l.strip() for l in f.read_text(encoding="utf-8").splitlines() if l.strip()]
             for d in parser(page, lines):
-                deals.append(dict(store=meta["store"], category="Ostatné", club_price=None, note=None,
+                text = f"{d['name']} {d['unit']}"
+                if DURABLE.search(text):
+                    continue
+                deals.append(dict(store=meta["store"], category=categorize(text), club_price=None, note=None,
                                   valid_from=meta.get("valid_from"), valid_to=meta.get("valid_to"), **d))
     return dict(week=week_dir.name, generated=dt.datetime.now().isoformat(timespec="seconds"),
                 source="rules", stores=stores, deals=deals)
