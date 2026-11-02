@@ -83,6 +83,9 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .kw { display: inline-flex; align-items: center; gap: 4px; background: var(--watch-soft); border-radius: 999px; padding: 4px 4px 4px 12px; margin: 0 6px 6px 0; font-size: 14px; }
 .total { text-align: right; color: var(--muted); font-size: 14px; margin-top: 6px; }
 .shop { margin-bottom: 6px; }
+.price.emp { color: var(--tesco); }
+.club.empTag { color: var(--tesco); background: transparent; border: 1px solid var(--tesco); }
+#emp[aria-pressed="true"] { background: var(--tesco); border-color: var(--tesco); color: #fff; }
 .shop > summary { list-style: none; display: flex; align-items: baseline; gap: 10px; padding: 12px 2px 8px; cursor: pointer;
   position: sticky; top: var(--hdr, 0px); background: var(--bg); z-index: 2; }
 .shop > summary::-webkit-details-marker { display: none; }
@@ -105,6 +108,7 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
         <option value="price">Najnižšia cena</option>
         <option value="name">Podľa názvu</option>
       </select>
+      <button class="chip" id="emp" aria-pressed="false">Zamestnanecká karta Tesco −15 %</button>
     </div>
   </div>
 </header>
@@ -129,8 +133,13 @@ function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value
 const state = {
   data: { deals: [], stores: {} }, tab: "deals",
   q: "", stores: new Set(load("akcie.stores", [])), cat: "", sort: load("akcie.sort", "disc"),
-  list: load("akcie.list", []), watch: load("akcie.watch", []),
+  list: load("akcie.list", []), watch: load("akcie.watch", []), emp: load("akcie.emp", false),
 };
+const EMP_DISCOUNT = 0.15;
+// Employee card: 15 % on top of the best card price (Clubcard/coupon price if the deal has one).
+const empPrice = d => d.store === "Tesco" && state.emp
+  ? Math.round((d.club_price ?? d.price) * (1 - EMP_DISCOUNT) * 100) / 100 : null;
+const payPrice = d => empPrice(d) ?? d.price;
 const keyOf = d => `${d.store}|${d.name}|${d.price}`;
 const isWatched = d => state.watch.some(w => norm(d.name + " " + (d.brand || "")).includes(norm(w)));
 const expired = d => d.valid_to && d.valid_to < today;
@@ -163,7 +172,7 @@ function filtered() {
     q.every(w => norm(`${d.name} ${d.brand || ""} ${d.unit || ""} ${d.category || ""}`).includes(w)));
   const by = {
     disc: (a, b) => (b.discount ?? -1) - (a.discount ?? -1),
-    price: (a, b) => a.price - b.price,
+    price: (a, b) => payPrice(a) - payPrice(b),
     name: (a, b) => a.name.localeCompare(b.name, "sk"),
   }[state.sort];
   return list.sort((a, b) => (expired(a) - expired(b)) || (isWatched(b) - isWatched(a)) || by(a, b));
@@ -175,10 +184,17 @@ function dealCard(d, showStore = true) {
   return `<article class="deal ${isWatched(d) ? "watched" : ""} ${expired(d) ? "expired" : ""}">
     ${showStore || expired(d) ? `<div>${showStore ? `<span class="store ${esc(d.store)}">${esc(d.store)}</span>` : ""}${expired(d) ? ' <span class="meta">skončila</span>' : ""}</div>` : ""}
     <div class="prices">
-      <div class="price">${eur(d.price)}</div>
-      ${d.old_price ? `<div class="old">${eur(d.old_price)}</div>` : ""}
-      ${d.discount ? `<div class="pct">−${d.discount} %</div>` : ""}
-      ${d.club_price != null && d.club_price < d.price ? `<div><span class="club">${STORE_CLUB[d.store] || "Karta"} ${eur(d.club_price)}</span></div>` : ""}
+      ${empPrice(d) != null ? `
+        <div class="price emp">${eur(empPrice(d))}</div>
+        <div><span class="club empTag">so zam. kartou</span></div>
+        <div class="old" style="text-decoration:none">akcia ${eur(d.price)}${d.club_price != null && d.club_price < d.price ? ` · Clubcard ${eur(d.club_price)}` : ""}</div>
+        ${d.old_price ? `<div class="old">${eur(d.old_price)}</div><div class="pct">−${Math.round((1 - empPrice(d) / d.old_price) * 100)} %</div>` : ""}
+      ` : `
+        <div class="price">${eur(d.price)}</div>
+        ${d.old_price ? `<div class="old">${eur(d.old_price)}</div>` : ""}
+        ${d.discount ? `<div class="pct">−${d.discount} %</div>` : ""}
+        ${d.club_price != null && d.club_price < d.price ? `<div><span class="club">${STORE_CLUB[d.store] || "Karta"} ${eur(d.club_price)}</span></div>` : ""}
+      `}
     </div>
     <div class="name">${esc(d.name)}</div>
     <div class="meta">${[d.brand, d.unit, dates].filter(Boolean).map(esc).join(" · ")}</div>
@@ -251,6 +267,11 @@ function render() {
 }
 
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+$("#emp").setAttribute("aria-pressed", state.emp);
+$("#emp").addEventListener("click", e => {
+  state.emp = !state.emp; save("akcie.emp", state.emp);
+  e.target.setAttribute("aria-pressed", state.emp); render();
+});
 $("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; save("akcie.sort", state.sort); render(); });
 $("#stores").addEventListener("click", e => {
@@ -270,7 +291,7 @@ $("#view").addEventListener("click", e => {
     if (i >= 0) state.list.splice(i, 1);
     else {
       const d = state.data.deals.find(d => keyOf(d) === t.dataset.add);
-      state.list.push({ key: keyOf(d), name: d.name, store: d.store, price: d.price, unit: d.unit, done: false });
+      state.list.push({ key: keyOf(d), name: d.name, store: d.store, price: payPrice(d), unit: d.unit, done: false });
     }
     save("akcie.list", state.list); render();
   } else if (t.dataset.del) {
