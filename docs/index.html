@@ -149,6 +149,13 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .syncbox > summary::-webkit-details-marker { display: none; }
 .syncbox p { margin: 10px 0 4px; }
 .syncbox .code { font-family: ui-monospace, Menlo, monospace; letter-spacing: .03em; user-select: all; }
+#controls { max-height: 400px; transition: max-height .25s ease, opacity .2s ease; overflow: hidden; }
+header h1 { transition: font-size .2s ease; }
+header.compact #controls { max-height: 0; opacity: 0; pointer-events: none; }
+header.compact { padding-bottom: 8px; cursor: pointer; }
+header.compact h1 { font-size: 22px; }
+header .sub { max-height: 80px; transition: max-height .25s ease, opacity .2s ease, margin .2s ease; overflow: hidden; }
+header.compact .sub { max-height: 0; opacity: 0; margin: 0; }
 </style>
 </head>
 <body>
@@ -583,6 +590,19 @@ $("#view").addEventListener("toggle", e => {
   e.target.open ? closed.delete(s) : closed.add(s);
   save("akcie.closed", [...closed]);
 }, true);
+// Collapse search + filters while scrolling down the deals; bring them back near the top.
+let lastY = 0;
+function onScroll() {
+  const y = window.scrollY, hdr = $("header");
+  if (state.tab !== "deals" || document.activeElement === $("#q")) { hdr.classList.remove("compact"); lastY = y; return; }
+  if (y > 140 && y > lastY) hdr.classList.add("compact");
+  else if (y < 80) hdr.classList.remove("compact");
+  lastY = y;
+}
+window.addEventListener("scroll", onScroll, { passive: true });
+$("header").addEventListener("click", e => {
+  if ($("header").classList.contains("compact")) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); $("header").classList.remove("compact"); }
+});
 const setHeaderHeight = () => document.documentElement.style.setProperty("--hdr", $("header").offsetHeight + "px");
 new ResizeObserver(setHeaderHeight).observe($("header"));
 $("#view").addEventListener("change", e => {
