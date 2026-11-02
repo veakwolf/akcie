@@ -2,3 +2,4 @@
 weeks/*/*/img/
 *.pdf
 __pycache__/
+codex-weekly.log
