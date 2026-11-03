@@ -356,6 +356,12 @@ function syncPanel() {
     <div class="actions"><button class="btn primary" id="syncShare">Poslať pozvánku</button><button class="btn" id="syncLeave">Odpojiť</button></div></details>`;
 }
 
+// Product photos: the store's own (Kaufland) or a matching one from the Tesco e-shop (scripts/tesco_images.py).
+const imgKey = s => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+let images = {};
+const imgFor = d => d.image || (images[imgKey(d.name)] || {}).url?.replace(/\?w=\d+/, "?w=540") || null;
+fetch("images.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : {}).then(j => images = j).catch(() => {});
+
 async function init() {
   try {
     const r = await fetch("deals.json?v=" + Date.now(), { cache: "no-store" });
@@ -455,7 +461,7 @@ function openSheet(d) {
     <div class="grab"></div>
     <button class="sclose" id="sheetClose" aria-label="Zavrieť">×</button>
     <div class="store ${esc(d.store)}">${esc(d.store)}${d.category && d.category !== "Ostatné" ? ` <span class="cat">${esc(d.category)}</span>` : ""}</div>
-    ${d.image ? `<img class="simg" src="${esc(d.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
+    ${imgFor(d) ? `<img class="simg" src="${esc(imgFor(d))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}
     <h2 class="sname-big">${esc(d.name)}</h2>
     <div class="meta">${[d.brand, d.unit].filter(Boolean).map(esc).join(" · ")}</div>
     <div class="sprice">

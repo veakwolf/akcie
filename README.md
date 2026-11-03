@@ -40,6 +40,14 @@ Celá appka je jeden súbor `docs/index.html` (GitHub Pages z priečinka `docs/`
 Kým AI spracovanie neprebehne, appka ukazuje len základný zoznam z pravidiel
 (`scripts/rules.py`) a Kaufland.
 
+## Fotky produktov
+
+- Kaufland: fotka priamo z jeho webu (ranný Action).
+- Ostatné obchody: `scripts/tesco_images.py` vyhľadá produkt v Tesco e-shope a
+  URL fotky uloží do `docs/images.json`. Tesco blokuje servery GitHubu, preto sa
+  spúšťa na domácom PC: `git pull` a potom `python scripts/tesco_images.py --push`.
+  Pri slabej zhode sa fotka nedá.
+
 ## Keď niečo nefunguje
 
 - **GitHub → Actions → Stiahnuť letáky → Run workflow** spustí sťahovanie ručne.
