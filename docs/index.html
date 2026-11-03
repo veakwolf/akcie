@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Akcie Trnava</title>
-<meta name="theme-color" content="#09080f">
+<meta name="theme-color" content="#121417">
 <meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Akcie">
@@ -17,12 +17,12 @@
 <style>
 :root {
   color-scheme: dark;
-    --bg: #09080f; --card: #14121f; --raised: #1d1a2e; --ink: #ecebf5; --muted: #8f8cad; --line: #26233a;
-    --accent: #8b6cff; --accent-soft: #231c45; --on-accent: #ffffff;
-    --sale: #ff7466; --sale-soft: #33181b;
-    --tesco: #ff6b6b; --billa: #f4c152; --lidl: #5aa2ff; --kaufland: #ff8a3d; --watch: #f4c152; --watch-soft: #2c2412;
-  --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  --bg: #121417; --card: #1b1e23; --raised: #262a31; --ink: #eef0f2; --muted: #8d949e; --line: #2a2e35;
+  --accent: #4fd1a5; --accent-soft: #163a30; --on-accent: #06261c;
+  --sale: #4fd1a5; --sale-soft: #163a30;
+  --tesco: #ff6b6b; --billa: #f2c14e; --lidl: #6aa8ff; --kaufland: #ff8a4c; --watch: #f2c14e; --watch-soft: #2e2715;
+  --display: "Manrope", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --body: "Manrope", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --tabs-h: 62px;
 }
 
@@ -184,6 +184,27 @@ body.noscroll { overflow: hidden; }
 .plan { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; margin: 14px 0 4px; }
 .plan b { font-weight: 700; }
 .plan .meta { margin-top: 4px; }
+/* "Večer" theme: graphite, borderless cards, larger prices, green for savings */
+header, .minibar, nav, .shop > summary { background: color-mix(in srgb, var(--bg) 94%, transparent); }
+h1 { font: 800 32px/1.05 var(--display); letter-spacing: -0.03em; }
+.deal { border: 0; border-radius: 20px; padding: 14px 12px 14px 16px; }
+.deal.watched { box-shadow: 0 0 0 1.5px var(--watch) inset; }
+.price { font: 800 26px/1 var(--display); letter-spacing: -0.03em; }
+.pct { background: transparent; padding: 0; font-size: 14px; }
+.name { font-weight: 700; font-size: 16px; }
+.note { color: #ffb36b; }
+.chip { background: var(--card); color: #c9ced5; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.search { background: var(--card); }
+.addbtn { background: var(--raised); }
+.addbtn.on { background: var(--accent); color: var(--on-accent); }
+.shop > summary .store { font: 800 22px/1 var(--display); }
+.catx { color: #9aa3ff; }
+.club { background: #22263a; color: #b6bcff; }
+.tag.soon { background: #3a1f1f; color: #ff8f8f; }
+.item, .syncbox, .plan { border: 0; }
+nav button[aria-current="page"] { color: var(--ink); }
+nav button[aria-current="page"]::before { background: var(--accent); }
 </style>
 </head>
 <body>
