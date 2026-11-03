@@ -1,32 +1,61 @@
 # Akcie Trnava
 
-Vlastná náhrada za aplikáciu Dohliadač: týždenné akcie z letákov **Tesco**,
-**Billa** a **Lidl** v jednej appke na iPhone, s vyhľadávaním, nákupným
-zoznamom a sledovanými produktmi.
+Vlastná náhrada za aplikáciu Dohliadač: týždenné akcie z **Tesco**, **Billa**,
+**Lidl** a **Kaufland** v jednej appke na iPhone.
 
 **Appka:** https://veakwolf.github.io/akcie/ (v Safari → Zdieľať → Pridať na
 plochu)
 
-## Ako to funguje
+## Čo appka vie
 
-1. **Každý pondelok a stredu ráno** GitHub Action (`.github/workflows/letaky.yml`) stiahne
-   aktuálne letáky (v pondelok aj budúce letáky Tesco a Billa), vytiahne text strán s potravinami do `weeks/<dátum>/` a
-   urobí základný zoznam akcií (časť Tesco a Billa) do `docs/deals.json`.
-   Obrázky strán Lidla idú do vetvy `stranky` (každý týždeň sa prepíše).
-2. **V pondelok večer** Codex (naplánovaná úloha) alebo Claude spracuje nové letáky („spracuj akcie“); v stredu sa použije pondelkové spracovanie a nové sa nemusí robiť. Claude
-   podľa [`SPRACOVANIE.md`](SPRACOVANIE.md) prečíta letáky, vytvorí úplný zoznam
-   akcií a uloží ho. Bez tohto kroku appka ukazuje len základný zoznam.
-3. Appka (`docs/index.html`) číta `docs/deals.json`. Nákupný zoznam a sledované
-   produkty sa ukladajú len v telefóne.
+- Akcie podľa obchodu, vyhľadávanie, rýchle filtre, cena za kg/l,
+  „najlacnejšie“, „končí zajtra“.
+- História cien a detail akcie (spodný panel).
+- Prepínač **tento / budúci týždeň** (keď sú budúce letáky už zverejnené).
+- Zamestnanecká karta Tesco (−15 %).
+- **Môj zoznam** – nákupný zoznam uložený v telefóne.
+- **Spoločný zoznam** – zdieľaný cez Supabase, pripája sa kódom alebo
+  pozvánkou. Schéma databázy je v [`db/schema.sql`](db/schema.sql).
+- **Sledované** produkty – osobné, uložené v telefóne.
 
-Kaufland nie je zahrnutý: jeho stránka blokuje automatické sťahovanie.
+Celá appka je jeden súbor `docs/index.html` (GitHub Pages z priečinka `docs/`).
+
+## Odkiaľ sú dáta
+
+1. **Každé ráno (~6:17)** GitHub Action „Stiahnuť letáky“
+   (`.github/workflows/letaky.yml`) spustí `scripts/fetch.py`:
+   - stiahne letáky Tesco, Billa a Lidl (PDF), vytiahne text strán s
+     potravinami do `weeks/<dátum>/<obchod>/`; keď sú zverejnené, aj budúce
+     letáky Tesco a Billa (`tesco_next`, `billa_next`),
+   - Kaufland berie priamo z predajne.kaufland.sk (`scripts/kaufland_web.py`,
+     bez AI) – aktuálny aj budúci týždeň,
+   - leták, ktorý sa nezmenil, sa len prevezme z predošlého dňa, takže nové
+     AI spracovanie netreba,
+   - obrázky strán (Lidl) idú do vetvy `stranky`, ktorá sa zakaždým prepíše.
+2. **AI spracovanie** („spracuj akcie“) robí Codex na mojom PC – naplánované
+   úlohy v pondelok a stredu o 18:00 (`scripts/codex-weekly.ps1`). Z textu
+   letákov vytiahne akcie do `ai.jsonl` podľa [`AGENTS.md`](AGENTS.md) a
+   [`SPRACOVANIE.md`](SPRACOVANIE.md). Berie sa len spotrebný tovar
+   (potraviny, nápoje, drogéria, čistiace prostriedky).
+3. `scripts/merge.py` skontroluje riadky, dopočíta cenu za kg/l, aktualizuje
+   históriu cien (`docs/history.json`) a zapíše `docs/deals.json`. Keď je
+   všetko spracované, má `"complete": true`.
+
+Kým AI spracovanie neprebehne, appka ukazuje len základný zoznam z pravidiel
+(`scripts/rules.py`) a Kaufland.
 
 ## Keď niečo nefunguje
 
-- **Actions → Stiahnuť letáky → Run workflow** spustí sťahovanie ručne.
+- **GitHub → Actions → Stiahnuť letáky → Run workflow** spustí sťahovanie ručne.
 - Chyby jednotlivých obchodov sú v `weeks/<dátum>/status.json`. Ak obchod zmení
-  web, treba upraviť príslušnú funkciu `find_*` v `scripts/fetch.py`.
+  web, treba upraviť príslušnú funkciu `find_*` v `scripts/fetch.py`
+  (Kaufland: `scripts/kaufland_web.py`).
+- Log Codexu je v `codex-weekly.log` na PC (necommituje sa).
 - `python3 scripts/merge.py` skontroluje a znova zloží `docs/deals.json`.
 
-Údaje pochádzajú z verejne dostupných letákov obchodov, sťahujú sa raz týždenne
-a sú len na osobné použitie.
+## Na neskôr
+
+- Upozornenia na sledované produkty (týždenný e-mail alebo notifikácia).
+
+Údaje pochádzajú z verejne dostupných letákov a webov obchodov a sú len na
+osobné použitie.
