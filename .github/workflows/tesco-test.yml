@@ -6,10 +6,10 @@ jobs:
     steps:
       - run: |
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-          for u in "https://nakup.itesco.sk/groceries/sk-SK/search?query=mlet%C3%A9%20hov%C3%A4dzie" "https://nakup.itesco.sk/groceries/sk-SK/"; do
+          for u in "https://potravinydomov.itesco.sk/groceries/sk-SK/search?query=mlet%C3%A9%20hov%C3%A4dzie" "https://www.tesco.sk/groceries/sk-SK/search?query=mlet%C3%A9%20hov%C3%A4dzie" "https://www.tesco.sk/nakup/groceries/sk-SK/search?query=mlet%C3%A9"; do
             echo "=== $u"
-            curl -sS -L -m 30 -A "$UA" -H "Accept-Language: sk-SK,sk;q=0.9" -o p.html -w "HTTP %{http_code} size %{size_download}\n" "$u"
+            curl -sS -L -m 30 -A "$UA" -H "Accept-Language: sk-SK,sk;q=0.9" -o p.html -w "HTTP %{http_code} size %{size_download} url %{url_effective}\n" "$u" || true
             grep -o '<title>[^<]*' p.html | head -2
-            grep -oE 'https://[^"]*digitalcontent[^"]*' p.html | head -5
-            grep -oiE 'captcha|access denied|akamai|bm-verify' p.html | sort | uniq -c
+            grep -oE 'https://[^"]*digitalcontent[^"]*' p.html | sort -u | head -5 || true
+            grep -oiE 'captcha|access denied|akamai|bm-verify' p.html | sort | uniq -c || true
           done
