@@ -1,1 +1,968 @@
-{}
+{
+"100 jablkovy dzus": {
+"url": null,
+"checked": "2026-11-03"
+},
+"activia jogurt": {
+"url": null,
+"checked": "2026-11-03"
+},
+"activia jogurtovy napoj": {
+"url": null,
+"checked": "2026-11-03"
+},
+"always platinum damske hygienicke vlozky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/7c5f5571-f1c4-4b8e-85dd-563a248cc723/07a9a167-35ed-4f80-bbd5-fd46718db89b.jpeg?w=225",
+"match": "Always Platinum Hygienické Vložky Super Extra (Veľkosť 3) 12 Vložiek",
+"score": 0.8,
+"checked": "2026-11-03"
+},
+"autoactive tuhy wc blok": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/9bf22d11-6fcd-482e-ae47-722821414270/afb883f5-6554-4b96-8896-fa53a3006197.jpeg?w=225",
+"match": "Bref Power Active Lemon tuhý WC blok 3 x 50 g",
+"score": 0.8,
+"checked": "2026-11-03"
+},
+"avivaz": {
+"url": null,
+"checked": "2026-11-03"
+},
+"avokado": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/da350cc2-0053-4573-85d5-09c5324a448e/c3e6e150-ced7-44c3-8070-f27c0d6cb331_293040584.jpeg?w=225",
+"match": "Tesco Finest Avokádo zrelé ks",
+"score": 1,
+"checked": "2026-11-03"
+},
+"balicek cukroviniek": {
+"url": null,
+"checked": "2026-11-03"
+},
+"banany v zele v cokolade": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/c432785d-4c0d-4c28-b13e-9b6b636c8b6d/5550f7f8-7d52-49d7-a457-76514c586bba_1447436631.jpeg?w=225",
+"match": "ORION BANÁNY želé tyčinka v horkej čokoláde 45 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"banovecka parenica udena neudena": {
+"url": null,
+"checked": "2026-11-03"
+},
+"bistrobageta": {
+"url": null,
+"checked": "2026-11-03"
+},
+"bochnik s kvaskom a cmarom": {
+"url": null,
+"checked": "2026-11-03"
+},
+"bratislavske parky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/7635e787-a0fd-4a7f-b382-147411bc117b/67c9d0a0-74e7-4020-9b00-86d9e6ea1c78.jpeg?w=225",
+"match": "Ilavský Bratislavské párky",
+"score": 1,
+"checked": "2026-11-03"
+},
+"bravcove plece bez kosti chladene": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/cc83a193-3bae-40c5-8346-ccc84c65403b/1718757e-deed-4b06-a398-e9a60e263e9a_1837438991.jpeg?w=225",
+"match": "Bravčové plece bez kosti",
+"score": 0.75,
+"checked": "2026-11-03"
+},
+"bravcove stehno bez kosti chladene": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/2722ee51-9533-4e88-9260-2211b03fb3cd/e33213fc-e4ac-47bd-bf90-87426e42a2d4_1118954051.jpeg?w=225",
+"match": "Bravčové stehno bez kosti",
+"score": 0.75,
+"checked": "2026-11-03"
+},
+"bravcovy bok s kostou kostelecke uzeniny": {
+"url": null,
+"checked": "2026-11-03"
+},
+"bylinne caje vybrane druhy": {
+"url": null,
+"checked": "2026-11-03"
+},
+"captain morgan original spiced gold 35": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/b471f4ad-10ed-4b8e-a2fd-e527b1172998/37edaf10-247a-4743-91ab-5b9ab33277b1_841757478.jpeg?w=225",
+"match": "Captain Morgan Original Spiced Gold liehovina 35% 0,7 l",
+"score": 1,
+"checked": "2026-11-03"
+},
+"cerealna tycinka": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/4fe2e232-8b55-47de-9f73-066449ff9fef/e9cf7ac7-d8d3-4ff2-9635-51d8e74f979d_567856942.jpeg?w=225",
+"match": "CORNY BIG cereálna tyčinka Čokoláda-Banán 50 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"chopok salama": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/2888de21-7e62-4b30-9be6-091b609a9db0/5a26a949-7f37-494b-b4e5-a76fec1cca2c.jpeg?w=225",
+"match": "Mecom Chopok saláma",
+"score": 1,
+"checked": "2026-11-03"
+},
+"cibula": {
+"url": null,
+"checked": "2026-11-03"
+},
+"cibula cervena volna": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3896e92b-6d80-4ae1-ab7e-da1cd095862e/8d69bd88-9311-49fc-83e4-5ea37ec99a30_217285391.jpeg?w=225",
+"match": "Cibuľa červená voľná",
+"score": 1,
+"checked": "2026-11-03"
+},
+"cierny zeleny bylinny caj": {
+"url": null,
+"checked": "2026-11-03"
+},
+"citrony volne": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/4166ef42-2776-4f0c-a40c-7053be1a436f/a0107353-a622-4166-afc8-f7f269bf00e0_1728824376.jpeg?w=225",
+"match": "Citróny voľné",
+"score": 1,
+"checked": "2026-11-03"
+},
+"coca cola coca cola zero fanta": {
+"url": null,
+"checked": "2026-11-03"
+},
+"cokoladove gulocky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"cokoladove lizanky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"cottage cheese original": {
+"url": null,
+"checked": "2026-11-03"
+},
+"croissant s maslom": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/5f4c0a7a-457c-4a62-a3b1-df21f561736a/7396195a-481a-4428-b494-d0fa89832510_432601306.jpeg?w=225",
+"match": "Multicereálny croissant s maslom 65 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"cucoriedky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/e4af1d8e-77a9-4cb6-9efc-bbba93e062b6/ab56cc44-b136-4e86-a4fb-74e14fed8334_1284020156.jpeg?w=225",
+"match": "Tesco Čučoriedky balené 125 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"cukor hnedy trstinovy": {
+"url": null,
+"checked": "2026-11-03"
+},
+"danone kostici jogurt": {
+"url": null,
+"checked": "2026-11-03"
+},
+"demanovka horka bylinny liker 38": {
+"url": null,
+"checked": "2026-11-03"
+},
+"detska sunka": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/b421999b-772b-46d4-a375-36e227e49245/ce77d4f0-35e1-4e07-af3e-fcb03b012919_1162485883.jpeg?w=225",
+"match": "Kostelecké Uzeniny Detská šunka výberová",
+"score": 1,
+"checked": "2026-11-03"
+},
+"detska voda": {
+"url": null,
+"checked": "2026-11-03"
+},
+"donut s cokoladovou prichutou": {
+"url": null,
+"checked": "2026-11-03"
+},
+"donut scary eye s naplnou z lesnych plodov": {
+"url": null,
+"checked": "2026-11-03"
+},
+"dove deospray": {
+"url": null,
+"checked": "2026-11-03"
+},
+"eidam platky udeny neudeny": {
+"url": null,
+"checked": "2026-11-03"
+},
+"energeticky napoj": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/b83e9f0c-d638-42be-ae8c-ca8f4e66592f/e61218ee-44da-4aa5-8960-025ce563c3c1_362582263.jpeg?w=225",
+"match": "Tiger Energetický nápoj 500 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"extra sirup": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/ad230dd4-00f8-4fcb-8c73-d3b93daf9f9c/77877fc5-245e-4705-b4f8-92c14c89bbba_2268362001.jpeg?w=225",
+"match": "Jupí Extra sirup mojito 0,7 l",
+"score": 1,
+"checked": "2026-11-03"
+},
+"extra virgin olivovy olej": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/0ee322f9-e951-4b71-be1d-2883cbaac1ea/78487ff9-25fb-4485-8b81-5ea4cca52fba_984092363.jpeg?w=225",
+"match": "Franz Josef Kaiser Exclusive Extra panenský olivový olej 500 ml",
+"score": 0.83,
+"checked": "2026-11-03"
+},
+"farmarske mlieko 3 6": {
+"url": null,
+"checked": "2026-11-03"
+},
+"finlandia vodka 40": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/b77136f6-fba0-478d-8a6f-c2499125e514/603357a8-12c2-4436-90f3-52a1e8664cd8_884141307.jpeg?w=225",
+"match": "Finlandia Vodka 40% 700 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"gasparik polievky chladene": {
+"url": null,
+"checked": "2026-11-03"
+},
+"gastany volne": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/dd1aa65d-b387-40e5-9dc3-4ab9e2f98172/fb042a16-7729-4636-84a8-700cdfe94eab_214807151.jpeg?w=225",
+"match": "Gaštany jedlé voľné",
+"score": 1,
+"checked": "2026-11-03"
+},
+"gazdovsky kvaskovy chlieb": {
+"url": null,
+"checked": "2026-11-03"
+},
+"gibson s london dry gin 37 5": {
+"url": null,
+"checked": "2026-11-03"
+},
+"grana padano d o p": {
+"url": null,
+"checked": "2026-11-03"
+},
+"granatove jablko": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/1a9ed31a-e452-4fb5-bd6d-b4d6a5aeebf3/48c0a3c4-d9e6-4b86-9625-edde1988bd1b_306393199.jpeg?w=225",
+"match": "Granátové jablko ks",
+"score": 1,
+"checked": "2026-11-03"
+},
+"granola": {
+"url": null,
+"checked": "2026-11-03"
+},
+"gulocky zleteho mlieka": {
+"url": null,
+"checked": "2026-11-03"
+},
+"hamenatierka": {
+"url": null,
+"checked": "2026-11-03"
+},
+"hermelin": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/f1cbe244-fedf-4e05-a013-b58ff66d7c32/cc294cf8-ffdf-4a9b-9e46-93ef63ec30ef_1136736689.jpeg?w=225",
+"match": "Král Sýrů Hermelín so zeleným korením 120 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"hotove jedla": {
+"url": null,
+"checked": "2026-11-03"
+},
+"hrusky xenia ukladane": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/a3bb714f-c982-4a4e-93eb-26f3919c698e/1abf1204-59fc-41dc-b9cc-6da3b3256216_1334442369.jpeg?w=225",
+"match": "Hrušky Xenia ukladané",
+"score": 1,
+"checked": "2026-11-03"
+},
+"hurmikaki": {
+"url": null,
+"checked": "2026-11-03"
+},
+"instantna polievka knedlickova": {
+"url": null,
+"checked": "2026-11-03"
+},
+"instantny kakaovy napoj": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/65ebb6a8-576b-43e8-96fe-769f43cf224c/04f30a4c-7131-423f-8e87-792b3c487db2_2111743880.jpeg?w=225",
+"match": "GRANKO Original instantný kakaový nápoj s vitamínmi 400 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"jablka evelina ukladane": {
+"url": null,
+"checked": "2026-11-03"
+},
+"jack mackerel udena makrela": {
+"url": null,
+"checked": "2026-11-03"
+},
+"jacobs velvet zrnkova kava": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/9e8a0ef2-3bd5-4a20-a6ca-d6390a2f1924/1bfd15e9-1e53-4305-8de1-cb03b6f5527c_1402512794.jpeg?w=225",
+"match": "Jacobs Velvet Gold Crema zrnková káva 1000 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"jagermeister bylinny liker 35": {
+"url": null,
+"checked": "2026-11-03"
+},
+"jojo cukriky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/14b7b978-f297-4e11-b5d7-80f34df7d5dc/09ef6a55-795e-4d9e-af2c-ac26da01dc9d.jpeg?w=225",
+"match": "JOJO Kyslé dážďovky Cukríky 80 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"kacacie stehna s kozou": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kacica bez drobkov hungerit": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kaizerka natural": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kapsa smotanovo slaninova": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kapusta cervena krajana": {
+"url": null,
+"checked": "2026-11-03"
+},
+"karfiol": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/477307a6-a788-4ce7-a8ff-d014e891b7f2/0893dc12-4d9c-4a9c-b98d-0d8e75d3bad6_712385173.jpeg?w=225",
+"match": "Karfiol ks",
+"score": 1,
+"checked": "2026-11-03"
+},
+"karicka klasik": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3d506273-2795-4435-85f1-b51fd4c901f8/4e18c86a-69c5-4857-9864-e5f5dd3e975c.jpeg?w=225",
+"match": "Karička Klasik 8 ks 125 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"kavenky a kakaove rezy": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kavenky a kakaove rezy minis": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kefir biely": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/0f551fdd-f842-45e2-85bb-048387a47448/bd91f467-2f46-4e85-b2c2-7ee5b54b730b_2009072961.jpeg?w=225",
+"match": "Rajo Acidko kefír jemný biely 450 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"kesu prazene solene": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kinder bueno plnene oblatky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/f3e774f1-831b-4328-b763-5c084973d791/a78f5b6a-f6c4-40f9-9828-c56c2f2355eb_215092031.jpeg?w=225",
+"match": "Kinder Bueno Oblátky plnené mliečnou a lieskovcovou náplňou v mliečnej čokoláde 2 x 21,5 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"kinder surprise cokoladove vajicko dark": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kivigold": {
+"url": null,
+"checked": "2026-11-03"
+},
+"klobasa gasparik": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kmotrova klobasa trio": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kofola": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/dff47936-d605-4c8e-b279-6c177a38f9af/1abe83ed-47f1-419a-9da6-46fc39ffa5e4.jpeg?w=225",
+"match": "Kofola Originál 2 l",
+"score": 1,
+"checked": "2026-11-03"
+},
+"korejska bageta": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kornbageta": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/c77c65bd-9293-4b1f-aa65-6517c4757172/e6ab1acf-2a05-4013-9da0-4f77078d6a57_2096450509.jpeg?w=225",
+"match": "Kornbageta 115 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"korunny cukor krystalovy": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/d43a46ae-0206-4ab6-8b05-0b2e0feff888/335d0cd5-7f56-442d-bac0-6dc89a09527f.jpeg?w=225",
+"match": "Korunný Cukor Kryštálový 1000 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"kralovska klobasa": {
+"url": null,
+"checked": "2026-11-03"
+},
+"krevety lupane": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kubik waterrr": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/81b9e7dc-fb37-41d6-9357-f034b80fdb81/5d1bfb7e-bbdc-4542-bf6a-6a5b883ea3ab.jpeg?w=225",
+"match": "Kubík Waterrr Príchuť jahoda 500 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"kuchynske utierky 2 vrstvove": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kukuricne chrumky arasidove": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kuracie pecienky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kuracie rezne": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/4153b8a9-f520-4620-9c64-075554e4ae66/2c6b3a57-503f-4205-a69a-9c214f6f4e86_1522473602.jpeg?w=225",
+"match": "Hyza Zlaté kuracie rezne",
+"score": 1,
+"checked": "2026-11-03"
+},
+"kuracie stehna horne a dolne": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kuracie stripsy mrazene": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kurca a dve stehenne stvrte": {
+"url": null,
+"checked": "2026-11-03"
+},
+"kysly cistiaci prostriedok na hrdzu a vodny kamen": {
+"url": null,
+"checked": "2026-11-03"
+},
+"la mia grande salame picante": {
+"url": null,
+"checked": "2026-11-03"
+},
+"lipanek tvarohovo smotanovy dezert": {
+"url": null,
+"checked": "2026-11-03"
+},
+"lucina": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/02284ad9-afec-4af1-bf8e-c9b99f4aae23/eff5abef-4bd7-40eb-85f3-2cf7d7756da4.jpeg?w=225",
+"match": "Lučina Svěží 180 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"magnum bonbon": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/58bad1d4-7732-468a-b7e5-b14e0da8280d/d2bf705c-131b-4532-aefc-c83d4356cd70_675107765.jpeg?w=225",
+"match": "Magnum Bonbon Salted Caramel 12 x 17 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"maliny": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/18db1a36-d502-4070-8007-776a6fa3f738/98855190-ebea-445d-bd9f-82f4791c705a_295666263.jpeg?w=225",
+"match": "Tesco Maliny 125 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mandarinky volne": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/5fe1da25-aa08-4139-b08c-5e2b6aae12c5/63ced636-4982-4208-a32d-d59c9814a4df_1588247745.jpeg?w=225",
+"match": "Mandarínky voľné",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mango": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/d2883345-d657-42a4-965a-885c0384e0a3/04390da7-0cd9-4e45-ab93-9e17a16775ef_1196346209.jpeg?w=225",
+"match": "Mango ks",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mangoplatky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"marcipan nugat tycinka": {
+"url": null,
+"checked": "2026-11-03"
+},
+"marlenka gulocky medove kakaove malinove": {
+"url": null,
+"checked": "2026-11-03"
+},
+"maxi king chladeny dezert": {
+"url": null,
+"checked": "2026-11-03"
+},
+"mccain 123 hranolceky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"minit home oskvarkove marhulove": {
+"url": null,
+"checked": "2026-11-03"
+},
+"miticka mineralna voda": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/96abc641-cd7c-42a7-af9a-dd143337059f/946b2841-1f4f-441b-b617-7bf84dc5fd35.jpeg?w=225",
+"match": "Mitická Prírodná minerálna voda jemne perlivá 1,5 l",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mlety pripravok z hovadzieho masa": {
+"url": null,
+"checked": "2026-11-03"
+},
+"mlieko 1 5 trvanlive": {
+"url": null,
+"checked": "2026-11-03"
+},
+"mocca grande mleta kava": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/1e5f9eb9-cf84-4e02-bf77-81e430481bbe/7ed0637f-5b38-40df-a77c-7fdd76e2b68e_1230051121.jpeg?w=225",
+"match": "Eduscho Mocca Grande pražená mletá káva 2 x 250 g (500 g)",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mon cheri cokoladove bonbony": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/2618358f-d0ec-4b05-a796-a2828d76dfed/61d8bf8e-3d63-4aa5-a5ae-3845d619fd09_1914483489.jpeg?w=225",
+"match": "Mon Chéri Čokoládové bonbóny plnené celou čerešňou v likéri 157,5 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"moravska krkovica": {
+"url": null,
+"checked": "2026-11-03"
+},
+"morcacie horne stehno bez kosti a koze": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/efc6094c-d3da-4f3a-8c83-ae65c537b14c/d732930b-fda3-40db-8c42-e3eaebdb2cd0.jpeg?w=225",
+"match": "Hydina Kubus Morčacie stehno horné bez kosti a kože (plátok)",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mortadella bologna": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/06507907-e7a1-4a1e-a026-b84e11b2f5cd/b13cb2b3-e388-454c-8547-44b98a1f27d4_65499082.jpeg?w=225",
+"match": "Tesco Finest Mortadella Bologna 120 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mozartove gulicky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"mozzarella": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/4b886974-13e2-4afd-b6cc-38c38f728a19/1c932878-05d4-437f-b0a2-65054cbd4109_1839722727.jpeg?w=225",
+"match": "Galbani Mozzarella 125 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"mrkva": {
+"url": null,
+"checked": "2026-11-03"
+},
+"mullermilch mliecny napoj": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/6fe12d0f-32ce-4137-9882-b32f6a5da816/18645d1d-be4b-495e-867a-de1797286688_762076282.jpeg?w=225",
+"match": "Müller Müllermilch Mliečny nápoj s čokoládovou príchuťou 400 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"myslik cerealie": {
+"url": null,
+"checked": "2026-11-03"
+},
+"nealkoholicky napoj": {
+"url": null,
+"checked": "2026-11-03"
+},
+"nescafe classic instantna kava": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/47af0422-8891-4e21-b056-299189fbfec1/009e27b0-ab00-433e-9b4e-3795d07596c9.jpeg?w=225",
+"match": "NESCAFÉ CLASSIC, instantná káva, 200 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"nicolaus extra jemna vodka 37 5": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/48affc9e-3976-4e89-b686-b361c70b6c53/7b26d4e9-9994-4a79-b0b6-a13ac146a853.jpeg?w=225",
+"match": "Nicolaus Vodka Extra Jemná 37,5% 0,7 l",
+"score": 1,
+"checked": "2026-11-03"
+},
+"nivea sprchovaci gel": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/40900e7f-43c0-4872-a014-10d1e51354ac/2685ea22-0804-4049-bf8b-ed492ca36478_807443578.jpeg?w=225",
+"match": "Nivea Diamond & Argan Oil Ošetrujúci sprchovací gél 500 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"oblatky vybrane druhy": {
+"url": null,
+"checked": "2026-11-03"
+},
+"ochutena mineralna voda": {
+"url": null,
+"checked": "2026-11-03"
+},
+"omacka vybrane druhy": {
+"url": null,
+"checked": "2026-11-03"
+},
+"oravska slanina": {
+"url": null,
+"checked": "2026-11-03"
+},
+"original crievko": {
+"url": null,
+"checked": "2026-11-03"
+},
+"oskvarkova natierka": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/bf89c8fd-59d8-4631-a084-206d2f668bdf/4c4860f7-29f8-4239-b21f-8162b7a37e64.jpeg?w=225",
+"match": "PRETO Radoma Oškvarková nátierka 135 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"osviezovac vzduchu v spreji": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/f1b80866-c252-46ad-b63f-fcc1185008c3/611c3951-891d-404b-bfe1-516ca4bfb637.jpeg?w=225",
+"match": "Ambi Pur Lenor Spring Awakening Osviežovač Vzduchu v Spreji 185 ml",
+"score": 0.75,
+"checked": "2026-11-03"
+},
+"pampers premium care detske plienky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"parizsky salat premium": {
+"url": null,
+"checked": "2026-11-03"
+},
+"pedigree kompletne mokre krmivo pre psy": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/d81d9741-add2-48e0-8871-8a250cb41446/2c78ebe6-fe6a-44ad-91fc-0834364b5963_1937953656.jpeg?w=225",
+"match": "Pedigree S hovädzím v želé kompletné mokré krmivo pre dospelé psy 400 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"pernicky": {
+"url": null,
+"checked": "2026-11-03"
+},
+"pernikova oblatka": {
+"url": null,
+"checked": "2026-11-03"
+},
+"petrzlen volny prany": {
+"url": null,
+"checked": "2026-11-03"
+},
+"pilsner urquell svetle pivo 12": {
+"url": null,
+"checked": "2026-11-03"
+},
+"piskoty": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/19161024-49ef-47a1-a5bc-25354a07204a/d56a1a9f-5199-4351-b5c0-a5919b1a1ff7_299633943.jpeg?w=225",
+"match": "Opavia Piškoty Tradičné Piškoty Rodinné balenie 220 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"poctive parky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/76bbd48c-321c-4ee2-a91b-4901cc66284b/c00f0771-dec9-4f55-8065-cfd92616c69f.jpeg?w=225",
+"match": "Berto Poctivé párky 180 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"polievkova zmes masiarov vyber hovadzie a bravcove kosti": {
+"url": null,
+"checked": "2026-11-03"
+},
+"pomarance volne": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3352f854-6be5-4d93-bb95-6dd75c90ee6e/fc529c20-da88-4648-880d-41d5c228ad58_538946341.jpeg?w=225",
+"match": "Pomaranče voľné",
+"score": 1,
+"checked": "2026-11-03"
+},
+"pomarancovy dzus 100": {
+"url": null,
+"checked": "2026-11-03"
+},
+"popradska crema zrnkova kava": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/b8d7cc8a-2b79-4467-a9d8-295905c4d010/2adb25fb-752d-4c7c-ae88-d8b723b49573.jpeg?w=225",
+"match": "Popradská Crema Espresso Crema pražená zrnková káva 1000 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"pracie gel 40 prani": {
+"url": null,
+"checked": "2026-11-03"
+},
+"pracie gel praci prasok tablety": {
+"url": null,
+"checked": "2026-11-03"
+},
+"premium vajcia 10 ks velkost m l": {
+"url": null,
+"checked": "2026-11-03"
+},
+"pressburg biele cervene ruzove vino": {
+"url": null,
+"checked": "2026-11-03"
+},
+"pringles slany snack": {
+"url": null,
+"checked": "2026-11-03"
+},
+"prosecco d o c": {
+"url": null,
+"checked": "2026-11-03"
+},
+"psenicna muka hladka polohruba hruba": {
+"url": null,
+"checked": "2026-11-03"
+},
+"puncovy rez": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/0e2fd197-d94c-4802-9448-734d6b71c416/7f04e16b-fe8a-4b09-9a96-6002c5fc4004_244186213.jpeg?w=225",
+"match": "Jomo Punčový rez 330 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"qualita oro mleta kava": {
+"url": null,
+"checked": "2026-11-03"
+},
+"raffaello oblatka s naplnou": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3d241f4f-e6ac-415c-a6ae-b900c024b790/d4fbe1c1-82bc-4724-90eb-e86ef26dbce8_224261400.jpeg?w=225",
+"match": "Ferrero Raffaello Confetteria oblátka s náplňou a celou mandľou posypaná strúhaným kokosom 150 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"rajciaky cherry strapcove cerinka": {
+"url": null,
+"checked": "2026-11-03"
+},
+"rajec pramenita voda": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/69d1087c-468d-4ec2-b87d-402a7b0f0f91/2d394914-2237-42b7-9de5-6afa69201184.jpeg?w=225",
+"match": "Rajec Pramenitá voda nesýtená 1,5 l",
+"score": 1,
+"checked": "2026-11-03"
+},
+"rama classic": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/4d03b65b-12e5-46cf-8a05-f140aa718d2a/4eea3188-5136-4f49-8581-a478671094b1_222727731.jpeg?w=225",
+"match": "Rama Classic 400 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"red bull energeticky napoj": {
+"url": null,
+"checked": "2026-11-03"
+},
+"richtar kvaskovy zemiakovy chlieb": {
+"url": null,
+"checked": "2026-11-03"
+},
+"rulandske sede biele cervene ruzove vino": {
+"url": null,
+"checked": "2026-11-03"
+},
+"ryza gulatozrnna dlhozrnna": {
+"url": null,
+"checked": "2026-11-03"
+},
+"salat ladovy": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/e6bb0453-e33f-4730-8007-55a528b60822/a357c51b-ab4e-4172-a883-72e2b74973e2_674646237.jpeg?w=225",
+"match": "Tesco Ľadový šalát",
+"score": 1,
+"checked": "2026-11-03"
+},
+"santa claus": {
+"url": null,
+"checked": "2026-11-03"
+},
+"schwarzwaldska sunka": {
+"url": null,
+"checked": "2026-11-03"
+},
+"slane tycinky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/569a2832-69ba-4994-9caf-d5fd964b22cb/7a3e5f7b-9609-43bc-89fa-f55288ec0b1c.jpeg?w=225",
+"match": "DRU Slané tyčinky 90 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"slnecnicovy olej": {
+"url": null,
+"checked": "2026-11-03"
+},
+"smotana na slahanie 33": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/b5e36f19-4e48-454a-a9f3-8035868925d3/aeb36161-e8b0-4d95-ac6b-79f84a708fe5.jpeg?w=225",
+"match": "Rajo Smotana na šľahanie 33% 250 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"smotanovy jogurt biely": {
+"url": null,
+"checked": "2026-11-03"
+},
+"smotanovy jogurt ochuteny": {
+"url": null,
+"checked": "2026-11-03"
+},
+"somat tablety do umyvacky riadu 5 komorove": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/bfd6cfec-6cea-4b5c-ae34-a4d962e91932/96611fc5-db38-4887-ba72-cb0ef9bf342c_2005609203.jpeg?w=225",
+"match": "Somat Classic Power Lemon tablety do umývačky riadu 95 ks 1577 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"sosovicove chipsy": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/f1d07f99-1c4b-4950-9d37-229a51990c3e/c2f6534a-c409-4d4f-b4c1-6ecc7c1ea999_1842812669.jpeg?w=225",
+"match": "Slovakia Chipsy šošovicové s príchuťou paprika 65 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"stolove hrozno biele": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3281cfd1-e8e9-4ca1-9ad9-6484d2342a65/fb62c97f-6170-442c-9ead-7a1d19dfa3a5_498562666.jpeg?w=225",
+"match": "Hrozno stolové biele, voľné",
+"score": 1,
+"checked": "2026-11-03"
+},
+"sunkova pena": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/25b63a79-5d6e-4a81-8bcd-b20de15a6896/afdcf148-9bb5-42de-bbf0-eb039d102ddc.jpeg?w=225",
+"match": "Tauris Maťko šunková pena 100 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"svetle pivo 10": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/5272c62c-09bf-42e2-b6f5-17c12f61462f/0132ee05-4e49-47ec-b78a-d87b1759b73f.jpeg?w=225",
+"match": "Corgoň 10 % svetlé výčapné pivo 500 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"svetle pivo 10 plechovka": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/4bf2b1ae-826b-43a2-8a7f-7ce3b0cc1d26/ca4b3c54-dc3a-4e6f-9873-0d480e44ca63_1492286633.jpeg?w=225",
+"match": "Krušovice 10° svetlé výčapné pivo plechovka 330 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"syrokrem smotana xxl klasik": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tassimo kavove kapsuly": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tatarska omacka majoneza": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tekovsky salamovy syr udeny neudeny": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tekuty prostriedok na umyvanie riadu": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tekuty wc cistic": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tekvica hokkaido": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tilapia filety bez koze": {
+"url": null,
+"checked": "2026-11-03"
+},
+"toaletny papier 3 vrstvovy": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tradicne maslo 82": {
+"url": null,
+"checked": "2026-11-03"
+},
+"trescia pecen": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/421d71f2-9eee-4f6a-89f8-0e40f59822f6/a6d49d67-a249-4536-b525-3f86d18cfef8_2064717554.jpeg?w=225",
+"match": "Giana Tresčia pečeň vo vlastnom oleji 115 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"treska v majoneze": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/c5ef66bb-5f27-4013-965c-a872b6c24287/f1e312e5-bdcb-40f7-9984-c820f9877168.jpeg?w=225",
+"match": "Tesco Treska v majonéze 140 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"trojuholnik s klobasovou plnkou": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tullamore dew irska whiskey 40": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tuniak vo voleji": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/115edd66-e8dc-4ebc-8ef3-37276bd1d2d4/9b5fc004-f843-4a14-a1b4-d2468a236b32_1763683994.jpeg?w=225",
+"match": "Franz Josef Kaiser Exclusive Tuniak celé kúsky vo vlastnej šťave 170 g",
+"score": 0.8,
+"checked": "2026-11-03"
+},
+"tvarohovo smotanovy dezert milko matko": {
+"url": null,
+"checked": "2026-11-03"
+},
+"tycinky sol a rasca": {
+"url": null,
+"checked": "2026-11-03"
+},
+"udena slanina s kozou": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/a014a583-f588-4655-9501-2b652f379f09/3c6197f3-aaf2-4c0a-b0b1-d6d4fdad0e33.jpeg?w=225",
+"match": "Baron Údená slanina s kožou",
+"score": 1,
+"checked": "2026-11-03"
+},
+"uhorka salatova": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3316b6b9-a55e-42d4-8feb-bc5755ccfa07/1ffcd576-d011-4826-9590-fd4f9b5e8c80_1891079937.jpeg?w=225",
+"match": "Uhorka šalátová ks",
+"score": 1,
+"checked": "2026-11-03"
+},
+"uhorky 6 9 cm": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/f60e6673-9003-4c77-bb33-100e2da76cc4/5ca761b0-bb1b-46bc-bb22-635a25e8d2d0_1478242048.jpeg?w=225",
+"match": "Giana Uhorky 6-9 cm 670 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"vodka amundsen 37 5": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/df903c78-86b3-44cf-a45a-ddef6cef1d62/3a90869e-bd1b-45b4-b7ab-e0bc05b23342_1159018195.jpeg?w=225",
+"match": "Amundsen Vodka 37,5% 700 ml",
+"score": 1,
+"checked": "2026-11-03"
+},
+"zakusok puding a ribezla": {
+"url": null,
+"checked": "2026-11-03"
+},
+"zemiakove halusky a sulance chladene": {
+"url": null,
+"checked": "2026-11-03"
+},
+"zemiakove lupienky": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/d3b4f56f-1a9e-4be0-9d56-f34f5ea63cce/0a067b09-398a-43bf-b5f4-5d53e526a1a9_64036416.jpeg?w=225",
+"match": "Slovakia Kotlíkové zemiakové lupienky sladké čili a paprika 100 g",
+"score": 1,
+"checked": "2026-11-03"
+},
+"zemiaky neskore prane": {
+"url": null,
+"checked": "2026-11-03"
+},
+"zlaty bazant svetle pivo 12": {
+"url": "https://digitalcontent.api.tesco.com/v2/media/ghs/f2add553-75b1-4363-ae9a-9f25ebc3ba51/91afb043-d751-4bb7-b9e6-e847fce4940f.jpeg?w=225",
+"match": "Zlatý Bažant 10% svetlé výčapné pivo 500 ml",
+"score": 1,
+"checked": "2026-11-03"
+}
+}
