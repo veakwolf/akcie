@@ -345,7 +345,7 @@ const markDeleted = key => { if (isShared()) { tomb["l:" + key] = now(); save("a
 if (!sync.code && state.shared.length && !state.mine.length) { state.mine = state.shared; state.shared = []; saveL(); }
 
 function syncPanel() {
-  if (!sync.code) return `<details class="syncbox"><summary>👥 Zdieľať zoznam s ďalšími</summary>
+  if (!sync.code) return `<details class="syncbox"><summary>👥 Zdieľať zoznam</summary>
     <p class="meta">Vznikne spoločný nákupný zoznam pre všetkých, ktorí majú rovnaký kód. Tvoj vlastný zoznam a sledované ostanú len tvoje.</p>
     <div class="actions"><button class="btn primary" id="syncNew">Vytvoriť zdieľaný zoznam</button></div>
     <form class="addrow" id="joinForm"><input id="joinText" placeholder="alebo zadaj kód, napr. ab12-cd34-…" autocomplete="off">
