@@ -62,6 +62,25 @@ def _validity(text, today):
     return None, None
 
 
+def _image(tile):
+    """Product photo URL from a tile (lazy-loaded images keep it in data-src / srcset)."""
+    img = tile.select_one(".k-product-tile__image img, img")
+    if not img:
+        return None
+    for attr in ("data-src", "src", "data-srcset", "srcset"):
+        val = (img.get(attr) or "").strip()
+        if not val or val.startswith("data:"):
+            continue
+        url = val.split(",")[-1].strip().split(" ")[0] if "srcset" in attr else val
+        if url.startswith("//"):
+            url = "https:" + url
+        elif url.startswith("/"):
+            url = "https://predajne.kaufland.sk" + url
+        if url.startswith("https://"):
+            return url
+    return None
+
+
 def parse(html, today, categorize, durable):
     """Return (deals, valid_from, valid_to). `categorize`/`durable` come from rules.py."""
     soup = BeautifulSoup(html, "html.parser")
@@ -88,7 +107,7 @@ def parse(html, today, categorize, durable):
             normal = _tag(tile.select_one(".k-product-tile__pricetags-normal .k-price-tag"))
             card = _tag(tile.select_one(".k-product-tile__pricetags-loyalty .k-price-tag"))
             raw.append(dict(name=name, unit=unit, normal=normal, card=card, vf=vf, vt=vt,
-                            mixed=mixed, section_cat=section_cat))
+                            mixed=mixed, section_cat=section_cat, image=_image(tile)))
             if not mixed and section_cat:
                 by_name_category[name.lower()] = section_cat
 
@@ -119,7 +138,8 @@ def parse(html, today, categorize, durable):
             continue
         seen.add(key)
         deals.append(dict(name=r["name"], brand=None, unit=r["unit"], price=price, old_price=old, discount=disc,
-                          club_price=club, category=cat, note=note, valid_from=r["vf"], valid_to=r["vt"], page=None))
+                          club_price=club, category=cat, note=note, valid_from=r["vf"], valid_to=r["vt"], page=None,
+                          image=r["image"]))
 
     starts = sorted(d["valid_from"] for d in deals if d["valid_from"])
     ends = sorted(d["valid_to"] for d in deals if d["valid_to"])

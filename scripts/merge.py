@@ -99,7 +99,12 @@ def check(row):
     return dict(name=name, brand=row.get("brand") or None, unit=(row.get("unit") or "").strip(),
                 price=price, old_price=old, discount=disc, club_price=club, category=cat,
                 note=row.get("note") or None, valid_from=row.get("valid_from"), valid_to=row.get("valid_to"),
-                page=row.get("page")), None
+                page=row.get("page"), **_image(row.get("image"))), None
+
+
+def _image(url):
+    """Optional product photo (only https URLs from the stores' own websites)."""
+    return {"image": url} if isinstance(url, str) and url.startswith("https://") else {}
 
 
 HISTORY = ROOT / "docs" / "history.json"
