@@ -179,6 +179,20 @@ header.compact { transform: translateY(-105%); opacity: 0; pointer-events: none;
 .sactions small { opacity: .75; font-weight: 500; }
 body.noscroll { overflow: hidden; }
 .catx { color: #a99cff; font-weight: 600; }
+/* Photo thumbnail in deal rows */
+.deal { grid-template-columns: 52px 1fr auto 32px; padding-left: 10px; }
+.deal > :not(.prices):not(.btncol):not(.thumb) { grid-column: 2; }
+.deal > .prices { grid-column: 3; }
+.deal > .btncol { grid-column: 4; }
+.thumb { grid-column: 1; grid-row: 1 / span 4; align-self: center; width: 52px; height: 52px; border-radius: 12px;
+  background: #fff; overflow: hidden; display: grid; place-items: center; }
+.thumb img { width: 100%; height: 100%; object-fit: contain; }
+.thumb.none { background: var(--raised); color: var(--muted); font: 800 18px/1 var(--display); }
+/* Cheaper elsewhere */
+.cheaper { font-size: 12px; color: #5ee0ae; margin-top: 2px; }
+.plan { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; margin: 14px 0 4px; }
+.plan b { font-weight: 700; }
+.plan .meta { margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -232,7 +246,7 @@ function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value
 
 const state = {
   data: { deals: [], stores: {} }, tab: "deals",
-  week: "now", quick: new Set(), q: "", stores: new Set(load("akcie.stores", [])), cat: "", sort: load("akcie.sort", "disc"),
+  week: "now", quick: new Set(load("akcie.quick", [])), q: "", stores: new Set(load("akcie.stores", [])), cat: load("akcie.cat", ""), sort: load("akcie.sort", "disc"),
   shared: load("akcie.list", []), mine: load("akcie.mylist", []), target: load("akcie.target", "mine"), watch: load("akcie.watch", []), emp: load("akcie.emp", false),
 };
 const EMP_DISCOUNT = 0.15;
@@ -241,7 +255,8 @@ const empPrice = d => d.store === "Tesco" && state.emp
   ? Math.round((d.club_price ?? d.price) * (1 - EMP_DISCOUNT) * 100) / 100 : null;
 const payPrice = d => empPrice(d) ?? d.price;
 const keyOf = d => `${d.store}|${d.name}|${d.price}`;
-const isWatched = d => state.watch.some(w => norm(d.name + " " + (d.brand || "")).includes(norm(w)));
+const watchHit = (d, w) => { const t = norm(d.name + " " + (d.brand || "")); return norm(w).split(/\s+/).filter(Boolean).every(p => t.includes(p)); };
+const isWatched = d => state.watch.some(w => watchHit(d, w));
 const expired = d => d.valid_to && d.valid_to < today;
 const tomorrow = new Date(Date.now() + 864e5).toISOString().slice(0, 10);
 const isNext = d => d.upcoming && d.valid_from && d.valid_from > today;
@@ -359,8 +374,11 @@ function syncPanel() {
 // Product photos: the store's own (Kaufland) or a matching one from the Tesco e-shop (scripts/tesco_images.py).
 const imgKey = s => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
 let images = {};
-const imgFor = d => d.image || (images[imgKey(d.name)] || {}).url?.replace(/\?w=\d+/, "?w=540") || null;
-fetch("images.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : {}).then(j => images = j).catch(() => {});
+// small=true: thumbnail size. Tesco photos take ?w=, Kaufland's (Scene7) take ?wid=.
+const sized = (u, small) => !u ? null : u.includes("digitalcontent.api.tesco.com") ? u.replace(/\?w=\d+/, "") + (small ? "?w=150" : "?w=540")
+  : u.includes("kaufland.media") ? u.split("?")[0] + (small ? "?wid=150&hei=150&fit=constrain" : "?wid=600&hei=600&fit=constrain") : u;
+const imgFor = (d, small) => sized(d.image || (images[imgKey(d.name)] || {}).url, small);
+fetch("images.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : {}).then(j => { images = j; render(); }).catch(() => {});
 
 async function init() {
   try {
@@ -376,6 +394,9 @@ async function init() {
   const cats = [...new Set(state.data.deals.map(d => d.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, "sk"));
   $("#cat").innerHTML = `<option value="">Všetky kategórie</option>` + cats.map(c => `<option>${esc(c)}</option>`).join("");
   $("#sort").value = state.sort;
+  if (!cats.includes(state.cat)) state.cat = "";
+  $("#cat").value = state.cat;
+  document.querySelectorAll("#quick .chip").forEach(c => c.setAttribute("aria-pressed", state.quick.has(c.dataset.quick)));
   const nextFrom = Object.values(state.data.stores || {}).map(v => v.next_from).filter(Boolean).sort()[0];
   const hasNext = state.data.deals.some(isNext);
   $("#weeks").innerHTML = hasNext ? `<button class="chip" data-week="now" aria-pressed="true">Tento týždeň</button>
@@ -415,7 +436,9 @@ function dealCard(d, showStore = true) {
   const sv = state.data.stores?.[d.store] || {};
   const differs = (d.valid_from && d.valid_from !== sv.valid_from) || (d.valid_to && d.valid_to !== sv.valid_to);
   const dates = differs ? `len ${fmtDate(d.valid_from || sv.valid_from)}–${fmtDate(d.valid_to || sv.valid_to)}` : "";
+  const img = imgFor(d, true);
   return `<article class="deal ${isWatched(d) ? "watched" : ""} ${expired(d) ? "expired" : ""}" data-idx="${d._i}">
+    <div class="thumb ${img ? "" : "none"}">${img ? `<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('none');this.parentNode.textContent='${esc(d.name.charAt(0).toUpperCase())}'">` : esc(d.name.charAt(0).toUpperCase())}</div>
     ${showStore || expired(d) ? `<div>${showStore ? `<span class="store ${esc(d.store)}">${esc(d.store)}</span>` : ""}${expired(d) ? ' <span class="meta">skončila</span>' : ""}</div>` : ""}
     <div class="prices">
       ${empPrice(d) != null ? `
@@ -497,6 +520,31 @@ function closeSheet() {
 }
 
 const STORE_ORDER = ["Tesco", "Billa", "Lidl", "Kaufland"];
+const IN = { Tesco: "v Tescu", Billa: "v Bille", Lidl: "v Lidli", Kaufland: "v Kauflande" };
+const inStore = s => IN[s] || "v " + s;
+
+// ---------- Same product in other stores (same token rule as add_images in scripts/merge.py)
+const STOPW = new Set("a s so z zo v vo na do pre bez alebo rozne druhy vybrane ks g kg ml l cl x tesco billa lidl kaufland clever pilos akcia cena za balenie bal cca xxl mix chute slovenska finest premium classic".split(" "));
+const toks = s => new Set((norm(s).match(/[a-z]+/g) || []).filter(w => w.length > 1 && !STOPW.has(w)));
+const tokCache = new Map();
+const dealToks = d => { if (!tokCache.has(d)) tokCache.set(d, toks(d.name + " " + (d.brand || ""))); return tokCache.get(d); };
+function sameProduct(a, b) {
+  const A = dealToks(a), B = dealToks(b); if (!A.size || !B.size) return false;
+  const first = [...toks(a.name.split(" ")[0])][0];
+  if (first && !B.has(first)) return false;
+  let hit = 0; A.forEach(w => B.has(w) && hit++);
+  return hit / A.size >= 0.8 && hit / B.size >= 0.6;
+}
+// Comparable price: per kg / l when both have it, otherwise only when the packs look the same.
+function cheaperThan(a, b) {
+  if (unitPay(a) != null && unitPay(b) != null && a.unit_basis === b.unit_basis) return unitPay(b) < unitPay(a) - 0.005;
+  return norm(a.unit) === norm(b.unit) && payPrice(b) < payPrice(a) - 0.005;
+}
+function alternatives(d) {
+  return state.data.deals.filter(o => o.store !== d.store && !expired(o) && isNext(o) === isNext(d) && sameProduct(d, o) && cheaperThan(d, o))
+    .sort((x, y) => (unitPay(x) ?? payPrice(x)) - (unitPay(y) ?? payPrice(y)));
+}
+const dealOfItem = i => state.data.deals.find(d => keyOf(d) === i.key);
 const closed = new Set(load("akcie.closed", []));
 
 function renderDeals() {
@@ -547,13 +595,16 @@ function renderList() {
       const left = groups[g].filter(i => !i.done && i.price);
       return `<div class="group"><span class="store ${esc(g)}">${esc(g)}</span>
         ${left.length ? `<span class="meta">${eur(sum(left))}${saved(left) > 0.005 ? ` · ušetríš ${eur(saved(left))}` : ""}</span>` : ""}</div>` +
-      groups[g].map(i => `<label class="item ${i.done ? "done" : ""}">
+      [...groups[g]].sort((a, b) => a.done - b.done).map(i => { const d = !i.done && dealOfItem(i), alt = d ? alternatives(d)[0] : null;
+        return `<label class="item ${i.done ? "done" : ""}">
         <input type="checkbox" data-done="${esc(i.key)}" ${i.done ? "checked" : ""}>
         <div class="grow"><div class="name">${esc(i.name)}</div>
-          ${i.price ? `<div class="meta">${eur(i.price)}${i.old_price ? ` <s>${eur(i.old_price)}</s>` : ""}${i.unit ? " · " + esc(i.unit) : ""}</div>` : ""}</div>
-        <button class="x" data-del="${esc(i.key)}" aria-label="Odstrániť">×</button></label>`).join("");
+          ${i.price ? `<div class="meta">${eur(i.price)}${i.old_price ? ` <s>${eur(i.old_price)}</s>` : ""}${i.unit ? " · " + esc(i.unit) : ""}</div>` : ""}
+          ${alt ? `<div class="cheaper">Lacnejšie ${esc(inStore(alt.store))}: ${eur(payPrice(alt))}${alt.unit && norm(alt.unit) !== norm(i.unit) ? ` (${esc(alt.unit)}, ${unitText(alt)})` : ""}</div>` : ""}</div>
+        <button class="x" data-del="${esc(i.key)}" aria-label="Odstrániť">×</button></label>`; }).join("");
     }).join("")
       || `<div class="empty">Nákupný zoznam je prázdny.<br>Pridaj akcie tlačidlom +.</div>`}
+    ${planBox()}
     ${L().length ? `<div class="summary">
         <div><span class="meta">Spolu</span><b>${eur(sum(open))}</b></div>
         ${saved(open) > 0.005 ? `<div><span class="meta">Ušetríš</span><b class="savings">${eur(saved(open))}</b></div>` : ""}
@@ -562,6 +613,24 @@ function renderList() {
         <button class="btn" id="clearDone">Vymazať kúpené</button>
         <button class="btn primary" id="shareList">Zdieľať zoznam</button>
       </div>` : ""}`;
+}
+
+// Cheapest shopping: how much the list costs if every item is bought where the same product is cheapest.
+function planBox() {
+  const items = L().filter(i => !i.done && i.price).map(i => ({ i, d: dealOfItem(i) })).filter(x => x.d);
+  if (!items.length) return "";
+  let now = 0, best = 0; const moves = {};
+  for (const { i, d } of items) {
+    const alt = alternatives(d).filter(a => norm(a.unit) === norm(d.unit))[0];  // only swap like for like in the total
+    now += i.price;
+    if (alt) { best += payPrice(alt); (moves[alt.store] ??= []).push(d.name); } else best += i.price;
+  }
+  const stores = new Set(items.map(x => x.d.store));
+  const diff = now - best;
+  if (diff < 0.05) return stores.size > 1 ? "" : `<div class="plan"><b>Všetko kúpiš ${esc(inStore([...stores][0]))}</b> a lacnejšie to inde nie je.</div>`;
+  return `<div class="plan"><b>Ušetríš ešte ${eur(diff)}</b>, ak niektoré veci kúpiš inde:
+    ${Object.entries(moves).map(([s, names]) => `<div class="meta"><span class="sname ${esc(s)}">${esc(s)}</span>: ${names.map(esc).join(", ")}</div>`).join("")}
+    <div class="meta">Rovnaké produkty v rovnakom balení, ceny z tohto týždňa.</div></div>`;
 }
 
 function listText() {
@@ -608,7 +677,7 @@ $("#quick").addEventListener("click", e => {
     if (q === "food") state.quick.delete("drug"); if (q === "drug") state.quick.delete("food");
   }
   document.querySelectorAll("#quick .chip").forEach(c => c.setAttribute("aria-pressed", state.quick.has(c.dataset.quick)));
-  render();
+  save("akcie.quick", [...state.quick]); render();
 });
 $("#weeks").addEventListener("click", e => {
   const w = e.target.dataset.week; if (!w) return;
@@ -616,7 +685,7 @@ $("#weeks").addEventListener("click", e => {
   document.querySelectorAll("#weeks .chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.week === w));
   render();
 });
-$("#cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
+$("#cat").addEventListener("change", e => { state.cat = e.target.value; save("akcie.cat", state.cat); render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; save("akcie.sort", state.sort); render(); });
 $("#stores").addEventListener("click", e => {
   const s = e.target.dataset.store; if (!s) return;
@@ -668,7 +737,7 @@ function handleAction(target) {
   } else if (t.dataset.watchname) {
     const d = state.data.deals.find(x => x.name === t.dataset.watchname);
     if (d && isWatched(d)) state.watch = state.watch.filter(w => {
-      const hit = norm(d.name + " " + (d.brand || "")).includes(norm(w)); if (hit) tomb["w:" + w] = now(); return !hit; });
+      const hit = watchHit(d, w); if (hit) tomb["w:" + w] = now(); return !hit; });
     else { state.watch.push(t.dataset.watchname); watchMeta[t.dataset.watchname] = now(); }
     save("akcie.watch", state.watch); save("akcie.watchMeta", watchMeta); save("akcie.tomb", tomb); render(); syncSoon();
   } else if (t.dataset.del) {
