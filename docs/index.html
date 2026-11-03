@@ -374,9 +374,9 @@ function syncPanel() {
 // Product photos: the store's own (Kaufland) or a matching one from the Tesco e-shop (scripts/tesco_images.py).
 const imgKey = s => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
 let images = {};
-// small=true: thumbnail size. Tesco photos take ?w=, Kaufland's (Scene7) take ?wid=.
+// small=true: thumbnail size (Tesco photos take ?w=).
 const sized = (u, small) => !u ? null : u.includes("digitalcontent.api.tesco.com") ? u.replace(/\?w=\d+/, "") + (small ? "?w=150" : "?w=540")
-  : u.includes("kaufland.media") ? u.split("?")[0] + (small ? "?wid=150&hei=150&fit=constrain" : "?wid=600&hei=600&fit=constrain") : u;
+  : u.includes("kaufland.media") ? u.split("?")[0] : u;  // Kaufland's server rejects size parameters
 const imgFor = (d, small) => sized(d.image || (images[imgKey(d.name)] || {}).url, small);
 fetch("images.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.json() : {}).then(j => { images = j; render(); }).catch(() => {});
 
