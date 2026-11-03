@@ -3,8 +3,7 @@
 Vlastná náhrada za aplikáciu Dohliadač: týždenné akcie z **Tesco**, **Billa**,
 **Lidl** a **Kaufland** v jednej appke na iPhone.
 
-**Appka:** https://veakwolf.github.io/akcie/ (v Safari → Zdieľať → Pridať na
-plochu)
+**Appka:** https://veakwolf.github.io/akcie/ (v Browseri → Share → Add to Desktop)
 
 ## Čo appka vie
 
@@ -32,7 +31,7 @@ Celá appka je jeden súbor `docs/index.html` (GitHub Pages z priečinka `docs/`
    - leták, ktorý sa nezmenil, sa len prevezme z predošlého dňa, takže nové
      AI spracovanie netreba,
    - obrázky strán (Lidl) idú do vetvy `stranky`, ktorá sa zakaždým prepíše.
-2. **AI spracovanie** („spracuj akcie“) robí Codex na mojom PC – naplánované
+2. **AI spracovanie** („spracuj akcie“) robí Codex lokalne – naplánované
    úlohy v pondelok a stredu o 18:00 (`scripts/codex-weekly.ps1`). Z textu
    letákov vytiahne akcie do `ai.jsonl` podľa [`AGENTS.md`](AGENTS.md) a
    [`SPRACOVANIE.md`](SPRACOVANIE.md). Berie sa len spotrebný tovar
