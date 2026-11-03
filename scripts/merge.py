@@ -11,6 +11,7 @@ import datetime as dt
 import json
 import pathlib
 import sys
+import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -108,6 +109,49 @@ def _image(url):
 
 
 HISTORY = ROOT / "docs" / "history.json"
+IMAGES = ROOT / "docs" / "images.json"
+_STOP = {"a", "s", "so", "z", "zo", "v", "vo", "na", "do", "pre", "bez", "alebo", "rozne", "druhy", "vybrane", "ks",
+         "g", "kg", "ml", "l", "cl", "x", "tesco", "billa", "lidl", "kaufland", "clever", "pilos", "akcia",
+         "cena", "za", "balenie", "bal", "cca", "xxl", "mix", "chute", "slovenska", "finest", "premium", "classic"}
+
+
+def _tokens(s):
+    s = "".join(c for c in unicodedata.normalize("NFD", (s or "").lower()) if unicodedata.category(c) != "Mn")
+    return {w for w in re.findall(r"[a-z]+", s) if len(w) > 1 and w not in _STOP}
+
+
+def add_images(deals):
+    """Give deals without their own photo one from another deal or from docs/images.json (Tesco e-shop).
+
+    Any store's photo of a matching product will do (a Billa salami may show Kaufland's or Tesco's)."""
+    pool = [(_tokens(f"{d['name']} {d.get('brand') or ''}"), d["image"]) for d in deals if d.get("image")]
+    if IMAGES.exists():
+        for k, e in json.loads(IMAGES.read_text(encoding="utf-8")).items():
+            if e.get("url"):
+                pool.append((_tokens(k) | _tokens(e.get("match")), e["url"]))
+    pool = [(toks, url) for toks, url in pool if toks]
+    given = 0
+    for d in deals:
+        if d.get("image"):
+            continue
+        want = _tokens(f"{d['name']} {d.get('brand') or ''}")
+        if not want:
+            continue
+        first = next(iter(_tokens(d["name"].split()[0])), None) if d["name"].split() else None
+        best, url = 0, None
+        for toks, u in pool:
+            hit = len(want & toks)
+            if not hit:
+                continue
+            s = hit / len(want) - 0.05 * len(toks - want) / len(toks)  # prefer candidates without extra words
+            if first and first not in toks:
+                s *= 0.8  # the first word is usually the brand or the main noun
+            if s > best:
+                best, url = s, u
+        if best >= 0.6:
+            d["image"] = url
+            given += 1
+    return given
 
 
 def hist_key(d):
@@ -179,6 +223,7 @@ def main():
     for d in deals:
         d.pop("_dir", None)
         d["unit_price"], d["unit_basis"] = unit_price(d.get("unit"), d["price"])
+    report.append(f"photos: {add_images(deals)} deals got a photo from another store")
     if any_ai:  # only learn prices from the checked AI list, not the rough fallback
         update_history(deals)
     out = dict(week=week.name, generated=dt.datetime.now().isoformat(timespec="seconds"),

@@ -1,6 +1,6 @@
 {
  "week": "2026-11-03",
- "generated": "2026-11-03T06:49:04",
+ "generated": "2026-11-03T08:36:36",
  "source": "ai",
  "complete": true,
  "stores": {
@@ -48,7 +48,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 4.0,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133361_P"
   },
   {
    "store": "Billa",
@@ -84,7 +85,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 9.4,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8584004010200_SK_P"
   },
   {
    "store": "Billa",
@@ -138,7 +140,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 4.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4153b8a9-f520-4620-9c64-075554e4ae66/2c6b3a57-503f-4205-a69a-9c214f6f4e86_1522473602.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -174,7 +177,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 14.0,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09702751_P-1"
   },
   {
    "store": "Billa",
@@ -192,7 +196,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 15.92,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09702586_P-1"
   },
   {
    "store": "Billa",
@@ -210,7 +215,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 2.69,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/cc83a193-3bae-40c5-8346-ccc84c65403b/1718757e-deed-4b06-a398-e9a60e263e9a_1837438991.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -264,7 +270,8 @@
    "valid_to": "2026-11-03",
    "page": 2,
    "unit_price": 5.18,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00126979_P-1"
   },
   {
    "store": "Billa",
@@ -282,7 +289,8 @@
    "valid_to": "2026-11-03",
    "page": 2,
    "unit_price": 6.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/c5ef66bb-5f27-4013-965c-a872b6c24287/f1e312e5-bdcb-40f7-9984-c820f9877168.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -354,7 +362,8 @@
    "valid_to": "2026-11-03",
    "page": 3,
    "unit_price": 0.26,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133231_P"
   },
   {
    "store": "Billa",
@@ -426,7 +435,8 @@
    "valid_to": "2026-11-03",
    "page": 3,
    "unit_price": 11.41,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00012642_P"
   },
   {
    "store": "Billa",
@@ -480,7 +490,8 @@
    "valid_to": "2026-11-03",
    "page": 3,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/bfd6cfec-6cea-4b5c-ae34-a4d962e91932/96611fc5-db38-4887-ba72-cb0ef9bf342c_2005609203.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -498,7 +509,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": 1.25,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/5fe1da25-aa08-4139-b08c-5e2b6aae12c5/63ced636-4982-4208-a32d-d59c9814a4df_1588247745.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -516,7 +528,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": 1.19,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3352f854-6be5-4d93-bb95-6dd75c90ee6e/fc529c20-da88-4648-880d-41d5c228ad58_538946341.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -534,7 +547,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/1a9ed31a-e452-4fb5-bd6d-b4d6a5aeebf3/48c0a3c4-d9e6-4b86-9625-edde1988bd1b_306393199.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -570,7 +584,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": 1.59,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4166ef42-2776-4f0c-a40c-7053be1a436f/a0107353-a622-4166-afc8-f7f269bf00e0_1728824376.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -588,7 +603,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3316b6b9-a55e-42d4-8feb-bc5755ccfa07/1ffcd576-d011-4826-9590-fd4f9b5e8c80_1891079937.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -606,7 +622,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09701671A_P"
   },
   {
    "store": "Billa",
@@ -624,7 +641,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09701788_P-1"
   },
   {
    "store": "Billa",
@@ -642,7 +660,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4000007036862_SK_P-1"
   },
   {
    "store": "Billa",
@@ -750,7 +769,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 1.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3281cfd1-e8e9-4ca1-9ad9-6484d2342a65/fb62c97f-6170-442c-9ead-7a1d19dfa3a5_498562666.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -768,7 +788,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 0.65,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20830405_P"
   },
   {
    "store": "Billa",
@@ -804,7 +825,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 6.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/dd1aa65d-b387-40e5-9dc3-4ab9e2f98172/fb042a16-7729-4636-84a8-700cdfe94eab_214807151.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -822,7 +844,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 1.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/a3bb714f-c982-4a4e-93eb-26f3919c698e/1abf1204-59fc-41dc-b9cc-6da3b3256216_1334442369.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -840,7 +863,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 0.59,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3896e92b-6d80-4ae1-ab7e-da1cd095862e/8d69bd88-9311-49fc-83e4-5ea37ec99a30_217285391.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -858,7 +882,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 0.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8717953011008_SK_P"
   },
   {
    "store": "Billa",
@@ -876,7 +901,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588008600139_SK_P-1"
   },
   {
    "store": "Billa",
@@ -894,7 +920,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 0.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3896e92b-6d80-4ae1-ab7e-da1cd095862e/8d69bd88-9311-49fc-83e4-5ea37ec99a30_217285391.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -912,7 +939,8 @@
    "valid_to": "2026-11-03",
    "page": 6,
    "unit_price": 6.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/efc6094c-d3da-4f3a-8c83-ae65c537b14c/d732930b-fda3-40db-8c42-e3eaebdb2cd0.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -966,7 +994,8 @@
    "valid_to": "2026-11-03",
    "page": 6,
    "unit_price": 2.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2819410000000_SK_P"
   },
   {
    "store": "Billa",
@@ -1002,7 +1031,8 @@
    "valid_to": "2026-11-03",
    "page": 6,
    "unit_price": 10.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588003767349_SK_P"
   },
   {
    "store": "Billa",
@@ -1056,7 +1086,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 5.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/7635e787-a0fd-4a7f-b382-147411bc117b/67c9d0a0-74e7-4020-9b00-86d9e6ea1c78.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1092,7 +1123,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 6.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/a014a583-f588-4655-9501-2b652f379f09/3c6197f3-aaf2-4c0a-b0b1-d6d4fdad0e33.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1146,7 +1178,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 2.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/2722ee51-9533-4e88-9260-2211b03fb3cd/e33213fc-e4ac-47bd-bf90-87426e42a2d4_1118954051.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1164,7 +1197,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 7.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/01206094_P"
   },
   {
    "store": "Billa",
@@ -1218,7 +1252,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 9.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b421999b-772b-46d4-a375-36e227e49245/ce77d4f0-35e1-4e07-af3e-fcb03b012919_1162485883.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1254,7 +1289,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 10.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/2888de21-7e62-4b30-9be6-091b609a9db0/5a26a949-7f37-494b-b4e5-a76fec1cca2c.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1290,7 +1326,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 14.6,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/06507907-e7a1-4a1e-a026-b84e11b2f5cd/b13cb2b3-e388-454c-8547-44b98a1f27d4_65499082.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1308,7 +1345,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 12.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2822020000000_SK_P"
   },
   {
    "store": "Billa",
@@ -1326,7 +1364,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 16.61,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/76bbd48c-321c-4ee2-a91b-4901cc66284b/c00f0771-dec9-4f55-8065-cfd92616c69f.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1344,7 +1383,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 13.14,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/bf89c8fd-59d8-4631-a084-206d2f668bdf/4c4860f7-29f8-4239-b21f-8162b7a37e64.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1416,7 +1456,8 @@
    "valid_to": "2026-11-03",
    "page": 9,
    "unit_price": 2.52,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/c77c65bd-9293-4b1f-aa65-6517c4757172/e6ab1acf-2a05-4013-9da0-4f77078d6a57_2096450509.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1488,7 +1529,8 @@
    "valid_to": "2026-11-03",
    "page": 9,
    "unit_price": 8.22,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://media.kaufland.com/images/PPIM/KMO/SK300_20833557_P.jpg"
   },
   {
    "store": "Billa",
@@ -1560,7 +1602,8 @@
    "valid_to": "2026-11-03",
    "page": 10,
    "unit_price": 2.26,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586000140400_SK_P"
   },
   {
    "store": "Billa",
@@ -1578,7 +1621,8 @@
    "valid_to": "2026-11-03",
    "page": 10,
    "unit_price": 1.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/0f551fdd-f842-45e2-85bb-048387a47448/bd91f467-2f46-4e85-b2c2-7ee5b54b730b_2009072961.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1596,7 +1640,8 @@
    "valid_to": "2026-11-03",
    "page": 10,
    "unit_price": 1.72,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00408793_P"
   },
   {
    "store": "Billa",
@@ -1614,7 +1659,8 @@
    "valid_to": "2026-11-03",
    "page": 10,
    "unit_price": 2.69,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586000140400_SK_P"
   },
   {
    "store": "Billa",
@@ -1632,7 +1678,8 @@
    "valid_to": "2026-11-03",
    "page": 10,
    "unit_price": 3.75,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002100596_SK_P"
   },
   {
    "store": "Billa",
@@ -1668,7 +1715,8 @@
    "valid_to": "2026-11-03",
    "page": 10,
    "unit_price": 0.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002507570_SK_P"
   },
   {
    "store": "Billa",
@@ -1722,7 +1770,8 @@
    "valid_to": "2026-11-03",
    "page": 11,
    "unit_price": 4.72,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4d03b65b-12e5-46cf-8a05-f140aa718d2a/4eea3188-5136-4f49-8581-a478671094b1_222727731.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1794,7 +1843,8 @@
    "valid_to": "2026-11-03",
    "page": 11,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002100596_SK_P"
   },
   {
    "store": "Billa",
@@ -1830,7 +1880,8 @@
    "valid_to": "2026-11-03",
    "page": 11,
    "unit_price": 24.46,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/58bad1d4-7732-468a-b7e5-b14e0da8280d/d2bf705c-131b-4532-aefc-c83d4356cd70_675107765.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1920,7 +1971,8 @@
    "valid_to": "2026-11-03",
    "page": 12,
    "unit_price": 7.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4b886974-13e2-4afd-b6cc-38c38f728a19/1c932878-05d4-437f-b0a2-65054cbd4109_1839722727.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1938,7 +1990,8 @@
    "valid_to": "2026-11-03",
    "page": 12,
    "unit_price": 9.08,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f1cbe244-fedf-4e05-a013-b58ff66d7c32/cc294cf8-ffdf-4a9b-9e46-93ef63ec30ef_1136736689.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -1974,7 +2027,8 @@
    "valid_to": "2026-11-03",
    "page": 12,
    "unit_price": 8.72,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3d506273-2795-4435-85f1-b51fd4c901f8/4e18c86a-69c5-4857-9864-e5f5dd3e975c.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2010,7 +2064,8 @@
    "valid_to": "2026-11-03",
    "page": 12,
    "unit_price": 4.76,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00139542_P-2"
   },
   {
    "store": "Billa",
@@ -2028,7 +2083,8 @@
    "valid_to": "2026-11-03",
    "page": 12,
    "unit_price": 9.08,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/02284ad9-afec-4af1-bf8e-c9b99f4aae23/eff5abef-4bd7-40eb-85f3-2cf7d7756da4.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2064,7 +2120,8 @@
    "valid_to": "2026-11-03",
    "page": 14,
    "unit_price": 5.37,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/5f4c0a7a-457c-4a62-a3b1-df21f561736a/7396195a-481a-4428-b494-d0fa89832510_432601306.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2082,7 +2139,8 @@
    "valid_to": "2026-11-03",
    "page": 14,
    "unit_price": 6.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/25b63a79-5d6e-4a81-8bcd-b20de15a6896/afdcf148-9bb5-42de-bbf0-eb039d102ddc.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2118,7 +2176,8 @@
    "valid_to": "2026-11-03",
    "page": 14,
    "unit_price": 0.85,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/d43a46ae-0206-4ab6-8b05-0b2e0feff888/335d0cd5-7f56-442d-bac0-6dc89a09527f.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2136,7 +2195,8 @@
    "valid_to": "2026-11-03",
    "page": 14,
    "unit_price": 12.22,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/c432785d-4c0d-4c28-b13e-9b6b636c8b6d/5550f7f8-7d52-49d7-a457-76514c586bba_1447436631.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2208,7 +2268,8 @@
    "valid_to": "2026-11-03",
    "page": 14,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4fe2e232-8b55-47de-9f73-066449ff9fef/e9cf7ac7-d8d3-4ff2-9635-51d8e74f979d_567856942.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2244,7 +2305,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 6.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/1e5f9eb9-cf84-4e02-bf77-81e430481bbe/7ed0637f-5b38-40df-a77c-7fdd76e2b68e_1230051121.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2262,7 +2324,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 0.89,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133446_P"
   },
   {
    "store": "Billa",
@@ -2280,7 +2343,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 15.57,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/421d71f2-9eee-4f6a-89f8-0e40f59822f6/a6d49d67-a249-4536-b525-3f86d18cfef8_2064717554.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2316,7 +2380,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 8.89,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/65ebb6a8-576b-43e8-96fe-769f43cf224c/04f30a4c-7131-423f-8e87-792b3c487db2_2111743880.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2334,7 +2399,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 1.18,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4bf2b1ae-826b-43a2-8a7f-7ce3b0cc1d26/ca4b3c54-dc3a-4e6f-9873-0d480e44ca63_1492286633.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2370,7 +2436,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 7.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/0ee322f9-e951-4b71-be1d-2883cbaac1ea/78487ff9-25fb-4485-8b81-5ea4cca52fba_984092363.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2514,7 +2581,8 @@
    "valid_to": "2026-11-03",
    "page": 16,
    "unit_price": 8.76,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/115edd66-e8dc-4ebc-8ef3-37276bd1d2d4/9b5fc004-f843-4a14-a1b4-d2468a236b32_1763683994.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2532,7 +2600,8 @@
    "valid_to": "2026-11-03",
    "page": 16,
    "unit_price": 1.65,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f60e6673-9003-4c77-bb33-100e2da76cc4/5ca761b0-bb1b-46bc-bb22-635a25e8d2d0_1478242048.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2568,7 +2637,8 @@
    "valid_to": "2026-11-03",
    "page": 17,
    "unit_price": 22.92,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f1d07f99-1c4b-4950-9d37-229a51990c3e/c2f6534a-c409-4d4f-b4c1-6ecc7c1ea999_1842812669.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2604,7 +2674,8 @@
    "valid_to": "2026-11-03",
    "page": 17,
    "unit_price": 23.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b8d7cc8a-2b79-4467-a9d8-295905c4d010/2adb25fb-752d-4c7c-ae88-d8b723b49573.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2622,7 +2693,8 @@
    "valid_to": "2026-11-03",
    "page": 17,
    "unit_price": 14.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/9e8a0ef2-3bd5-4a20-a6ca-d6390a2f1924/1bfd15e9-1e53-4305-8de1-cb03b6f5527c_1402512794.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2640,7 +2712,8 @@
    "valid_to": "2026-11-03",
    "page": 17,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/02401973_P"
   },
   {
    "store": "Billa",
@@ -2694,7 +2767,8 @@
    "valid_to": "2026-11-03",
    "page": 17,
    "unit_price": 13.46,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20696946_P"
   },
   {
    "store": "Billa",
@@ -2730,7 +2804,8 @@
    "valid_to": "2026-11-03",
    "page": 17,
    "unit_price": 6.77,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/569a2832-69ba-4994-9caf-d5fd964b22cb/7a3e5f7b-9609-43bc-89fa-f55288ec0b1c.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2910,7 +2985,8 @@
    "valid_to": "2026-11-03",
    "page": 19,
    "unit_price": 31.68,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/2618358f-d0ec-4b05-a796-a2828d76dfed/61d8bf8e-3d63-4aa5-a5ae-3845d619fd09_1914483489.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2946,7 +3022,8 @@
    "valid_to": "2026-11-03",
    "page": 19,
    "unit_price": 26.6,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3d241f4f-e6ac-415c-a6ae-b900c024b790/d4fbe1c1-82bc-4724-90eb-e86ef26dbce8_224261400.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2964,7 +3041,8 @@
    "valid_to": "2026-11-03",
    "page": 19,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f3e774f1-831b-4328-b763-5c084973d791/a78f5b6a-f6c4-40f9-9828-c56c2f2355eb_215092031.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -2982,7 +3060,8 @@
    "valid_to": "2026-11-03",
    "page": 19,
    "unit_price": 8.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8593893738690_SK_P"
   },
   {
    "store": "Billa",
@@ -3000,7 +3079,8 @@
    "valid_to": "2026-11-03",
    "page": 19,
    "unit_price": 9.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8584004010200_SK_P"
   },
   {
    "store": "Billa",
@@ -3018,7 +3098,8 @@
    "valid_to": "2026-11-03",
    "page": 19,
    "unit_price": 5.86,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/19161024-49ef-47a1-a5bc-25354a07204a/d56a1a9f-5199-4351-b5c0-a5919b1a1ff7_299633943.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3036,7 +3117,8 @@
    "valid_to": "2026-11-03",
    "page": 20,
    "unit_price": 0.3,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/69d1087c-468d-4ec2-b87d-402a7b0f0f91/2d394914-2237-42b7-9de5-6afa69201184.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3054,7 +3136,8 @@
    "valid_to": "2026-11-03",
    "page": 20,
    "unit_price": 0.86,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/dff47936-d605-4c8e-b279-6c177a38f9af/1abe83ed-47f1-419a-9da6-46fc39ffa5e4.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3108,7 +3191,8 @@
    "valid_to": "2026-11-03",
    "page": 20,
    "unit_price": 2.36,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/50499557_SK_P"
   },
   {
    "store": "Billa",
@@ -3126,7 +3210,8 @@
    "valid_to": "2026-11-03",
    "page": 20,
    "unit_price": 1.9,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b83e9f0c-d638-42be-ae8c-ca8f4e66592f/e61218ee-44da-4aa5-8960-025ce563c3c1_362582263.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3144,7 +3229,8 @@
    "valid_to": "2026-11-03",
    "page": 20,
    "unit_price": 3.79,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/ad230dd4-00f8-4fcb-8c73-d3b93daf9f9c/77877fc5-245e-4705-b4f8-92c14c89bbba_2268362001.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3198,7 +3284,8 @@
    "valid_to": "2026-11-03",
    "page": 20,
    "unit_price": 1.58,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/81b9e7dc-fb37-41d6-9357-f034b80fdb81/5d1bfb7e-bbdc-4542-bf6a-6a5b883ea3ab.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3216,7 +3303,8 @@
    "valid_to": "2026-11-03",
    "page": 20,
    "unit_price": 1.1,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00137207_P"
   },
   {
    "store": "Billa",
@@ -3270,7 +3358,8 @@
    "valid_to": "2026-11-03",
    "page": 21,
    "unit_price": 17.13,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b471f4ad-10ed-4b8e-a2fd-e527b1172998/37edaf10-247a-4743-91ab-5b9ab33277b1_841757478.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3288,7 +3377,8 @@
    "valid_to": "2026-11-03",
    "page": 21,
    "unit_price": 8.56,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b77136f6-fba0-478d-8a6f-c2499125e514/603357a8-12c2-4436-90f3-52a1e8664cd8_884141307.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3306,7 +3396,8 @@
    "valid_to": "2026-11-03",
    "page": 21,
    "unit_price": 21.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/48affc9e-3976-4e89-b686-b361c70b6c53/7b26d4e9-9994-4a79-b0b6-a13ac146a853.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3360,7 +3451,8 @@
    "valid_to": "2026-11-03",
    "page": 21,
    "unit_price": 2.88,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594404110172_SK_P"
   },
   {
    "store": "Billa",
@@ -3378,7 +3470,8 @@
    "valid_to": "2026-11-03",
    "page": 21,
    "unit_price": 1.58,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20605238_P"
   },
   {
    "store": "Billa",
@@ -3468,7 +3561,8 @@
    "valid_to": "2026-11-03",
    "page": 22,
    "unit_price": 7.63,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/05007531_P"
   },
   {
    "store": "Billa",
@@ -3504,7 +3598,8 @@
    "valid_to": "2026-11-03",
    "page": 22,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/9bf22d11-6fcd-482e-ae47-722821414270/afb883f5-6554-4b96-8896-fa53a3006197.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3594,7 +3689,8 @@
    "valid_to": "2026-11-03",
    "page": 22,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20342413_P"
   },
   {
    "store": "Billa",
@@ -3630,7 +3726,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 10.76,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/40900e7f-43c0-4872-a014-10d1e51354ac/2685ea22-0804-4049-bf8b-ed492ca36478_807443578.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3648,7 +3745,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/7c5f5571-f1c4-4b8e-85dd-563a248cc723/07a9a167-35ed-4f80-bbd5-fd46718db89b.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3684,7 +3782,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 4.72,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/d81d9741-add2-48e0-8871-8a250cb41446/2c78ebe6-fe6a-44ad-91fc-0834364b5963_1937953656.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3720,7 +3819,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 6.72,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/40900e7f-43c0-4872-a014-10d1e51354ac/2685ea22-0804-4049-bf8b-ed492ca36478_807443578.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -3756,7 +3856,8 @@
    "valid_to": "2026-11-01",
    "page": 24,
    "unit_price": 3.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P"
   },
   {
    "store": "Billa",
@@ -3900,7 +4001,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 13.96,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09702751_P-1"
   },
   {
    "store": "Billa",
@@ -3918,7 +4020,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 0.75,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588001821869_SK_P"
   },
   {
    "store": "Billa",
@@ -3936,7 +4039,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 0.33,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594001028832_SK_P"
   },
   {
    "store": "Billa",
@@ -3955,6 +4059,7 @@
    "page": 1,
    "unit_price": null,
    "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3316b6b9-a55e-42d4-8feb-bc5755ccfa07/1ffcd576-d011-4826-9590-fd4f9b5e8c80_1891079937.jpeg?w=225",
    "hist": {
     "n": 1,
     "min": 0.59,
@@ -4032,7 +4137,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 2.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P"
   },
   {
    "store": "Billa",
@@ -4105,6 +4211,7 @@
    "page": 2,
    "unit_price": 13.27,
    "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/06507907-e7a1-4a1e-a026-b84e11b2f5cd/b13cb2b3-e388-454c-8547-44b98a1f27d4_65499082.jpeg?w=225",
    "hist": {
     "n": 1,
     "min": 2.19,
@@ -4128,7 +4235,8 @@
    "valid_to": "2026-11-10",
    "page": 2,
    "unit_price": 16.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2822100000000_SK_P"
   },
   {
    "store": "Billa",
@@ -4236,7 +4344,8 @@
    "valid_to": "2026-11-10",
    "page": 3,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03002002_P"
   },
   {
    "store": "Billa",
@@ -4308,7 +4417,8 @@
    "valid_to": "2026-11-10",
    "page": 3,
    "unit_price": 11.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/0ee322f9-e951-4b71-be1d-2883cbaac1ea/78487ff9-25fb-4485-8b81-5ea4cca52fba_984092363.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -4344,7 +4454,8 @@
    "valid_to": "2026-11-10",
    "page": 3,
    "unit_price": 1.38,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4bf2b1ae-826b-43a2-8a7f-7ce3b0cc1d26/ca4b3c54-dc3a-4e6f-9873-0d480e44ca63_1492286633.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -4362,7 +4473,8 @@
    "valid_to": "2026-11-10",
    "page": 3,
    "unit_price": 32.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00015755_P"
   },
   {
    "store": "Billa",
@@ -4507,6 +4619,7 @@
    "page": 4,
    "unit_price": null,
    "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588008600139_SK_P-1",
    "hist": {
     "n": 1,
     "min": 1.39,
@@ -4530,7 +4643,8 @@
    "valid_to": "2026-11-10",
    "page": 4,
    "unit_price": 1.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594012791657_SK_P"
   },
   {
    "store": "Billa",
@@ -4650,7 +4764,8 @@
    "valid_to": "2026-11-10",
    "page": 5,
    "unit_price": 1.1,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2837230000000_SK_P-1"
   },
   {
    "store": "Billa",
@@ -4794,7 +4909,8 @@
    "valid_to": "2026-11-10",
    "page": 5,
    "unit_price": 0.74,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20830405_P"
   },
   {
    "store": "Billa",
@@ -4866,7 +4982,8 @@
    "valid_to": "2026-11-10",
    "page": 6,
    "unit_price": 6.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/efc6094c-d3da-4f3a-8c83-ae65c537b14c/d732930b-fda3-40db-8c42-e3eaebdb2cd0.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -5010,7 +5127,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 2.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/cc83a193-3bae-40c5-8346-ccc84c65403b/1718757e-deed-4b06-a398-e9a60e263e9a_1837438991.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -5046,7 +5164,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 9.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2824030000000_SK_P"
   },
   {
    "store": "Billa",
@@ -5064,7 +5183,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 6.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20988428_P"
   },
   {
    "store": "Billa",
@@ -5118,7 +5238,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 3.89,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00047036_P"
   },
   {
    "store": "Billa",
@@ -5154,7 +5275,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 2.89,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/2722ee51-9533-4e88-9260-2211b03fb3cd/e33213fc-e4ac-47bd-bf90-87426e42a2d4_1118954051.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -5172,7 +5294,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 16.61,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/76bbd48c-321c-4ee2-a91b-4901cc66284b/c00f0771-dec9-4f55-8065-cfd92616c69f.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -5316,7 +5439,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 12.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2840600000000_SK_P"
   },
   {
    "store": "Billa",
@@ -5334,7 +5458,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 8.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4049729003219_SK_P"
   },
   {
    "store": "Billa",
@@ -5352,7 +5477,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 6.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/c5ef66bb-5f27-4013-965c-a872b6c24287/f1e312e5-bdcb-40f7-9984-c820f9877168.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -5532,7 +5658,8 @@
    "valid_to": "2026-11-10",
    "page": 9,
    "unit_price": 3.78,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00019115_P"
   },
   {
    "store": "Billa",
@@ -5550,7 +5677,8 @@
    "valid_to": "2026-11-10",
    "page": 9,
    "unit_price": 8.04,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20839910_P"
   },
   {
    "store": "Billa",
@@ -5604,7 +5732,8 @@
    "valid_to": "2026-11-10",
    "page": 10,
    "unit_price": 14.39,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/02284ad9-afec-4af1-bf8e-c9b99f4aae23/eff5abef-4bd7-40eb-85f3-2cf7d7756da4.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -5640,7 +5769,8 @@
    "valid_to": "2026-11-10",
    "page": 10,
    "unit_price": 6.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/85812826_SK_P"
   },
   {
    "store": "Billa",
@@ -5658,7 +5788,8 @@
    "valid_to": "2026-11-10",
    "page": 10,
    "unit_price": 3.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00042465_P"
   },
   {
    "store": "Billa",
@@ -5730,7 +5861,8 @@
    "valid_to": "2026-11-10",
    "page": 10,
    "unit_price": 3.75,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002100596_SK_P"
   },
   {
    "store": "Billa",
@@ -5802,7 +5934,8 @@
    "valid_to": "2026-11-10",
    "page": 11,
    "unit_price": 13.71,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00507901_P"
   },
   {
    "store": "Billa",
@@ -5856,7 +5989,8 @@
    "valid_to": "2026-11-10",
    "page": 11,
    "unit_price": 8.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00507901_P"
   },
   {
    "store": "Billa",
@@ -5946,7 +6080,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 3.6,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595692202327_SK_P"
   },
   {
    "store": "Billa",
@@ -5964,7 +6099,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 4.94,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00139542_P-2"
   },
   {
    "store": "Billa",
@@ -6018,7 +6154,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 0.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002561251_SK_P"
   },
   {
    "store": "Billa",
@@ -6054,7 +6191,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 6.36,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4049729003226_SK_P"
   },
   {
    "store": "Billa",
@@ -6072,7 +6210,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 3.96,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00017288_P"
   },
   {
    "store": "Billa",
@@ -6180,7 +6319,8 @@
    "valid_to": "2026-11-10",
    "page": 13,
    "unit_price": 21.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00086557_P"
   },
   {
    "store": "Billa",
@@ -6198,7 +6338,8 @@
    "valid_to": "2026-11-10",
    "page": 13,
    "unit_price": 7.77,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00076822_P"
   },
   {
    "store": "Billa",
@@ -6234,7 +6375,8 @@
    "valid_to": "2026-11-10",
    "page": 13,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603003B_P"
   },
   {
    "store": "Billa",
@@ -6288,7 +6430,8 @@
    "valid_to": "2026-11-10",
    "page": 13,
    "unit_price": 21.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00136523_P"
   },
   {
    "store": "Billa",
@@ -6468,7 +6611,8 @@
    "valid_to": "2026-11-10",
    "page": 15,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/02702465_P"
   },
   {
    "store": "Billa",
@@ -6648,7 +6792,8 @@
    "valid_to": "2026-11-10",
    "page": 15,
    "unit_price": 27.69,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f3e774f1-831b-4328-b763-5c084973d791/a78f5b6a-f6c4-40f9-9828-c56c2f2355eb_215092031.jpeg?w=225"
   },
   {
    "store": "Billa",
@@ -6684,7 +6829,8 @@
    "valid_to": "2026-11-10",
    "page": 16,
    "unit_price": 9.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://media.kaufland.com/images/PPIM/KMO/SK300_03300521_P.jpg"
   },
   {
    "store": "Billa",
@@ -6702,7 +6848,8 @@
    "valid_to": "2026-11-10",
    "page": 16,
    "unit_price": 1.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00021496_P-1"
   },
   {
    "store": "Billa",
@@ -6792,7 +6939,8 @@
    "valid_to": "2026-11-10",
    "page": 16,
    "unit_price": 10.38,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594001692644_SK_P"
   },
   {
    "store": "Billa",
@@ -6882,7 +7030,8 @@
    "valid_to": "2026-11-10",
    "page": 17,
    "unit_price": 35.78,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4009900412117_SK_P"
   },
   {
    "store": "Billa",
@@ -6972,7 +7121,8 @@
    "valid_to": "2026-11-10",
    "page": 17,
    "unit_price": 10.0,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/85920729_SK_P"
   },
   {
    "store": "Billa",
@@ -6990,7 +7140,8 @@
    "valid_to": "2026-11-10",
    "page": 17,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20278063_P"
   },
   {
    "store": "Billa",
@@ -7026,7 +7177,8 @@
    "valid_to": "2026-11-10",
    "page": 18,
    "unit_price": 25.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00123848_P"
   },
   {
    "store": "Billa",
@@ -7044,7 +7196,8 @@
    "valid_to": "2026-11-10",
    "page": 18,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/02401973_P"
   },
   {
    "store": "Billa",
@@ -7080,7 +7233,8 @@
    "valid_to": "2026-11-10",
    "page": 18,
    "unit_price": 10.75,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20943653_P"
   },
   {
    "store": "Billa",
@@ -7134,7 +7288,8 @@
    "valid_to": "2026-11-10",
    "page": 18,
    "unit_price": 13.16,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4061445292463_SK_P"
   },
   {
    "store": "Billa",
@@ -7206,7 +7361,8 @@
    "valid_to": "2026-11-10",
    "page": 19,
    "unit_price": 0.26,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133826_P"
   },
   {
    "store": "Billa",
@@ -7224,7 +7380,8 @@
    "valid_to": "2026-11-10",
    "page": 19,
    "unit_price": 0.33,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133838A_P"
   },
   {
    "store": "Billa",
@@ -7296,7 +7453,8 @@
    "valid_to": "2026-11-10",
    "page": 19,
    "unit_price": 0.66,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133826_P"
   },
   {
    "store": "Billa",
@@ -7494,7 +7652,8 @@
    "valid_to": "2026-11-10",
    "page": 20,
    "unit_price": 1.5,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594403708738_SK_P"
   },
   {
    "store": "Billa",
@@ -7566,7 +7725,8 @@
    "valid_to": "2026-11-10",
    "page": 20,
    "unit_price": 8.22,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00063227_P"
   },
   {
    "store": "Billa",
@@ -7584,7 +7744,8 @@
    "valid_to": "2026-11-10",
    "page": 21,
    "unit_price": 1.1,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20605238_P"
   },
   {
    "store": "Billa",
@@ -7728,7 +7889,8 @@
    "valid_to": "2026-11-10",
    "page": 21,
    "unit_price": 13.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20343335_P"
   },
   {
    "store": "Billa",
@@ -7782,7 +7944,8 @@
    "valid_to": "2026-11-10",
    "page": 22,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20342413_P"
   },
   {
    "store": "Billa",
@@ -7818,7 +7981,8 @@
    "valid_to": "2026-11-10",
    "page": 22,
    "unit_price": 0.173,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20684150_P-2"
   },
   {
    "store": "Billa",
@@ -7836,7 +8000,8 @@
    "valid_to": "2026-11-10",
    "page": 22,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20921651_P"
   },
   {
    "store": "Billa",
@@ -7890,7 +8055,8 @@
    "valid_to": "2026-11-10",
    "page": 22,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20820821_P-1"
   },
   {
    "store": "Billa",
@@ -7926,7 +8092,8 @@
    "valid_to": "2026-11-10",
    "page": 22,
    "unit_price": 0.271,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20862086_P"
   },
   {
    "store": "Billa",
@@ -7998,7 +8165,8 @@
    "valid_to": "2026-11-10",
    "page": 23,
    "unit_price": 11.18,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/04808852_P"
   },
   {
    "store": "Billa",
@@ -8052,7 +8220,8 @@
    "valid_to": "2026-11-10",
    "page": 23,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4064791015335_SK_P"
   },
   {
    "store": "Billa",
@@ -8124,7 +8293,8 @@
    "valid_to": "2026-11-08",
    "page": 24,
    "unit_price": 8.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2853290000000_SK_P"
   },
   {
    "store": "Billa",
@@ -8196,7 +8366,8 @@
    "valid_to": "2026-11-08",
    "page": 24,
    "unit_price": 1.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8031858122011_SK_P-1"
   },
   {
    "store": "Billa",
@@ -8232,7 +8403,8 @@
    "valid_to": "2026-11-08",
    "page": 24,
    "unit_price": 1.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2837080000000_SK_P"
   },
   {
    "store": "Billa",
@@ -8286,7 +8458,8 @@
    "valid_to": "2026-11-30",
    "page": 25,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00063571_P"
   },
   {
    "store": "Kaufland",
@@ -22428,7 +22601,8 @@
    "valid_to": "2026-11-08",
    "page": 1,
    "unit_price": 4.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2819380000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -22482,7 +22656,8 @@
    "valid_to": "2026-11-08",
    "page": 1,
    "unit_price": 5.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20921939_P"
   },
   {
    "store": "Lidl",
@@ -22554,7 +22729,8 @@
    "valid_to": "2026-11-08",
    "page": 6,
    "unit_price": 38.83,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/9e8a0ef2-3bd5-4a20-a6ca-d6390a2f1924/1bfd15e9-1e53-4305-8de1-cb03b6f5527c_1402512794.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -22608,7 +22784,8 @@
    "valid_to": "2026-11-08",
    "page": 6,
    "unit_price": 11.8,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8584004010200_SK_P"
   },
   {
    "store": "Lidl",
@@ -22644,7 +22821,8 @@
    "valid_to": "2026-11-08",
    "page": 6,
    "unit_price": 0.84,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/dff47936-d605-4c8e-b279-6c177a38f9af/1abe83ed-47f1-419a-9da6-46fc39ffa5e4.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -22788,7 +22966,8 @@
    "valid_to": "2026-11-08",
    "page": 7,
    "unit_price": 21.56,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2870000000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -22842,7 +23021,8 @@
    "valid_to": "2026-11-08",
    "page": 7,
    "unit_price": 6.33,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20696946_P"
   },
   {
    "store": "Lidl",
@@ -22896,7 +23076,8 @@
    "valid_to": "2026-11-08",
    "page": 7,
    "unit_price": 1.7,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20927433_P"
   },
   {
    "store": "Lidl",
@@ -22932,7 +23113,8 @@
    "valid_to": "2026-11-08",
    "page": 10,
    "unit_price": 1.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4046434103043_SK_P"
   },
   {
    "store": "Lidl",
@@ -22950,7 +23132,8 @@
    "valid_to": "2026-11-08",
    "page": 10,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/1a9ed31a-e452-4fb5-bd6d-b4d6a5aeebf3/48c0a3c4-d9e6-4b86-9625-edde1988bd1b_306393199.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -22968,7 +23151,8 @@
    "valid_to": "2026-11-08",
    "page": 10,
    "unit_price": 2.69,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09701772_P"
   },
   {
    "store": "Lidl",
@@ -23022,7 +23206,8 @@
    "valid_to": "2026-11-08",
    "page": 10,
    "unit_price": 2.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586008424014_SK_P"
   },
   {
    "store": "Lidl",
@@ -23166,7 +23351,8 @@
    "valid_to": "2026-11-08",
    "page": 12,
    "unit_price": 18.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20981759_P"
   },
   {
    "store": "Lidl",
@@ -23184,7 +23370,8 @@
    "valid_to": "2026-11-08",
    "page": 13,
    "unit_price": 2.59,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2819410000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -23220,7 +23407,8 @@
    "valid_to": "2026-11-08",
    "page": 13,
    "unit_price": 3.19,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -23238,7 +23426,8 @@
    "valid_to": "2026-11-08",
    "page": 13,
    "unit_price": 3.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00047036_P"
   },
   {
    "store": "Lidl",
@@ -23274,7 +23463,8 @@
    "valid_to": "2026-11-08",
    "page": 13,
    "unit_price": 2.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/2722ee51-9533-4e88-9260-2211b03fb3cd/e33213fc-e4ac-47bd-bf90-87426e42a2d4_1118954051.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -23436,7 +23626,8 @@
    "valid_to": "2026-11-08",
    "page": 14,
    "unit_price": 5.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20760251_P"
   },
   {
    "store": "Lidl",
@@ -23508,7 +23699,8 @@
    "valid_to": "2026-11-08",
    "page": 16,
    "unit_price": 5.38,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00083446_P"
   },
   {
    "store": "Lidl",
@@ -23544,7 +23736,8 @@
    "valid_to": "2026-11-08",
    "page": 17,
    "unit_price": 4.94,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20823358_P"
   },
   {
    "store": "Lidl",
@@ -23580,7 +23773,8 @@
    "valid_to": "2026-11-08",
    "page": 17,
    "unit_price": 6.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/7622201392215_SK_P"
   },
   {
    "store": "Lidl",
@@ -23634,7 +23828,8 @@
    "valid_to": "2026-11-08",
    "page": 18,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20278063_P"
   },
   {
    "store": "Lidl",
@@ -23724,7 +23919,8 @@
    "valid_to": "2026-11-08",
    "page": 19,
    "unit_price": 1.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03401075_P"
   },
   {
    "store": "Lidl",
@@ -23976,7 +24172,8 @@
    "valid_to": "2026-11-08",
    "page": 21,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20610318_P"
   },
   {
    "store": "Lidl",
@@ -23994,7 +24191,8 @@
    "valid_to": "2026-11-08",
    "page": 21,
    "unit_price": 9.96,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20904655_P"
   },
   {
    "store": "Lidl",
@@ -24012,7 +24210,8 @@
    "valid_to": "2026-11-08",
    "page": 21,
    "unit_price": 6.17,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4337185525858_P-1"
   },
   {
    "store": "Lidl",
@@ -24030,7 +24229,8 @@
    "valid_to": "2026-11-08",
    "page": 21,
    "unit_price": 7.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00504070_P"
   },
   {
    "store": "Lidl",
@@ -24084,7 +24284,8 @@
    "valid_to": "2026-11-08",
    "page": 22,
    "unit_price": 19.97,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20272974_P"
   },
   {
    "store": "Lidl",
@@ -24138,7 +24339,8 @@
    "valid_to": "2026-11-08",
    "page": 22,
    "unit_price": 2.64,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595692202327_SK_P"
   },
   {
    "store": "Lidl",
@@ -24174,7 +24376,8 @@
    "valid_to": "2026-11-08",
    "page": 22,
    "unit_price": 4.32,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00126979_P-1"
   },
   {
    "store": "Lidl",
@@ -24228,7 +24431,8 @@
    "valid_to": "2026-11-08",
    "page": 23,
    "unit_price": 7.53,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4049727722419_SK_P"
   },
   {
    "store": "Lidl",
@@ -24336,7 +24540,8 @@
    "valid_to": "2026-11-08",
    "page": 24,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002101210_SK_P"
   },
   {
    "store": "Lidl",
@@ -24372,7 +24577,8 @@
    "valid_to": "2026-11-08",
    "page": 24,
    "unit_price": 7.42,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/85812826_SK_P"
   },
   {
    "store": "Lidl",
@@ -24390,7 +24596,8 @@
    "valid_to": "2026-11-08",
    "page": 24,
    "unit_price": 2.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00042465_P"
   },
   {
    "store": "Lidl",
@@ -24408,7 +24615,8 @@
    "valid_to": "2026-11-08",
    "page": 24,
    "unit_price": 1.69,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20919395_P"
   },
   {
    "store": "Lidl",
@@ -24858,7 +25066,8 @@
    "valid_to": "2026-11-08",
    "page": 28,
    "unit_price": 13.27,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00109841_P"
   },
   {
    "store": "Lidl",
@@ -24894,7 +25103,8 @@
    "valid_to": "2026-11-08",
    "page": 28,
    "unit_price": 8.87,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4063367432958_SK_P"
   },
   {
    "store": "Lidl",
@@ -24930,7 +25140,8 @@
    "valid_to": "2026-11-08",
    "page": 28,
    "unit_price": 7.96,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20943653_P"
   },
   {
    "store": "Lidl",
@@ -25002,7 +25213,8 @@
    "valid_to": "2026-11-08",
    "page": 29,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/01502968_P"
   },
   {
    "store": "Lidl",
@@ -25038,7 +25250,8 @@
    "valid_to": "2026-11-08",
    "page": 29,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/115edd66-e8dc-4ebc-8ef3-37276bd1d2d4/9b5fc004-f843-4a14-a1b4-d2468a236b32_1763683994.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -25074,7 +25287,8 @@
    "valid_to": "2026-11-08",
    "page": 29,
    "unit_price": 1.28,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586003765440_SK_P"
   },
   {
    "store": "Lidl",
@@ -25092,7 +25306,8 @@
    "valid_to": "2026-11-08",
    "page": 29,
    "unit_price": 1.94,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20796077_P"
   },
   {
    "store": "Lidl",
@@ -25164,7 +25379,8 @@
    "valid_to": "2026-11-08",
    "page": 30,
    "unit_price": 3.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595229920403_SK_P"
   },
   {
    "store": "Lidl",
@@ -25344,7 +25560,8 @@
    "valid_to": "2026-11-08",
    "page": 31,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20605238_P"
   },
   {
    "store": "Lidl",
@@ -25434,7 +25651,8 @@
    "valid_to": "2026-11-08",
    "page": 32,
    "unit_price": 9.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/02203621_P"
   },
   {
    "store": "Lidl",
@@ -25452,7 +25670,8 @@
    "valid_to": "2026-11-08",
    "page": 32,
    "unit_price": 16.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/7312040017034_SK_P"
   },
   {
    "store": "Lidl",
@@ -25470,7 +25689,8 @@
    "valid_to": "2026-11-08",
    "page": 32,
    "unit_price": 16.33,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b471f4ad-10ed-4b8e-a2fd-e527b1172998/37edaf10-247a-4743-91ab-5b9ab33277b1_841757478.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -25578,7 +25798,8 @@
    "valid_to": "2026-11-08",
    "page": 33,
    "unit_price": 14.93,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20341732_P-1"
   },
   {
    "store": "Lidl",
@@ -25740,7 +25961,8 @@
    "valid_to": "2026-11-08",
    "page": 36,
    "unit_price": 0.77,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/d81d9741-add2-48e0-8871-8a250cb41446/2c78ebe6-fe6a-44ad-91fc-0834364b5963_1937953656.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -25848,7 +26070,8 @@
    "valid_to": "2026-11-08",
    "page": 35,
    "unit_price": 3.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595671301430_SK_P"
   },
   {
    "store": "Lidl",
@@ -25866,7 +26089,8 @@
    "valid_to": "2026-11-08",
    "page": 35,
    "unit_price": 3.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00139542_P-2"
   },
   {
    "store": "Lidl",
@@ -25938,7 +26162,8 @@
    "valid_to": "2026-11-08",
    "page": 37,
    "unit_price": 6.23,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00114178_P"
   },
   {
    "store": "Lidl",
@@ -26082,7 +26307,8 @@
    "valid_to": "2026-11-08",
    "page": 38,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603002_P"
   },
   {
    "store": "Lidl",
@@ -26100,7 +26326,8 @@
    "valid_to": "2026-11-08",
    "page": 38,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603003B_P"
   },
   {
    "store": "Lidl",
@@ -26118,7 +26345,8 @@
    "valid_to": "2026-11-08",
    "page": 38,
    "unit_price": 7.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603003B_P"
   },
   {
    "store": "Lidl",
@@ -26136,7 +26364,8 @@
    "valid_to": "2026-11-08",
    "page": 38,
    "unit_price": 0.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00020651_P"
   },
   {
    "store": "Lidl",
@@ -26154,7 +26383,8 @@
    "valid_to": "2026-11-08",
    "page": 38,
    "unit_price": 0.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/d43a46ae-0206-4ab6-8b05-0b2e0feff888/335d0cd5-7f56-442d-bac0-6dc89a09527f.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -26190,7 +26420,8 @@
    "valid_to": "2026-11-08",
    "page": 39,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00086557_P"
   },
   {
    "store": "Lidl",
@@ -26226,7 +26457,8 @@
    "valid_to": "2026-11-08",
    "page": 39,
    "unit_price": 17.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00086557_P"
   },
   {
    "store": "Lidl",
@@ -26298,7 +26530,8 @@
    "valid_to": "2026-11-08",
    "page": 39,
    "unit_price": 27.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603003B_P"
   },
   {
    "store": "Lidl",
@@ -26586,7 +26819,8 @@
    "valid_to": "2026-11-08",
    "page": 42,
    "unit_price": 5.93,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000150038_SK_P"
   },
   {
    "store": "Lidl",
@@ -26604,7 +26838,8 @@
    "valid_to": "2026-11-08",
    "page": 42,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00089386_P"
   },
   {
    "store": "Lidl",
@@ -26910,7 +27145,8 @@
    "valid_to": "2026-11-08",
    "page": 45,
    "unit_price": 39.75,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f3e774f1-831b-4328-b763-5c084973d791/a78f5b6a-f6c4-40f9-9828-c56c2f2355eb_215092031.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -27126,7 +27362,8 @@
    "valid_to": "2026-11-08",
    "page": 48,
    "unit_price": 14.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4000607000386_SK_P"
   },
   {
    "store": "Lidl",
@@ -27288,7 +27525,8 @@
    "valid_to": "2026-11-08",
    "page": 49,
    "unit_price": 33.2,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/5702018063231_SK_P"
   },
   {
    "store": "Lidl",
@@ -27306,7 +27544,8 @@
    "valid_to": "2026-11-08",
    "page": 49,
    "unit_price": 23.87,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/5702018063231_SK_P"
   },
   {
    "store": "Lidl",
@@ -27324,7 +27563,8 @@
    "valid_to": "2026-11-08",
    "page": 50,
    "unit_price": 14.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20996079_P"
   },
   {
    "store": "Lidl",
@@ -27432,7 +27672,8 @@
    "valid_to": "2026-11-08",
    "page": 51,
    "unit_price": 13.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20996079_P"
   },
   {
    "store": "Lidl",
@@ -27486,7 +27727,8 @@
    "valid_to": "2026-11-08",
    "page": 52,
    "unit_price": 1.48,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00128981_P"
   },
   {
    "store": "Lidl",
@@ -27540,7 +27782,8 @@
    "valid_to": "2026-11-08",
    "page": 52,
    "unit_price": 0.83,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/05005894_P"
   },
   {
    "store": "Lidl",
@@ -27558,7 +27801,8 @@
    "valid_to": "2026-11-08",
    "page": 52,
    "unit_price": 1.0,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585003911574_SK_P"
   },
   {
    "store": "Lidl",
@@ -27612,7 +27856,8 @@
    "valid_to": "2026-11-08",
    "page": 53,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20747342_P"
   },
   {
    "store": "Lidl",
@@ -27666,7 +27911,8 @@
    "valid_to": "2026-11-08",
    "page": 53,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20747342_P"
   },
   {
    "store": "Lidl",
@@ -27900,7 +28146,8 @@
    "valid_to": "2026-11-08",
    "page": 73,
    "unit_price": 1.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8031858122011_SK_P-1"
   },
   {
    "store": "Lidl",
@@ -27918,7 +28165,8 @@
    "valid_to": "2026-11-08",
    "page": 73,
    "unit_price": 5.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20841954_P"
   },
   {
    "store": "Lidl",
@@ -27936,7 +28184,8 @@
    "valid_to": "2026-11-08",
    "page": 73,
    "unit_price": 3.19,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -27954,7 +28203,8 @@
    "valid_to": "2026-11-08",
    "page": 76,
    "unit_price": 1.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09701673_P-1"
   },
   {
    "store": "Lidl",
@@ -27972,7 +28222,8 @@
    "valid_to": "2026-11-08",
    "page": 76,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09701788_P-1"
   },
   {
    "store": "Lidl",
@@ -28008,7 +28259,8 @@
    "valid_to": "2026-11-08",
    "page": 76,
    "unit_price": 15.92,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09702751_P-1"
   },
   {
    "store": "Lidl",
@@ -28062,7 +28314,8 @@
    "valid_to": "2026-11-08",
    "page": 77,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588008600122_SK_P-1"
   },
   {
    "store": "Lidl",
@@ -28080,7 +28333,8 @@
    "valid_to": "2026-11-08",
    "page": 77,
    "unit_price": 0.55,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8717953011008_SK_P"
   },
   {
    "store": "Lidl",
@@ -28098,7 +28352,8 @@
    "valid_to": "2026-11-08",
    "page": 77,
    "unit_price": 1.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2837510000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -28116,7 +28371,8 @@
    "valid_to": "2026-11-08",
    "page": 77,
    "unit_price": 0.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3896e92b-6d80-4ae1-ab7e-da1cd095862e/8d69bd88-9311-49fc-83e4-5ea37ec99a30_217285391.jpeg?w=225"
   },
   {
    "store": "Lidl",
@@ -28152,7 +28408,8 @@
    "valid_to": "2026-11-08",
    "page": 78,
    "unit_price": 4.38,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20343904_P-1"
   },
   {
    "store": "Lidl",
@@ -28170,7 +28427,8 @@
    "valid_to": "2026-11-08",
    "page": 78,
    "unit_price": 4.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -28206,7 +28464,8 @@
    "valid_to": "2026-11-08",
    "page": 78,
    "unit_price": 6.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20343911_P"
   },
   {
    "store": "Lidl",
@@ -28260,7 +28519,8 @@
    "valid_to": "2026-11-08",
    "page": 79,
    "unit_price": 0.75,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2809920000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -28278,7 +28538,8 @@
    "valid_to": "2026-11-08",
    "page": 79,
    "unit_price": 3.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2819400000000_SK_P"
   },
   {
    "store": "Lidl",
@@ -28530,7 +28791,8 @@
    "valid_to": "2026-11-08",
    "page": 81,
    "unit_price": 4.33,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8934561000327_SK_P"
   },
   {
    "store": "Lidl",
@@ -28602,7 +28864,8 @@
    "valid_to": "2026-11-08",
    "page": 81,
    "unit_price": 2.18,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00134202_P"
   },
   {
    "store": "Lidl",
@@ -28620,7 +28883,8 @@
    "valid_to": "2026-11-08",
    "page": 81,
    "unit_price": 3.23,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/6080_SK_P"
   },
   {
    "store": "Lidl",
@@ -28674,7 +28938,8 @@
    "valid_to": "2026-11-08",
    "page": 82,
    "unit_price": 1.38,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586028180280_SK_P"
   },
   {
    "store": "Lidl",
@@ -28710,7 +28975,8 @@
    "valid_to": "2026-11-08",
    "page": 82,
    "unit_price": 0.46,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133600_P"
   },
   {
    "store": "Lidl",
@@ -28728,7 +28994,8 @@
    "valid_to": "2026-11-08",
    "page": 82,
    "unit_price": 1.1,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20927425_P"
   },
   {
    "store": "Lidl",
@@ -28782,7 +29049,8 @@
    "valid_to": "2026-11-08",
    "page": 82,
    "unit_price": 0.78,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00137207_P"
   },
   {
    "store": "Lidl",
@@ -28836,7 +29104,8 @@
    "valid_to": "2026-11-08",
    "page": 82,
    "unit_price": 3.72,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8001540002228_SK_P"
   },
   {
    "store": "Lidl",
@@ -29052,7 +29321,8 @@
    "valid_to": "2026-11-08",
    "page": 99,
    "unit_price": 3.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00047010_P"
   },
   {
    "store": "Lidl",
@@ -29070,7 +29340,8 @@
    "valid_to": "2026-11-08",
    "page": 99,
    "unit_price": 3.58,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4000007079302_SK_P-1"
   },
   {
    "store": "Lidl",
@@ -29160,7 +29431,8 @@
    "valid_to": "2026-11-08",
    "page": 99,
    "unit_price": 1.18,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00137207_P"
   },
   {
    "store": "Lidl",
@@ -29196,7 +29468,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 3.19,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -29232,7 +29505,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00063227_P"
   },
   {
    "store": "Tesco",
@@ -29268,7 +29542,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 1.86,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133527_P"
   },
   {
    "store": "Tesco",
@@ -29304,7 +29579,8 @@
    "valid_to": "2026-11-03",
    "page": 1,
    "unit_price": 2.69,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/cc83a193-3bae-40c5-8346-ccc84c65403b/1718757e-deed-4b06-a398-e9a60e263e9a_1837438991.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -29376,7 +29652,8 @@
    "valid_to": "2026-11-03",
    "page": 2,
    "unit_price": 1.89,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20974331_P"
   },
   {
    "store": "Tesco",
@@ -29394,7 +29671,8 @@
    "valid_to": "2026-11-03",
    "page": 2,
    "unit_price": 4.27,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20941041_P"
   },
   {
    "store": "Tesco",
@@ -29448,7 +29726,8 @@
    "valid_to": "2026-11-01",
    "page": 3,
    "unit_price": 5.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00047036_P"
   },
   {
    "store": "Tesco",
@@ -29502,7 +29781,8 @@
    "valid_to": "2026-11-01",
    "page": 3,
    "unit_price": 10.7,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/48affc9e-3976-4e89-b686-b361c70b6c53/7b26d4e9-9994-4a79-b0b6-a13ac146a853.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -29520,7 +29800,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": 0.54,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4049729007408_SK_P-1"
   },
   {
    "store": "Tesco",
@@ -29574,7 +29855,8 @@
    "valid_to": "2026-11-01",
    "page": 4,
    "unit_price": 15.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09702586_P-1"
   },
   {
    "store": "Tesco",
@@ -29610,7 +29892,8 @@
    "valid_to": "2026-11-01",
    "page": 4,
    "unit_price": 9.16,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00124716_P-1"
   },
   {
    "store": "Tesco",
@@ -29664,7 +29947,8 @@
    "valid_to": "2026-11-03",
    "page": 4,
    "unit_price": 13.97,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09702751_P-1"
   },
   {
    "store": "Tesco",
@@ -29682,7 +29966,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/1a9ed31a-e452-4fb5-bd6d-b4d6a5aeebf3/48c0a3c4-d9e6-4b86-9625-edde1988bd1b_306393199.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -29700,7 +29985,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 1.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00112355_P-2"
   },
   {
    "store": "Tesco",
@@ -29718,7 +30004,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 0.59,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2837230000000_SK_P-1"
   },
   {
    "store": "Tesco",
@@ -29736,7 +30023,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 6.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/dd1aa65d-b387-40e5-9dc3-4ab9e2f98172/fb042a16-7729-4636-84a8-700cdfe94eab_214807151.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -29754,7 +30042,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 2.38,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8031858122011_SK_P-1"
   },
   {
    "store": "Tesco",
@@ -29772,7 +30061,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 1.39,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://media.kaufland.com/images/PPIM/KMO/SK300_09701828_P.jpg"
   },
   {
    "store": "Tesco",
@@ -29808,7 +30098,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 1.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4046434103043_SK_P"
   },
   {
    "store": "Tesco",
@@ -29844,7 +30135,8 @@
    "valid_to": "2026-11-03",
    "page": 5,
    "unit_price": 0.89,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8717953011008_SK_P"
   },
   {
    "store": "Tesco",
@@ -29862,7 +30154,8 @@
    "valid_to": "2026-11-03",
    "page": 6,
    "unit_price": 4.36,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00139542_P-2"
   },
   {
    "store": "Tesco",
@@ -29934,7 +30227,8 @@
    "valid_to": "2026-11-03",
    "page": 6,
    "unit_price": 11.73,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000669233_SK_P"
   },
   {
    "store": "Tesco",
@@ -29988,7 +30282,8 @@
    "valid_to": "2026-11-03",
    "page": 6,
    "unit_price": 4.14,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00126979_P-1"
   },
   {
    "store": "Tesco",
@@ -30006,7 +30301,8 @@
    "valid_to": "2026-11-03",
    "page": 6,
    "unit_price": 8.25,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f1cbe244-fedf-4e05-a013-b58ff66d7c32/cc294cf8-ffdf-4a9b-9e46-93ef63ec30ef_1136736689.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -30042,7 +30338,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 2.3,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586000140400_SK_P"
   },
   {
    "store": "Tesco",
@@ -30060,7 +30357,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 1.0,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002561251_SK_P"
   },
   {
    "store": "Tesco",
@@ -30096,7 +30394,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002101210_SK_P"
   },
   {
    "store": "Tesco",
@@ -30132,7 +30431,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 2.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00042465_P"
   },
   {
    "store": "Tesco",
@@ -30186,7 +30486,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 0.69,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/000886015_P"
   },
   {
    "store": "Tesco",
@@ -30204,7 +30505,8 @@
    "valid_to": "2026-11-03",
    "page": 7,
    "unit_price": 4.72,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4d03b65b-12e5-46cf-8a05-f140aa718d2a/4eea3188-5136-4f49-8581-a478671094b1_222727731.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -30276,7 +30578,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 5.58,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20343904_P-1"
   },
   {
    "store": "Tesco",
@@ -30294,7 +30597,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 2.59,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2819410000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -30312,7 +30616,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 8.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2807900000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -30330,7 +30635,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 5.72,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00047036_P"
   },
   {
    "store": "Tesco",
@@ -30384,7 +30690,8 @@
    "valid_to": "2026-11-03",
    "page": 8,
    "unit_price": 6.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20988799_P"
   },
   {
    "store": "Tesco",
@@ -30528,7 +30835,8 @@
    "valid_to": "2026-11-03",
    "page": 11,
    "unit_price": 3.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4006363114817_SK_P"
   },
   {
    "store": "Tesco",
@@ -30564,7 +30872,8 @@
    "valid_to": "2026-11-03",
    "page": 11,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603002_P"
   },
   {
    "store": "Tesco",
@@ -30654,7 +30963,8 @@
    "valid_to": "2026-11-03",
    "page": 11,
    "unit_price": 69.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00076253_P"
   },
   {
    "store": "Tesco",
@@ -31068,7 +31378,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 0.29,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133826_P"
   },
   {
    "store": "Tesco",
@@ -31104,7 +31415,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 6.33,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/569a2832-69ba-4994-9caf-d5fd964b22cb/7a3e5f7b-9609-43bc-89fa-f55288ec0b1c.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -31122,7 +31434,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 12.67,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/02804845_P"
   },
   {
    "store": "Tesco",
@@ -31140,7 +31453,8 @@
    "valid_to": "2026-11-03",
    "page": 15,
    "unit_price": 6.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/25b63a79-5d6e-4a81-8bcd-b20de15a6896/afdcf148-9bb5-42de-bbf0-eb039d102ddc.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -31230,7 +31544,8 @@
    "valid_to": "2026-11-02",
    "page": 17,
    "unit_price": 1.72,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20747342_P"
   },
   {
    "store": "Tesco",
@@ -31248,7 +31563,8 @@
    "valid_to": "2026-11-02",
    "page": 17,
    "unit_price": 0.3,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8006540940334_SK_P"
   },
   {
    "store": "Tesco",
@@ -31338,7 +31654,8 @@
    "valid_to": "2026-11-02",
    "page": 17,
    "unit_price": 5.9,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/40900e7f-43c0-4872-a014-10d1e51354ac/2685ea22-0804-4049-bf8b-ed492ca36478_807443578.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -31356,7 +31673,8 @@
    "valid_to": "2026-11-02",
    "page": 17,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20985514_P"
   },
   {
    "store": "Tesco",
@@ -31536,7 +31854,8 @@
    "valid_to": "2026-11-03",
    "page": 19,
    "unit_price": 0.225,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20684150_P-2"
   },
   {
    "store": "Tesco",
@@ -31824,7 +32143,8 @@
    "valid_to": "2026-11-03",
    "page": 22,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4b886974-13e2-4afd-b6cc-38c38f728a19/1c932878-05d4-437f-b0a2-65054cbd4109_1839722727.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -31842,7 +32162,8 @@
    "valid_to": "2026-11-03",
    "page": 22,
    "unit_price": 2.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586000140400_SK_P"
   },
   {
    "store": "Tesco",
@@ -32022,7 +32343,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 6.32,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/bf89c8fd-59d8-4631-a084-206d2f668bdf/4c4860f7-29f8-4239-b21f-8162b7a37e64.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -32058,7 +32380,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 2.28,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20941041_P"
   },
   {
    "store": "Tesco",
@@ -32130,7 +32453,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 18.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00109841_P"
   },
   {
    "store": "Tesco",
@@ -32148,7 +32472,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00090258_P"
   },
   {
    "store": "Tesco",
@@ -32166,7 +32491,8 @@
    "valid_to": "2026-11-03",
    "page": 23,
    "unit_price": 0.136,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20862086_P"
   },
   {
    "store": "Tesco",
@@ -32334,7 +32660,8 @@
    "valid_to": "2026-11-03",
    "page": 24,
    "unit_price": 7.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00070145_P"
   },
   {
    "store": "Tesco",
@@ -32388,7 +32715,8 @@
    "valid_to": "2026-11-03",
    "page": 24,
    "unit_price": 2.64,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002525031_SK_P"
   },
   {
    "store": "Tesco",
@@ -32532,7 +32860,8 @@
    "valid_to": "2026-11-03",
    "page": 25,
    "unit_price": 7.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00012887_P"
   },
   {
    "store": "Tesco",
@@ -32550,7 +32879,8 @@
    "valid_to": "2026-11-03",
    "page": 25,
    "unit_price": 14.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20853612_P"
   },
   {
    "store": "Tesco",
@@ -32568,7 +32898,8 @@
    "valid_to": "2026-11-03",
    "page": 25,
    "unit_price": 11.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20931741_P"
   },
   {
    "store": "Tesco",
@@ -32604,7 +32935,8 @@
    "valid_to": "2026-11-03",
    "page": 25,
    "unit_price": 10.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20343904_P-1"
   },
   {
    "store": "Tesco",
@@ -32640,7 +32972,8 @@
    "valid_to": "2026-11-03",
    "page": 25,
    "unit_price": 5.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/efc6094c-d3da-4f3a-8c83-ae65c537b14c/d732930b-fda3-40db-8c42-e3eaebdb2cd0.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -32658,7 +32991,8 @@
    "valid_to": "2026-11-03",
    "page": 25,
    "unit_price": 4.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2819380000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -32766,7 +33100,8 @@
    "valid_to": "2026-11-03",
    "page": 26,
    "unit_price": 8.33,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000150038_SK_P"
   },
   {
    "store": "Tesco",
@@ -32802,7 +33137,8 @@
    "valid_to": "2026-11-03",
    "page": 26,
    "unit_price": 2.86,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00105634_P"
   },
   {
    "store": "Tesco",
@@ -32820,7 +33156,8 @@
    "valid_to": "2026-11-03",
    "page": 26,
    "unit_price": 9.21,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20921447_P"
   },
   {
    "store": "Tesco",
@@ -32838,7 +33175,8 @@
    "valid_to": "2026-11-03",
    "page": 26,
    "unit_price": 7.04,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/bf89c8fd-59d8-4631-a084-206d2f668bdf/4c4860f7-29f8-4239-b21f-8162b7a37e64.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -33252,7 +33590,8 @@
    "valid_to": "2026-11-03",
    "page": 28,
    "unit_price": 26.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/3800020492659_SK_P"
   },
   {
    "store": "Tesco",
@@ -33270,7 +33609,8 @@
    "valid_to": "2026-11-03",
    "page": 28,
    "unit_price": 37.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/9e8a0ef2-3bd5-4a20-a6ca-d6390a2f1924/1bfd15e9-1e53-4305-8de1-cb03b6f5527c_1402512794.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -33288,7 +33628,8 @@
    "valid_to": "2026-11-03",
    "page": 28,
    "unit_price": 20.26,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f3e774f1-831b-4328-b763-5c084973d791/a78f5b6a-f6c4-40f9-9828-c56c2f2355eb_215092031.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -33324,7 +33665,8 @@
    "valid_to": "2026-11-03",
    "page": 29,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00138729_P"
   },
   {
    "store": "Tesco",
@@ -33342,7 +33684,8 @@
    "valid_to": "2026-11-03",
    "page": 29,
    "unit_price": 1.7,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20860154_P"
   },
   {
    "store": "Tesco",
@@ -33378,7 +33721,8 @@
    "valid_to": "2026-11-03",
    "page": 29,
    "unit_price": 1.08,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/4bf2b1ae-826b-43a2-8a7f-7ce3b0cc1d26/ca4b3c54-dc3a-4e6f-9873-0d480e44ca63_1492286633.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -33468,7 +33812,8 @@
    "valid_to": "2026-11-03",
    "page": 29,
    "unit_price": 2.36,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/5999571051854_SK_P"
   },
   {
    "store": "Tesco",
@@ -33528,7 +33873,8 @@
    "valid_to": "2026-11-03",
    "page": 30,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00020610_P"
   },
   {
    "store": "Tesco",
@@ -33600,7 +33946,8 @@
    "valid_to": "2026-11-03",
    "page": 30,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00122057_P"
   },
   {
    "store": "Tesco",
@@ -33654,7 +34001,8 @@
    "valid_to": "2026-11-03",
    "page": 30,
    "unit_price": 5.22,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/d81d9741-add2-48e0-8871-8a250cb41446/2c78ebe6-fe6a-44ad-91fc-0834364b5963_1937953656.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -33690,7 +34038,8 @@
    "valid_to": "2026-11-03",
    "page": 30,
    "unit_price": 0.216,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20684150_P-2"
   },
   {
    "store": "Tesco",
@@ -33762,7 +34111,8 @@
    "valid_to": "2026-11-03",
    "page": 31,
    "unit_price": 7.58,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/40900e7f-43c0-4872-a014-10d1e51354ac/2685ea22-0804-4049-bf8b-ed492ca36478_807443578.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -33906,7 +34256,8 @@
    "valid_to": "2026-11-09",
    "page": 37,
    "unit_price": 6.59,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/04808852_P"
   },
   {
    "store": "Tesco",
@@ -33942,7 +34293,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 1.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09701673_P-1"
   },
   {
    "store": "Tesco",
@@ -33978,7 +34330,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 0.78,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20605238_P"
   },
   {
    "store": "Tesco",
@@ -34014,7 +34367,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 5.19,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/01901450_P"
   },
   {
    "store": "Tesco",
@@ -34032,7 +34386,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 5.44,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00808041_P"
   },
   {
    "store": "Tesco",
@@ -34068,7 +34423,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 0.65,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20829749_P"
   },
   {
    "store": "Tesco",
@@ -34086,7 +34442,8 @@
    "valid_to": "2026-11-10",
    "page": 1,
    "unit_price": 4.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20841954_P"
   },
   {
    "store": "Tesco",
@@ -34122,7 +34479,8 @@
    "valid_to": "2026-11-10",
    "page": 2,
    "unit_price": 1.59,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20974331_P"
   },
   {
    "store": "Tesco",
@@ -34194,7 +34552,8 @@
    "valid_to": "2026-11-08",
    "page": 3,
    "unit_price": 1.78,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b83e9f0c-d638-42be-ae8c-ca8f4e66592f/e61218ee-44da-4aa5-8960-025ce563c3c1_362582263.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -34212,7 +34571,8 @@
    "valid_to": "2026-11-08",
    "page": 3,
    "unit_price": 8.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2810310000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -34267,6 +34627,7 @@
    "page": 4,
    "unit_price": 1.09,
    "unit_basis": "kg",
+   "image": "https://media.kaufland.com/images/PPIM/KMO/SK300_09701828_P.jpg",
    "hist": {
     "n": 1,
     "min": 1.39,
@@ -34290,7 +34651,8 @@
    "valid_to": "2026-11-10",
    "page": 4,
    "unit_price": 3.18,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586008424014_SK_P"
   },
   {
    "store": "Tesco",
@@ -34308,7 +34670,8 @@
    "valid_to": "2026-11-10",
    "page": 4,
    "unit_price": 1.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594012791657_SK_P"
   },
   {
    "store": "Tesco",
@@ -34326,7 +34689,8 @@
    "valid_to": "2026-11-10",
    "page": 4,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8717428039056_SK_P-1"
   },
   {
    "store": "Tesco",
@@ -34380,7 +34744,8 @@
    "valid_to": "2026-11-08",
    "page": 4,
    "unit_price": 1.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00112355_P-2"
   },
   {
    "store": "Tesco",
@@ -34398,7 +34763,8 @@
    "valid_to": "2026-11-08",
    "page": 4,
    "unit_price": 1.59,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2837510000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -34416,7 +34782,8 @@
    "valid_to": "2026-11-08",
    "page": 4,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588008600139_SK_P-1"
   },
   {
    "store": "Tesco",
@@ -34488,7 +34855,8 @@
    "valid_to": "2026-11-10",
    "page": 5,
    "unit_price": 2.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3281cfd1-e8e9-4ca1-9ad9-6484d2342a65/fb62c97f-6170-442c-9ead-7a1d19dfa3a5_498562666.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -34524,7 +34892,8 @@
    "valid_to": "2026-11-10",
    "page": 5,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09701772_P"
   },
   {
    "store": "Tesco",
@@ -34578,7 +34947,8 @@
    "valid_to": "2026-11-10",
    "page": 5,
    "unit_price": 15.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/09702751_P-1"
   },
   {
    "store": "Tesco",
@@ -34614,7 +34984,8 @@
    "valid_to": "2026-11-10",
    "page": 6,
    "unit_price": 4.68,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00126979_P-1"
   },
   {
    "store": "Tesco",
@@ -34632,7 +35003,8 @@
    "valid_to": "2026-11-10",
    "page": 6,
    "unit_price": 7.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00507901_P"
   },
   {
    "store": "Tesco",
@@ -34704,7 +35076,8 @@
    "valid_to": "2026-11-10",
    "page": 6,
    "unit_price": 5.5,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00139542_P-2"
   },
   {
    "store": "Tesco",
@@ -34722,7 +35095,8 @@
    "valid_to": "2026-11-10",
    "page": 6,
    "unit_price": 6.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20612535_P"
   },
   {
    "store": "Tesco",
@@ -34758,7 +35132,8 @@
    "valid_to": "2026-11-10",
    "page": 6,
    "unit_price": 6.36,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588001821869_SK_P"
   },
   {
    "store": "Tesco",
@@ -34794,7 +35169,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 0.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002561251_SK_P"
   },
   {
    "store": "Tesco",
@@ -34848,7 +35224,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 2.41,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00410081_P"
   },
   {
    "store": "Tesco",
@@ -34884,7 +35261,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002101210_SK_P"
   },
   {
    "store": "Tesco",
@@ -34902,7 +35280,8 @@
    "valid_to": "2026-11-10",
    "page": 7,
    "unit_price": 6.36,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20652761_P"
   },
   {
    "store": "Tesco",
@@ -34974,7 +35353,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 9.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2803820000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -35028,7 +35408,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 2.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/2722ee51-9533-4e88-9260-2211b03fb3cd/e33213fc-e4ac-47bd-bf90-87426e42a2d4_1118954051.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -35046,7 +35427,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 15.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20272974_P"
   },
   {
    "store": "Tesco",
@@ -35082,7 +35464,8 @@
    "valid_to": "2026-11-10",
    "page": 8,
    "unit_price": 4.97,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -35136,7 +35519,8 @@
    "valid_to": "2026-11-10",
    "page": 9,
    "unit_price": 18.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00109841_P"
   },
   {
    "store": "Tesco",
@@ -35172,7 +35556,8 @@
    "valid_to": "2026-11-10",
    "page": 9,
    "unit_price": 15.39,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/421d71f2-9eee-4f6a-89f8-0e40f59822f6/a6d49d67-a249-4536-b525-3f86d18cfef8_2064717554.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -35298,7 +35683,8 @@
    "valid_to": "2026-11-10",
    "page": 10,
    "unit_price": 4.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00601590_P"
   },
   {
    "store": "Tesco",
@@ -35316,7 +35702,8 @@
    "valid_to": "2026-11-10",
    "page": 10,
    "unit_price": 12.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2809920000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -35334,7 +35721,8 @@
    "valid_to": "2026-11-10",
    "page": 10,
    "unit_price": 11.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4001743761988_SK_P"
   },
   {
    "store": "Tesco",
@@ -35532,7 +35920,8 @@
    "valid_to": "2026-11-09",
    "page": 11,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20985514_P"
   },
   {
    "store": "Tesco",
@@ -35568,7 +35957,8 @@
    "valid_to": "2026-11-09",
    "page": 11,
    "unit_price": 0.198,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8006540940334_SK_P"
   },
   {
    "store": "Tesco",
@@ -35586,7 +35976,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 5.16,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00017288_P"
   },
   {
    "store": "Tesco",
@@ -35604,7 +35995,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 4.51,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594006840217_SK_P"
   },
   {
    "store": "Tesco",
@@ -35640,7 +36032,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 2.76,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002525031_SK_P"
   },
   {
    "store": "Tesco",
@@ -35694,7 +36087,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 1.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595692202327_SK_P"
   },
   {
    "store": "Tesco",
@@ -35713,6 +36107,7 @@
    "page": 12,
    "unit_price": 8.33,
    "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000150038_SK_P",
    "hist": {
     "n": 1,
     "min": 1.25,
@@ -35736,7 +36131,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 7.46,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000696031_SK_P"
   },
   {
    "store": "Tesco",
@@ -35772,7 +36168,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 4.38,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000027576_SK_P"
   },
   {
    "store": "Tesco",
@@ -35790,7 +36187,8 @@
    "valid_to": "2026-11-10",
    "page": 12,
    "unit_price": 11.58,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20996079_P"
   },
   {
    "store": "Tesco",
@@ -35826,7 +36224,8 @@
    "valid_to": "2026-11-17",
    "page": 13,
    "unit_price": 6.38,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000726967_SK_P"
   },
   {
    "store": "Tesco",
@@ -35844,7 +36243,8 @@
    "valid_to": "2026-11-17",
    "page": 13,
    "unit_price": 15.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603002_P"
   },
   {
    "store": "Tesco",
@@ -35916,7 +36316,8 @@
    "valid_to": "2026-11-17",
    "page": 13,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/03603003B_P"
   },
   {
    "store": "Tesco",
@@ -35970,7 +36371,8 @@
    "valid_to": "2026-11-17",
    "page": 13,
    "unit_price": 32.71,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00086557_P"
   },
   {
    "store": "Tesco",
@@ -36582,7 +36984,8 @@
    "valid_to": "2026-11-16",
    "page": 18,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20747342_P"
   },
   {
    "store": "Tesco",
@@ -36690,7 +37093,8 @@
    "valid_to": "2026-11-09",
    "page": 18,
    "unit_price": 3.77,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/5997321740690_SK_P-1"
   },
   {
    "store": "Tesco",
@@ -36744,7 +37148,8 @@
    "valid_to": "2026-11-09",
    "page": 19,
    "unit_price": 1.43,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/bfd6cfec-6cea-4b5c-ae34-a4d962e91932/96611fc5-db38-4887-ba72-cb0ef9bf342c_2005609203.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -36762,7 +37167,8 @@
    "valid_to": "2026-11-09",
    "page": 19,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20856215_P"
   },
   {
    "store": "Tesco",
@@ -36834,7 +37240,8 @@
    "valid_to": "2026-11-09",
    "page": 19,
    "unit_price": 7.1,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8585003920545_SK_P"
   },
   {
    "store": "Tesco",
@@ -36852,7 +37259,8 @@
    "valid_to": "2026-11-09",
    "page": 19,
    "unit_price": 8.0,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/05007531_P"
   },
   {
    "store": "Tesco",
@@ -36888,7 +37296,8 @@
    "valid_to": "2026-11-09",
    "page": 19,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00020610_P"
   },
   {
    "store": "Tesco",
@@ -36960,7 +37369,8 @@
    "valid_to": "2026-11-10",
    "page": 24,
    "unit_price": 11.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8291_SK_P"
   },
   {
    "store": "Tesco",
@@ -37212,7 +37622,8 @@
    "valid_to": "2026-11-10",
    "page": 26,
    "unit_price": 5.0,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00139542_P-2"
   },
   {
    "store": "Tesco",
@@ -37356,7 +37767,8 @@
    "valid_to": "2026-11-10",
    "page": 26,
    "unit_price": 3.28,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00139542_P-2"
   },
   {
    "store": "Tesco",
@@ -37428,7 +37840,8 @@
    "valid_to": "2026-11-10",
    "page": 27,
    "unit_price": 7.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2809920000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -37500,7 +37913,8 @@
    "valid_to": "2026-11-10",
    "page": 27,
    "unit_price": 7.58,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/7635e787-a0fd-4a7f-b382-147411bc117b/67c9d0a0-74e7-4020-9b00-86d9e6ea1c78.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -37591,6 +38005,7 @@
    "page": 27,
    "unit_price": 5.99,
    "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/efc6094c-d3da-4f3a-8c83-ae65c537b14c/d732930b-fda3-40db-8c42-e3eaebdb2cd0.jpeg?w=225",
    "hist": {
     "n": 1,
     "min": 5.99,
@@ -37920,7 +38335,8 @@
    "valid_to": "2026-11-17",
    "page": 29,
    "unit_price": 1.58,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20605238_P"
   },
   {
    "store": "Tesco",
@@ -37938,7 +38354,8 @@
    "valid_to": "2026-11-17",
    "page": 29,
    "unit_price": 0.84,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586001760096_SK_P"
   },
   {
    "store": "Tesco",
@@ -37956,7 +38373,8 @@
    "valid_to": "2026-11-17",
    "page": 29,
    "unit_price": 8.56,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/48affc9e-3976-4e89-b686-b361c70b6c53/7b26d4e9-9994-4a79-b0b6-a13ac146a853.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -38064,7 +38482,8 @@
    "valid_to": "2026-11-17",
    "page": 29,
    "unit_price": 7.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/569a2832-69ba-4994-9caf-d5fd964b22cb/7a3e5f7b-9609-43bc-89fa-f55288ec0b1c.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -38100,7 +38519,8 @@
    "valid_to": "2026-11-10",
    "page": 29,
    "unit_price": 19.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/b8d7cc8a-2b79-4467-a9d8-295905c4d010/2adb25fb-752d-4c7c-ae88-d8b723b49573.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -38136,7 +38556,8 @@
    "valid_to": "2026-11-17",
    "page": 29,
    "unit_price": 24.27,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586016609359_SK_P"
   },
   {
    "store": "Tesco",
@@ -38244,7 +38665,8 @@
    "valid_to": "2026-11-17",
    "page": 30,
    "unit_price": 1.1,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20927425_P"
   },
   {
    "store": "Tesco",
@@ -38406,7 +38828,8 @@
    "valid_to": "2026-11-10",
    "page": 31,
    "unit_price": 8.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/IMG_4734372"
   },
   {
    "store": "Tesco",
@@ -38424,7 +38847,8 @@
    "valid_to": "2026-11-10",
    "page": 31,
    "unit_price": 9.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/4049729003219_SK_P"
   },
   {
    "store": "Tesco",
@@ -38502,7 +38926,8 @@
    "valid_to": "2026-11-10",
    "page": 31,
    "unit_price": 8.83,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/7622201392215_SK_P"
   },
   {
    "store": "Tesco",
@@ -38538,7 +38963,8 @@
    "valid_to": "2026-11-10",
    "page": 31,
    "unit_price": 16.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00106595_P"
   },
   {
    "store": "Tesco",
@@ -38556,7 +38982,8 @@
    "valid_to": "2026-11-10",
    "page": 31,
    "unit_price": 7.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20901596_P"
   },
   {
    "store": "Tesco",
@@ -38574,7 +39001,8 @@
    "valid_to": "2026-11-10",
    "page": 31,
    "unit_price": 17.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20843626_P"
   },
   {
    "store": "Tesco",
@@ -38592,7 +39020,8 @@
    "valid_to": "2026-11-10",
    "page": 31,
    "unit_price": 3.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/2810230000000_SK_P"
   },
   {
    "store": "Tesco",
@@ -38718,7 +39147,8 @@
    "valid_to": "2026-11-10",
    "page": 32,
    "unit_price": 5.36,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/c5ef66bb-5f27-4013-965c-a872b6c24287/f1e312e5-bdcb-40f7-9984-c820f9877168.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -38808,7 +39238,8 @@
    "valid_to": "2026-11-10",
    "page": 32,
    "unit_price": 22.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00117677_P"
   },
   {
    "store": "Tesco",
@@ -38880,7 +39311,8 @@
    "valid_to": "2026-11-10",
    "page": 33,
    "unit_price": 3.18,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002100596_SK_P"
   },
   {
    "store": "Tesco",
@@ -38952,7 +39384,8 @@
    "valid_to": "2026-11-10",
    "page": 33,
    "unit_price": 1.76,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8586008304125_SK_P"
   },
   {
    "store": "Tesco",
@@ -39024,7 +39457,8 @@
    "valid_to": "2026-11-10",
    "page": 33,
    "unit_price": 9.08,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/f1cbe244-fedf-4e05-a013-b58ff66d7c32/cc294cf8-ffdf-4a9b-9e46-93ef63ec30ef_1136736689.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -39132,7 +39566,8 @@
    "valid_to": "2026-11-17",
    "page": 34,
    "unit_price": 39.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00015755_P"
   },
   {
    "store": "Tesco",
@@ -39150,7 +39585,8 @@
    "valid_to": "2026-11-10",
    "page": 34,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/02702465_P"
   },
   {
    "store": "Tesco",
@@ -39186,7 +39622,8 @@
    "valid_to": "2026-11-17",
    "page": 34,
    "unit_price": 9.97,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/65ebb6a8-576b-43e8-96fe-769f43cf224c/04f30a4c-7131-423f-8e87-792b3c487db2_2111743880.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -39240,7 +39677,8 @@
    "valid_to": "2026-11-10",
    "page": 34,
    "unit_price": 26.6,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/3d241f4f-e6ac-415c-a6ae-b900c024b790/d4fbe1c1-82bc-4724-90eb-e86ef26dbce8_224261400.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -39276,7 +39714,8 @@
    "valid_to": "2026-11-17",
    "page": 34,
    "unit_price": 19.2,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8593893007468_SK_P"
   },
   {
    "store": "Tesco",
@@ -39294,7 +39733,8 @@
    "valid_to": "2026-11-17",
    "page": 35,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/02401973_P"
   },
   {
    "store": "Tesco",
@@ -39312,7 +39752,8 @@
    "valid_to": "2026-11-17",
    "page": 35,
    "unit_price": 1.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8594404110172_SK_P"
   },
   {
    "store": "Tesco",
@@ -39348,7 +39789,8 @@
    "valid_to": "2026-11-30",
    "page": 35,
    "unit_price": 18.56,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00125396_P"
   },
   {
    "store": "Tesco",
@@ -39420,7 +39862,8 @@
    "valid_to": "2026-11-10",
    "page": 35,
    "unit_price": 0.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00133566_P"
   },
   {
    "store": "Tesco",
@@ -39636,7 +40079,8 @@
    "valid_to": "2026-11-16",
    "page": 36,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://digitalcontent.api.tesco.com/v2/media/ghs/7c5f5571-f1c4-4b8e-85dd-563a248cc723/07a9a167-35ed-4f80-bbd5-fd46718db89b.jpeg?w=225"
   },
   {
    "store": "Tesco",
@@ -39708,7 +40152,8 @@
    "valid_to": "2026-11-16",
    "page": 37,
    "unit_price": 0.064,
-   "unit_basis": "pranie"
+   "unit_basis": "pranie",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20820821_P-1"
   },
   {
    "store": "Tesco",
@@ -39780,7 +40225,8 @@
    "valid_to": "2026-11-16",
    "page": 37,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00122057_P"
   },
   {
    "store": "Tesco",
@@ -39816,7 +40262,8 @@
    "valid_to": "2026-11-16",
    "page": 37,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00122497_P"
   },
   {
    "store": "Tesco",
@@ -39834,7 +40281,8 @@
    "valid_to": "2026-11-16",
    "page": 37,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/20216897_P"
   },
   {
    "store": "Tesco",
@@ -39870,7 +40318,8 @@
    "valid_to": "2026-11-09",
    "page": 37,
    "unit_price": 14.11,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00038646_P"
   },
   {
    "store": "Tesco",
@@ -39924,7 +40373,8 @@
    "valid_to": "2026-11-10",
    "page": 45,
    "unit_price": 76.73,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00123848_P"
   },
   {
    "store": "Tesco",
@@ -39942,7 +40392,8 @@
    "valid_to": "2026-11-10",
    "page": 45,
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00123848_P"
   },
   {
    "store": "Tesco",
@@ -39960,7 +40411,8 @@
    "valid_to": "2026-11-10",
    "page": 45,
    "unit_price": 29.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/00015755_P"
   },
   {
    "store": "Tesco",
