@@ -205,6 +205,9 @@ h1 { font: 800 32px/1.05 var(--display); letter-spacing: -0.03em; }
 .item, .syncbox, .plan { border: 0; }
 nav button[aria-current="page"] { color: var(--ink); }
 nav button[aria-current="page"]::before { background: var(--accent); }
+/* Store names in capitals (BILLA, LIDL, …) */
+.store, .sname, .shopchip { text-transform: uppercase; }
+.shop > summary .store { text-transform: uppercase; letter-spacing: 0.01em; }
 </style>
 </head>
 <body>
