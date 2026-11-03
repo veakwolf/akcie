@@ -1,7 +1,4 @@
-# Akcie Trnava
-
-Vlastná náhrada za aplikáciu Dohliadač: týždenné akcie z **Tesco**, **Billa**,
-**Lidl** a **Kaufland** v jednej appke na iPhone.
+# Akcie
 
 **Appka:** https://veakwolf.github.io/akcie/ (v Browseri → Share → Add to Desktop)
 
