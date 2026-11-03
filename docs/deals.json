@@ -1,6 +1,6 @@
 {
  "week": "2026-11-03",
- "generated": "2026-11-03T08:36:36",
+ "generated": "2026-11-03T12:51:42",
  "source": "ai",
  "complete": true,
  "stores": {
@@ -6830,7 +6830,7 @@
    "page": 16,
    "unit_price": 9.29,
    "unit_basis": "kg",
-   "image": "https://media.kaufland.com/images/PPIM/KMO/SK300_03300521_P.jpg"
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/85938458_SK_P"
   },
   {
    "store": "Billa",
@@ -9454,7 +9454,7 @@
    "valid_from": "2026-11-03",
    "valid_to": "2026-11-03",
    "page": null,
-   "image": "https://media.kaufland.com/images/PPIM/KMO/SK300_03300521_P.jpg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/85938458_SK_P",
    "unit_price": 10.24,
    "unit_basis": "kg",
    "hist": {
