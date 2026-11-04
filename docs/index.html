@@ -95,6 +95,11 @@ nav .badge { display: inline-block; min-width: 18px; padding: 0 5px; border-radi
 .item input { width: 22px; height: 22px; accent-color: var(--accent); flex: none; }
 .item .grow { flex: 1; min-width: 0; }
 .item.done .name { text-decoration: line-through; color: var(--muted); }
+.qty { display: flex; align-items: center; gap: 2px; flex: none; background: var(--raised); border-radius: 999px; padding: 2px; }
+.qty span { min-width: 20px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.qbtn { width: 30px; height: 30px; border: 0; border-radius: 50%; background: transparent; color: var(--ink); font-size: 18px; line-height: 1; }
+.qbtn:active { background: var(--card); }
+.item.done .qty { opacity: .5; }
 .x { border: 0; background: none; color: var(--muted); font-size: 20px; padding: 4px 8px; }
 .addrow { display: flex; gap: 8px; margin: 8px 0 14px; }
 .addrow input { flex: 1; padding: 12px 14px; border-radius: 14px; border: 1px solid transparent; background: var(--raised); min-width: 0; outline: none; }
@@ -557,6 +562,7 @@ function alternatives(d) {
   return state.data.deals.filter(o => o.store !== d.store && !expired(o) && isNext(o) === isNext(d) && sameProduct(d, o) && cheaperThan(d, o))
     .sort((x, y) => (unitPay(x) ?? payPrice(x)) - (unitPay(y) ?? payPrice(y)));
 }
+const qtyOf = i => Math.max(1, i.qty || 1);
 const dealOfItem = i => state.data.deals.find(d => keyOf(d) === i.key);
 const closed = new Set(load("akcie.closed", []));
 
@@ -594,8 +600,8 @@ function renderList() {
   const groups = {};
   L().forEach(i => (groups[i.store || "Vlastné"] ??= []).push(i));
   const open = L().filter(i => !i.done && i.price);
-  const sum = items => items.reduce((s, i) => s + i.price, 0);
-  const saved = items => items.reduce((s, i) => s + (i.old_price ? i.old_price - i.price : 0), 0);
+  const sum = items => items.reduce((s, i) => s + i.price * qtyOf(i), 0);
+  const saved = items => items.reduce((s, i) => s + (i.old_price ? (i.old_price - i.price) * qtyOf(i) : 0), 0);
   const order = [...STORE_ORDER, "Vlastné"].filter(g => groups[g]).concat(Object.keys(groups).filter(g => ![...STORE_ORDER, "Vlastné"].includes(g)));
   const seg = sync.code ? `<div class="row seg listseg">
       <button class="chip" data-target="mine" aria-pressed="${state.target !== "shared"}">Môj zoznam${state.mine.filter(i => !i.done).length ? " · " + state.mine.filter(i => !i.done).length : ""}</button>
@@ -612,8 +618,9 @@ function renderList() {
         return `<label class="item ${i.done ? "done" : ""}">
         <input type="checkbox" data-done="${esc(i.key)}" ${i.done ? "checked" : ""}>
         <div class="grow"><div class="name">${esc(i.name)}</div>
-          ${i.price ? `<div class="meta">${eur(i.price)}${i.old_price ? ` <s>${eur(i.old_price)}</s>` : ""}${i.unit ? " · " + esc(i.unit) : ""}</div>` : ""}
+          ${i.price ? `<div class="meta">${qtyOf(i) > 1 ? `${qtyOf(i)} × ` : ""}${eur(i.price)}${i.old_price ? ` <s>${eur(i.old_price)}</s>` : ""}${i.unit ? " · " + esc(i.unit) : ""}${qtyOf(i) > 1 ? ` · spolu <b>${eur(i.price * qtyOf(i))}</b>` : ""}</div>` : ""}
           ${alt ? `<div class="cheaper">Lacnejšie ${esc(inStore(alt.store))}: ${eur(payPrice(alt))}${alt.unit && norm(alt.unit) !== norm(i.unit) ? ` (${esc(alt.unit)}, ${unitText(alt)})` : ""}</div>` : ""}</div>
+        <div class="qty"><button class="qbtn" data-qty="-1" data-key="${esc(i.key)}" aria-label="Menej">−</button><span>${qtyOf(i)}</span><button class="qbtn" data-qty="1" data-key="${esc(i.key)}" aria-label="Viac">+</button></div>
         <button class="x" data-del="${esc(i.key)}" aria-label="Odstrániť">×</button></label>`; }).join("");
     }).join("")
       || `<div class="empty">Nákupný zoznam je prázdny.<br>Pridaj akcie tlačidlom +.</div>`}
@@ -635,8 +642,8 @@ function planBox() {
   let now = 0, best = 0; const moves = {};
   for (const { i, d } of items) {
     const alt = alternatives(d).filter(a => norm(a.unit) === norm(d.unit))[0];  // only swap like for like in the total
-    now += i.price;
-    if (alt) { best += payPrice(alt); (moves[alt.store] ??= []).push(d.name); } else best += i.price;
+    const q = qtyOf(i); now += i.price * q;
+    if (alt) { best += payPrice(alt) * q; (moves[alt.store] ??= []).push(d.name); } else best += i.price * q;
   }
   const stores = new Set(items.map(x => x.d.store));
   const diff = now - best;
@@ -650,7 +657,7 @@ function listText() {
   const groups = {};
   L().filter(i => !i.done).forEach(i => (groups[i.store || "Vlastné"] ??= []).push(i));
   return "Nákup:\n" + Object.entries(groups).map(([g, items]) =>
-    `\n${g}\n` + items.map(i => `• ${i.name}${i.unit ? ` (${i.unit})` : ""}${i.price ? ` – ${eur(i.price)}` : ""}`).join("\n")).join("\n");
+    `\n${g}\n` + items.map(i => `• ${qtyOf(i) > 1 ? qtyOf(i) + "× " : ""}${i.name}${i.unit ? ` (${i.unit})` : ""}${i.price ? ` – ${eur(i.price)}` : ""}`).join("\n")).join("\n");
 }
 
 function renderWatch() {
@@ -734,10 +741,14 @@ $("#sheet").addEventListener("touchend", e => {
   $("#sheet").style.transform = ""; if (dy > 90) closeSheet();
 });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#sheet").hidden) closeSheet(); });
-$("#view").addEventListener("click", e => { if (e.target.dataset.del) e.preventDefault(); handleAction(e.target); });
+$("#view").addEventListener("click", e => { if (e.target.dataset.del || e.target.dataset.qty) e.preventDefault(); handleAction(e.target); });
 function handleAction(target) {
   const t = target;
-  if (t.dataset.add) {
+  if (t.dataset.qty) {
+    const i = L().find(x => x.key === t.dataset.key); if (!i) return;
+    i.qty = Math.max(1, Math.min(99, qtyOf(i) + +t.dataset.qty)); i.t = now();
+    saveL(); render(); syncSoon();
+  } else if (t.dataset.add) {
     const i = L().findIndex(x => x.key === t.dataset.add);
     if (i >= 0) { markDeleted(L()[i].key); L().splice(i, 1); }
     else {
