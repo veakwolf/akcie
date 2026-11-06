@@ -1,6 +1,6 @@
 {
- "week": "2026-11-05",
- "generated": "2026-11-05T13:15:52",
+ "week": "2026-11-06",
+ "generated": "2026-11-06T12:59:35",
  "source": "ai",
  "complete": true,
  "stores": {
@@ -4497,12 +4497,18 @@
    "club_price": 0.74,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/01600316_P",
    "unit_price": 3.16,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.79,
+    "last": 0.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4516,12 +4522,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/03401075_P",
    "unit_price": 1.09,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 10.89,
+    "last": 10.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4535,12 +4547,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8031858122011_SK_P-1",
    "unit_price": 1.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.95,
+    "last": 0.95,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4554,12 +4572,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5902409701661_SK_P",
    "unit_price": 5.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 2.99,
+    "last": 2.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4573,12 +4597,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8588001821869_SK_P",
    "unit_price": 6.2,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.55,
+    "last": 1.55,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4592,12 +4622,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8717428039056_SK_P-1",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 0.99,
+    "last": 0.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4611,12 +4647,18 @@
    "club_price": null,
    "category": "Trvanlivé potraviny",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00020651_P",
    "unit_price": 0.45,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.45,
+    "last": 0.45,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4630,12 +4672,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/2837470000000_SK_P",
    "unit_price": 1.59,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.59,
+    "last": 1.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4649,12 +4697,18 @@
    "club_price": null,
    "category": "Nápoje",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00133351_P",
    "unit_price": 1.38,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.69,
+    "last": 0.69,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4668,12 +4722,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20927425_P",
    "unit_price": 0.78,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.39,
+    "last": 0.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4687,12 +4747,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/2837230000000_SK_P-1",
    "unit_price": 0.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.49,
+    "last": 0.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4706,12 +4772,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/2837530000000_SK_P-1",
    "unit_price": 1.39,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.39,
+    "last": 1.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4725,12 +4797,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8717953011008_SK_P",
    "unit_price": 0.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.79,
+    "last": 0.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4744,12 +4822,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20708569_P-1",
    "unit_price": 6.32,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.79,
+    "last": 0.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4763,12 +4847,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8018708952783_SK_P-1",
    "unit_price": 6.32,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.79,
+    "last": 0.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4782,12 +4872,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8034073873638_SK_P-1",
    "unit_price": 6.32,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.79,
+    "last": 0.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4801,12 +4897,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8034073872372_SK_P-1",
    "unit_price": 6.32,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.79,
+    "last": 0.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4820,12 +4922,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00017288_P",
    "unit_price": 3.96,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.99,
+    "last": 0.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4839,12 +4947,18 @@
    "club_price": null,
    "category": "Trvanlivé potraviny",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8594012791657_SK_P",
    "unit_price": 3.17,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.99,
+    "last": 0.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4858,12 +4972,18 @@
    "club_price": null,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/09703195_P-1",
    "unit_price": 2.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.49,
+    "last": 1.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4877,12 +4997,18 @@
    "club_price": 0.99,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/09701673_P-1",
    "unit_price": 1.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.29,
+    "last": 1.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4896,12 +5022,18 @@
    "club_price": 1.89,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/2837080000000_SK_P",
    "unit_price": 1.99,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.99,
+    "last": 1.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4915,12 +5047,18 @@
    "club_price": 2.99,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/2802690000000_SK_P",
    "unit_price": 3.19,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 3.19,
+    "last": 3.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4934,12 +5072,18 @@
    "club_price": 0.55,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20284173_P",
    "unit_price": 7.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.79,
+    "last": 0.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4953,12 +5097,18 @@
    "club_price": null,
    "category": "Mäso a ryby",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00036216_P",
    "unit_price": 10.5,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.89,
+    "last": 1.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4972,12 +5122,18 @@
    "club_price": null,
    "category": "Mäso a ryby",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4049727005680_SK_P",
    "unit_price": 11.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.19,
+    "last": 1.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -4991,12 +5147,18 @@
    "club_price": null,
    "category": "Mäso a ryby",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8588001953737_SK_P",
    "unit_price": 13.27,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 2.19,
+    "last": 2.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5010,12 +5172,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20937309_P",
    "unit_price": 14.75,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.59,
+    "last": 0.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5029,12 +5197,18 @@
    "club_price": 0.49,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8594003968921_SK_P-1",
    "unit_price": 4.54,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.59,
+    "last": 0.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5048,12 +5222,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20217078_P",
    "unit_price": 11.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.19,
+    "last": 1.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5067,16 +5247,16 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8588003229915_SK_P",
    "unit_price": 3.58,
    "unit_basis": "kg",
    "hist": {
-    "n": 1,
+    "n": 2,
     "min": 1.59,
-    "last": 1.59,
+    "last": 1.79,
     "since": "2026-10-29"
    }
   },
@@ -5092,12 +5272,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00084282_P",
    "unit_price": 3.27,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.49,
+    "last": 0.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5111,12 +5297,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8586001544665_SK_P",
    "unit_price": 5.56,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.75,
+    "last": 0.75,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5130,12 +5322,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20652761_P",
    "unit_price": 8.21,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.15,
+    "last": 1.15,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5149,12 +5347,18 @@
    "club_price": 0.69,
    "category": "Mrazené",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8595692202327_SK_P",
    "unit_price": 2.47,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.99,
+    "last": 0.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5168,12 +5372,18 @@
    "club_price": null,
    "category": "Mrazené",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8588002816048_SK_P",
    "unit_price": 2.83,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.99,
+    "last": 0.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5187,12 +5397,18 @@
    "club_price": null,
    "category": "Trvanlivé potraviny",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00091197_P-1",
    "unit_price": 15.9,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.59,
+    "last": 1.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5206,12 +5422,18 @@
    "club_price": null,
    "category": "Trvanlivé potraviny",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8586002390483_SK_P",
    "unit_price": 5.0,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.25,
+    "last": 1.25,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5225,12 +5447,18 @@
    "club_price": 1.59,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8594006840217_SK_P",
    "unit_price": 4.26,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.69,
+    "last": 1.69,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5244,12 +5472,18 @@
    "club_price": null,
    "category": "Mliečne a vajcia",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4000539103049_SK_P",
    "unit_price": 64.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 12.99,
+    "last": 12.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5263,12 +5497,18 @@
    "club_price": null,
    "category": "Nápoje",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20910986_P",
    "unit_price": 1.33,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.99,
+    "last": 1.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5282,12 +5522,18 @@
    "club_price": null,
    "category": "Nápoje",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00133838A_P",
    "unit_price": 0.26,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.52,
+    "last": 0.52,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5301,12 +5547,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/3460410538536_SK_P",
    "unit_price": 32.84,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 22.99,
+    "last": 22.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5320,12 +5572,18 @@
    "club_price": null,
    "category": "Nápoje",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5999571051854_SK_P",
    "unit_price": 0.86,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.29,
+    "last": 1.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5339,12 +5597,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00133435_P",
    "unit_price": 2.18,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.09,
+    "last": 1.09,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5358,12 +5622,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4063367372315_SK_P",
    "unit_price": 3.19,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.45,
+    "last": 2.45,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5377,12 +5647,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4063367372780_SK_P",
    "unit_price": 3.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.45,
+    "last": 2.45,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5396,12 +5672,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4041584007661_SK_P-1",
    "unit_price": 3.59,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.45,
+    "last": 2.45,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5415,12 +5697,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20647194_P-1",
    "unit_price": 2.13,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 3.19,
+    "last": 3.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5434,12 +5722,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20808053_P",
    "unit_price": 1.1,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.42,
+    "last": 0.42,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5453,12 +5747,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20808204_P",
    "unit_price": 1.2,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.42,
+    "last": 0.42,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5472,12 +5772,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20927596_P",
    "unit_price": 0.78,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.42,
+    "last": 0.42,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5491,12 +5797,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20927597_P",
    "unit_price": 0.84,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.42,
+    "last": 0.42,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5510,12 +5822,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20927598_P",
    "unit_price": 0.88,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.44,
+    "last": 0.44,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5529,12 +5847,18 @@
    "club_price": null,
    "category": "Alkohol",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20927599_P",
    "unit_price": 0.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.49,
+    "last": 0.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5548,12 +5872,18 @@
    "club_price": null,
    "category": "Nápoje",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20927601_P",
    "unit_price": 0.56,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.28,
+    "last": 0.28,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5567,12 +5897,18 @@
    "club_price": 2.45,
    "category": "Drogéria a čistenie",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00020610_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 2.99,
+    "last": 2.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5586,12 +5922,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4009412320689_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 0.85,
+    "last": 0.85,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5605,12 +5947,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8585003911574_SK_P",
    "unit_price": 2.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.49,
+    "last": 1.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5624,12 +5972,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/3045206312257_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 2.59,
+    "last": 2.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5643,12 +5997,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/05004379_P",
    "unit_price": 4.38,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.19,
+    "last": 2.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5662,12 +6022,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20794874_P",
    "unit_price": 5.05,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 3.79,
+    "last": 3.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5681,12 +6047,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00086905_P",
    "unit_price": 3.05,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.29,
+    "last": 2.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5700,12 +6072,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4009175149091_SK_P",
    "unit_price": 5.18,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.59,
+    "last": 2.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5719,12 +6097,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/05005894_P",
    "unit_price": 2.09,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.09,
+    "last": 2.09,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5738,12 +6122,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/05002741_P",
    "unit_price": 3.58,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.79,
+    "last": 1.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5757,12 +6147,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00049405_P",
    "unit_price": 3.05,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.29,
+    "last": 2.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5776,12 +6172,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8411660005403_SK_P-1",
    "unit_price": 2.29,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.29,
+    "last": 2.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5795,12 +6197,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5997321740690_SK_P-1",
    "unit_price": 3.27,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.45,
+    "last": 2.45,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5814,12 +6222,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/9000101386356_SK_P",
    "unit_price": 2.39,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.79,
+    "last": 1.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5833,12 +6247,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5000204922721_SK_P",
    "unit_price": 9.97,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.99,
+    "last": 2.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5852,12 +6272,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20708295_P-1",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 3.39,
+    "last": 3.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5871,12 +6297,18 @@
    "club_price": 4.49,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5905386409667_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 4.99,
+    "last": 4.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5890,12 +6322,18 @@
    "club_price": null,
    "category": "Drogéria a čistenie",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00138729_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 8.99,
+    "last": 8.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5909,12 +6347,18 @@
    "club_price": 1.99,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20101643_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 2.39,
+    "last": 2.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5928,12 +6372,18 @@
    "club_price": 1.19,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8588000669233_SK_P",
    "unit_price": 11.92,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.49,
+    "last": 1.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5947,12 +6397,18 @@
    "club_price": 1.09,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00507282_P",
    "unit_price": 5.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.19,
+    "last": 1.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5966,12 +6422,18 @@
    "club_price": 1.79,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20346347_P",
    "unit_price": 11.06,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.99,
+    "last": 1.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -5985,12 +6447,18 @@
    "club_price": 1.29,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20612535_P",
    "unit_price": 5.96,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.49,
+    "last": 1.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6004,12 +6472,18 @@
    "club_price": 1.79,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20612561_P",
    "unit_price": 6.3,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.89,
+    "last": 1.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6023,12 +6497,18 @@
    "club_price": 0.99,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00507901_P",
    "unit_price": 9.52,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.19,
+    "last": 1.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6042,12 +6522,18 @@
    "club_price": 0.49,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00042465_P",
    "unit_price": 3.93,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.55,
+    "last": 0.55,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6061,12 +6547,18 @@
    "club_price": 0.35,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00410081_P",
    "unit_price": 3.79,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.55,
+    "last": 0.55,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6080,12 +6572,18 @@
    "club_price": 0.65,
    "category": "Nápoje",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00408793_P",
    "unit_price": 2.47,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.99,
+    "last": 0.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6099,12 +6597,18 @@
    "club_price": 0.95,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002561251_SK_P",
    "unit_price": 1.36,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.29,
+    "last": 1.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6118,12 +6622,18 @@
    "club_price": 0.39,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/85812826_SK_P",
    "unit_price": 4.89,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.44,
+    "last": 0.44,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6137,12 +6647,18 @@
    "club_price": 1.49,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8595002101210_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 1.99,
+    "last": 1.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6156,12 +6672,18 @@
    "club_price": 0.89,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00027327_P",
    "unit_price": 4.95,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.99,
+    "last": 0.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6175,12 +6697,18 @@
    "club_price": 1.99,
    "category": "Nápoje",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5411188129899_SK_P",
    "unit_price": 2.49,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.49,
+    "last": 2.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6194,12 +6722,18 @@
    "club_price": 2.59,
    "category": "Trvanlivé potraviny",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00126979_P-1",
    "unit_price": 5.58,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 3.49,
+    "last": 3.49,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6213,12 +6747,18 @@
    "club_price": 4.99,
    "category": "Trvanlivé potraviny",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00059037_P",
    "unit_price": 5.99,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 5.99,
+    "last": 5.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6232,12 +6772,18 @@
    "club_price": 1.89,
    "category": "Trvanlivé potraviny",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5997003581139_SK_P-1",
    "unit_price": 2.39,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 2.39,
+    "last": 2.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6251,12 +6797,18 @@
    "club_price": 1.39,
    "category": "Pečivo",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00105911_P-1",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 1.69,
+    "last": 1.69,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6270,12 +6822,18 @@
    "club_price": 1.79,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8595006316771_SK_P",
    "unit_price": 2.49,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.99,
+    "last": 1.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6289,12 +6847,18 @@
    "club_price": 2.19,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00208360__P",
    "unit_price": 7.97,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 2.39,
+    "last": 2.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6308,12 +6872,18 @@
    "club_price": 6.19,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8588001446154_SK_P",
    "unit_price": 9.26,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 6.39,
+    "last": 6.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6327,12 +6897,18 @@
    "club_price": 2.09,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20684739_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 2.29,
+    "last": 2.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6346,12 +6922,18 @@
    "club_price": 1.99,
    "category": "Mrazené",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5900437007137_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 2.09,
+    "last": 2.09,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6365,12 +6947,18 @@
    "club_price": null,
    "category": "Trvanlivé potraviny",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/04103471_P-1",
    "unit_price": 4.36,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.09,
+    "last": 1.09,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6384,12 +6972,18 @@
    "club_price": 0.79,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00035323_P",
    "unit_price": 5.93,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.89,
+    "last": 0.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6403,12 +6997,18 @@
    "club_price": 3.29,
    "category": "Trvanlivé potraviny",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20270901_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 3.79,
+    "last": 3.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6422,12 +7022,18 @@
    "club_price": 1.99,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/01502968_P",
    "unit_price": 16.19,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 2.59,
+    "last": 2.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6441,12 +7047,18 @@
    "club_price": 2.49,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00014493_P",
    "unit_price": 4.46,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 2.99,
+    "last": 2.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6460,12 +7072,18 @@
    "club_price": null,
    "category": "Trvanlivé potraviny",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/01401443_P",
    "unit_price": 7.29,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.35,
+    "last": 0.35,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6479,12 +7097,18 @@
    "club_price": 1.19,
    "category": "Mäso a ryby",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00129917_P",
    "unit_price": 9.93,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.39,
+    "last": 1.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6498,12 +7122,18 @@
    "club_price": 0.99,
    "category": "Trvanlivé potraviny",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8585002409768_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 1.39,
+    "last": 1.39,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6517,12 +7147,18 @@
    "club_price": 2.39,
    "category": "Sladké a slané",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/5000159563871_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 2.79,
+    "last": 2.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6536,12 +7172,18 @@
    "club_price": 0.79,
    "category": "Alkohol",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8594403708721_SK_P",
    "unit_price": 1.78,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.89,
+    "last": 0.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6555,12 +7197,18 @@
    "club_price": 12.99,
    "category": "Alkohol",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8586016609359_SK_P",
    "unit_price": 21.41,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 14.99,
+    "last": 14.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6574,12 +7222,18 @@
    "club_price": 4.39,
    "category": "Alkohol",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00078959_P",
    "unit_price": 6.65,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 4.99,
+    "last": 4.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6593,12 +7247,18 @@
    "club_price": 6.49,
    "category": "Alkohol",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00041522_P",
    "unit_price": 13.98,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 6.99,
+    "last": 6.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6612,12 +7272,18 @@
    "club_price": 1.89,
    "category": "Sladké a slané",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/4009900412117_SK_P",
    "unit_price": 34.22,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 2.19,
+    "last": 2.19,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6631,12 +7297,18 @@
    "club_price": 0.33,
    "category": "Sladké a slané",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/85920729_SK_P",
    "unit_price": 12.86,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.45,
+    "last": 0.45,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6650,12 +7322,18 @@
    "club_price": 7.49,
    "category": "Nápoje",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8711000516164_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 8.99,
+    "last": 8.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6669,12 +7347,18 @@
    "club_price": 0.65,
    "category": "Sladké a slané",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8593893738690_SK_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 0.89,
+    "last": 0.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6688,12 +7372,18 @@
    "club_price": 0.99,
    "category": "Nápoje",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/8590014813939_SK_P",
    "unit_price": 1.56,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.09,
+    "last": 1.09,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6707,12 +7397,18 @@
    "club_price": 1.59,
    "category": "Ovocie a zelenina",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20943653_P",
    "unit_price": 9.94,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 1.79,
+    "last": 1.79,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6726,12 +7422,18 @@
    "club_price": 0.75,
    "category": "Alkohol",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20925932_P",
    "unit_price": 1.78,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.89,
+    "last": 0.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6745,12 +7447,18 @@
    "club_price": 2.99,
    "category": "Mliečne a vajcia",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20920810_P",
    "unit_price": null,
-   "unit_basis": null
+   "unit_basis": null,
+   "hist": {
+    "n": 1,
+    "min": 3.99,
+    "last": 3.99,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6764,12 +7472,18 @@
    "club_price": 0.79,
    "category": "Sladké a slané",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20604545_P",
    "unit_price": 11.12,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "hist": {
+    "n": 1,
+    "min": 0.89,
+    "last": 0.89,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6783,12 +7497,18 @@
    "club_price": null,
    "category": "Nápoje",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/20278063_P",
    "unit_price": 0.8,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.59,
+    "last": 1.59,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6802,12 +7522,18 @@
    "club_price": null,
    "category": "Nápoje",
    "note": "len s Kaufland Card XTRA",
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00133826_P",
    "unit_price": 0.23,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 0.35,
+    "last": 0.35,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -6821,12 +7547,18 @@
    "club_price": 1.09,
    "category": "Nápoje",
    "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-05",
+   "valid_from": "2026-11-06",
+   "valid_to": "2026-11-06",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/00133361_P",
    "unit_price": 5.16,
-   "unit_basis": "l"
+   "unit_basis": "l",
+   "hist": {
+    "n": 1,
+    "min": 1.29,
+    "last": 1.29,
+    "since": "2026-11-05"
+   }
   },
   {
    "store": "Kaufland",
@@ -7423,9 +8155,9 @@
    "name": "Bravčové kolienko zadné s kosťou, v celku",
    "brand": null,
    "unit": "1 kg",
-   "price": 2.59,
+   "price": 2.49,
    "old_price": 3.89,
-   "discount": 33,
+   "discount": 35,
    "club_price": null,
    "category": "Mäso a ryby",
    "note": null,
@@ -7433,7 +8165,7 @@
    "valid_to": "2026-11-11",
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/2802620000000_SK_P",
-   "unit_price": 2.59,
+   "unit_price": 2.49,
    "unit_basis": "kg"
   },
   {
@@ -9036,25 +9768,6 @@
    "page": null,
    "image": "https://kaufland.media.schwarz/is/image/schwarz/2050009349233_DE_P-1",
    "unit_price": 8.78,
-   "unit_basis": "kg"
-  },
-  {
-   "store": "Kaufland",
-   "upcoming": false,
-   "name": "Taštička vanilkovo-jablkovou náplňou",
-   "brand": null,
-   "unit": "112 g",
-   "price": 0.69,
-   "old_price": null,
-   "discount": null,
-   "club_price": null,
-   "category": "Pečivo",
-   "note": null,
-   "valid_from": "2026-11-05",
-   "valid_to": "2026-11-11",
-   "page": null,
-   "image": "https://kaufland.media.schwarz/is/image/schwarz/20943649_P",
-   "unit_price": 6.16,
    "unit_basis": "kg"
   },
   {
