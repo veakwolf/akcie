@@ -22,6 +22,14 @@ jobs:
       - name: Install poppler (pdftotext)
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils && (pip install -q --break-system-packages beautifulsoup4 || pip install -q beautifulsoup4)
 
+      - name: Keep Supabase awake (free projects pause after 7 days without activity)
+        continue-on-error: true
+        run: |
+          curl -sS -m 20 -o /dev/null -w "Supabase: HTTP %{http_code}\n" \
+            -X POST "https://dlbgfzjgkuwubomihkux.supabase.co/rest/v1/rpc/get_household" \
+            -H "apikey: sb_publishable_mp28D-V0T8ZAHW410MStGw_KWIFq5Dw" \
+            -H "Content-Type: application/json" -d '{"p_code":"keepalive"}'
+
       - name: Download flyers and extract text
         run: python3 scripts/fetch.py
 
