@@ -160,9 +160,9 @@ def find_biedronka(today):
 
 def biedronka_images(press_url, img_dir):
     """Download all page images of one flyer; returns the page count."""
-    page = get(press_url).replace("&amp;", "&")
-    doc = re.search(r"doc=([^&\"']+\.pdf)", page).group(1)
-    sub = re.search(r"subfolder=([^&\"']+)", page).group(1)
+    page = get(press_url)
+    doc = re.search(r'startDocument\s*=\s*"([^"]+)"', page).group(1)
+    sub = re.search(r'subfolder\s*=\s*"([^"]+)"', page).group(1)
     base = f"{BIEDRONKA}/flexpaper/view?subfolder={sub}&doc={doc}"
     pages = json.loads(get(base + "&format=json&page=1"))[0]["pages"]
     img_dir.mkdir(parents=True, exist_ok=True)
@@ -213,6 +213,8 @@ def fetch_biedronka(today, week_dir, metas, errors):
         except Exception as e:
             errors[folder] = f"{type(e).__name__}: {e}"
             print(f"{folder}: FAILED {errors[folder]}", file=sys.stderr)
+            if not (week_dir / folder / "meta.json").exists():  # never leave a half-made folder behind
+                shutil.rmtree(week_dir / folder, ignore_errors=True)
 
 
 # ---------------------------------------------------------------- extraction

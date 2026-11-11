@@ -97,7 +97,7 @@ PARSERS = {"tesco": tesco, "billa": billa}  # Lidl's text is too jumbled for rul
 def build(week_dir):
     week_dir = pathlib.Path(week_dir)
     stores, deals = {}, []
-    for store_dir in sorted(p for p in week_dir.iterdir() if p.is_dir()):
+    for store_dir in sorted(p for p in week_dir.iterdir() if p.is_dir() and (p / "meta.json").exists()):
         meta = json.loads((store_dir / "meta.json").read_text(encoding="utf-8"))
         upcoming = store_dir.name.endswith("_next")
         entry = stores.setdefault(meta["store"], {})
