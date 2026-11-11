@@ -20,7 +20,7 @@
   --bg: #121417; --card: #1b1e23; --raised: #262a31; --ink: #eef0f2; --muted: #8d949e; --line: #2a2e35;
   --accent: #4fd1a5; --accent-soft: #163a30; --on-accent: #06261c;
   --sale: #4fd1a5; --sale-soft: #163a30;
-  --tesco: #ff6b6b; --billa: #f2c14e; --lidl: #6aa8ff; --kaufland: #ff8a4c; --watch: #f2c14e; --watch-soft: #2e2715;
+  --tesco: #ff6b6b; --billa: #f2c14e; --lidl: #6aa8ff; --kaufland: #ff8a4c; --biedronka: #ff5d8f; --watch: #f2c14e; --watch-soft: #2e2715;
   --display: "Manrope", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --body: "Manrope", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --tabs-h: 62px;
@@ -48,7 +48,9 @@ h1 { margin: 0; font: 800 30px/1.1 var(--display); letter-spacing: -0.02em; }
 .sname.Billa, .shopchip.Billa { color: var(--billa); }
 .sname.Lidl, .shopchip.Lidl { color: var(--lidl); }
 .sname.Kaufland, .shopchip.Kaufland { color: var(--kaufland); }
+.sname.Biedronka, .shopchip.Biedronka { color: var(--biedronka); }
 .shopchip.Kaufland[aria-pressed="true"] { background: var(--kaufland); color: #fff; }
+.shopchip.Biedronka[aria-pressed="true"] { background: var(--biedronka); color: #fff; }
 .shopchip.Tesco[aria-pressed="true"] { background: var(--tesco); color: #fff; }
 .shopchip.Billa[aria-pressed="true"] { background: var(--billa); color: #1a1405; }
 .shopchip.Lidl[aria-pressed="true"] { background: var(--lidl); color: #fff; }
@@ -63,7 +65,7 @@ main { padding: 4px 16px calc(env(safe-area-inset-bottom) + var(--tabs-h) + 24px
 .deal.watched { border-color: var(--watch); box-shadow: 0 0 0 1px var(--watch) inset; }
 .deal.expired { opacity: .5; }
 .store { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
-.store.Tesco { color: var(--tesco); } .store.Billa { color: var(--billa); } .store.Lidl { color: var(--lidl); } .store.Kaufland { color: var(--kaufland); }
+.store.Tesco { color: var(--tesco); } .store.Billa { color: var(--billa); } .store.Lidl { color: var(--lidl); } .store.Kaufland { color: var(--kaufland); } .store.Biedronka { color: var(--biedronka); }
 .name { font-weight: 650; font-size: 16px; line-height: 1.3; overflow-wrap: anywhere; }
 .meta { color: var(--muted); font-size: 13px; }
 .note { font-size: 13px; color: var(--sale); }
@@ -253,7 +255,7 @@ nav button[aria-current="page"]::before { background: var(--accent); }
 </nav>
 <script>
 const EYE = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`;
-const STORE_CLUB = { Tesco: "Clubcard", Billa: "Bonus", Lidl: "Lidl Plus", Kaufland: "Kaufland Card" };
+const STORE_CLUB = { Tesco: "Clubcard", Billa: "Bonus", Lidl: "Lidl Plus", Kaufland: "Kaufland Card", Biedronka: "Moja Biedronka" };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const norm = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -537,12 +539,12 @@ function closeSheet() {
   setTimeout(() => { $("#sheet").hidden = true; $("#sheetBack").hidden = true; }, 220);
 }
 
-const STORE_ORDER = ["Tesco", "Billa", "Lidl", "Kaufland"];
-const IN = { Tesco: "v Tescu", Billa: "v Bille", Lidl: "v Lidli", Kaufland: "v Kauflande" };
+const STORE_ORDER = ["Tesco", "Billa", "Lidl", "Kaufland", "Biedronka"];
+const IN = { Tesco: "v Tescu", Billa: "v Bille", Lidl: "v Lidli", Kaufland: "v Kauflande", Biedronka: "v Biedronke" };
 const inStore = s => IN[s] || "v " + s;
 
 // ---------- Same product in other stores (same token rule as add_images in scripts/merge.py)
-const STOPW = new Set("a s so z zo v vo na do pre bez alebo rozne druhy vybrane ks g kg ml l cl x tesco billa lidl kaufland clever pilos akcia cena za balenie bal cca xxl mix chute slovenska finest premium classic".split(" "));
+const STOPW = new Set("a s so z zo v vo na do pre bez alebo rozne druhy vybrane ks g kg ml l cl x tesco billa lidl kaufland biedronka clever pilos akcia cena za balenie bal cca xxl mix chute slovenska finest premium classic".split(" "));
 const toks = s => new Set((norm(s).match(/[a-z]+/g) || []).filter(w => w.length > 1 && !STOPW.has(w)));
 const tokCache = new Map();
 const dealToks = d => { if (!tokCache.has(d)) tokCache.set(d, toks(d.name + " " + (d.brand || ""))); return tokCache.get(d); };

@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install poppler (pdftotext)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils && (pip install -q --break-system-packages beautifulsoup4 || pip install -q beautifulsoup4)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils && (pip install -q --break-system-packages beautifulsoup4 pillow || pip install -q beautifulsoup4 pillow)
 
       - name: Keep Supabase awake (free projects pause after 7 days without activity)
         continue-on-error: true

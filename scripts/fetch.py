@@ -128,7 +128,91 @@ FINDERS = {"tesco": find_tesco, "billa": find_billa, "lidl": find_lidl, "kauflan
 TARGETS = [("tesco", "tesco", False), ("billa", "billa", False), ("lidl", "lidl", False),
            ("tesco_next", "tesco", True), ("billa_next", "billa", True)]
 IMAGE_STORES = {"lidl"}
-NAMES = {"tesco": "Tesco", "billa": "Billa", "lidl": "Lidl", "kaufland": "Kaufland"}
+NAMES = {"tesco": "Tesco", "billa": "Billa", "lidl": "Lidl", "kaufland": "Kaufland", "biedronka": "Biedronka"}
+
+# ---------------------------------------------------------------- Biedronka
+# Its flyers are only page images in a Flexpaper viewer (the text layer is empty), so we save the
+# page images and the AI step reads the deals straight from them.
+BIEDRONKA = "https://www.biedronka.sk"
+
+
+def find_biedronka(today):
+    """{folder: (press_url, start, end)} for the current and next weekly flyer and the current "fresh" flyer."""
+    html = get(BIEDRONKA + "/sk/letaky")
+    found = set()
+    for pid, slug, fresh, d1, m1, d2, m2, y in re.findall(
+            r"press,id,([a-z0-9]+),title,(w\d+-\d{4}-(fresh-)?letak-(\d{1,2})-(\d{1,2})-(\d{1,2})-(\d{1,2})-(\d{4}))", html):
+        start = dt.date(int(y) if int(m1) <= int(m2) else int(y) - 1, int(m1), int(d1))
+        found.add((bool(fresh), start, dt.date(int(y), int(m2), int(d2)), f"{BIEDRONKA}/sk/press,id,{pid},title,{slug}"))
+    weekly = sorted(f for f in found if not f[0])
+    fresh = sorted(f for f in found if f[0] and f[2] >= today)
+    out = {}
+    cur = [f for f in weekly if f[1] <= today <= f[2]]
+    if cur:
+        out["biedronka"] = cur[-1]
+    nxt = [f for f in weekly if f[1] > today]
+    if nxt:
+        out["biedronka_next"] = nxt[0]
+    if fresh:
+        out["biedronka_fresh"] = fresh[0]
+    return {k: (v[3], v[1], v[2]) for k, v in out.items()}
+
+
+def biedronka_images(press_url, img_dir):
+    """Download all page images of one flyer; returns the page count."""
+    page = get(press_url).replace("&amp;", "&")
+    doc = re.search(r"doc=([^&\"']+\.pdf)", page).group(1)
+    sub = re.search(r"subfolder=([^&\"']+)", page).group(1)
+    base = f"{BIEDRONKA}/flexpaper/view?subfolder={sub}&doc={doc}"
+    pages = json.loads(get(base + "&format=json&page=1"))[0]["pages"]
+    img_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        from PIL import Image
+    except ImportError:
+        Image = None
+    import io
+    for p in range(1, pages + 1):
+        data = get(f"{base}&format=jpg&page={p}", binary=True)
+        target = img_dir / f"p{p:03d}.jpg"
+        if Image:  # ~1000 px wide; re-save smaller so the weekly image branch stays light
+            Image.open(io.BytesIO(data)).convert("RGB").save(target, "JPEG", quality=72, optimize=True)
+        else:
+            target.write_bytes(data)
+    return pages
+
+
+def fetch_biedronka(today, week_dir, metas, errors):
+    try:
+        flyers = find_biedronka(today)
+    except Exception as e:
+        errors["biedronka"] = f"{type(e).__name__}: {e}"
+        print(f"biedronka: FAILED {errors['biedronka']}", file=sys.stderr)
+        return
+    for folder in ("biedronka", "biedronka_next", "biedronka_fresh"):
+        if folder not in flyers:
+            print(f"{folder}: not published")
+            continue
+        url, start, end = flyers[folder]
+        try:
+            here = week_dir / folder / "meta.json"
+            meta = json.loads(here.read_text(encoding="utf-8")) if here.exists() else None
+            if not (meta and meta.get("pdf") == url):
+                meta, _ = reuse(folder, url, week_dir)  # same flyer seen earlier: keep its AI results
+            out = week_dir / folder
+            if not meta:
+                if out.exists():
+                    shutil.rmtree(out)
+                out.mkdir(parents=True)
+            pages = biedronka_images(url, out / "img")  # images are not in git, so always (re)download them
+            if not meta:
+                meta = dict(store="Biedronka", pdf=url, valid_from=iso(start), valid_to=iso(end), web=url,
+                            pages_total=pages, pages_kept=list(range(1, pages + 1)), images=True, image_only=True)
+                (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
+            metas[folder] = meta
+            print(f"{folder}: {pages} page images, valid {iso(start)} – {iso(end)}")
+        except Exception as e:
+            errors[folder] = f"{type(e).__name__}: {e}"
+            print(f"{folder}: FAILED {errors[folder]}", file=sys.stderr)
 
 
 # ---------------------------------------------------------------- extraction
@@ -244,6 +328,8 @@ def main():
         except Exception as e:
             errors[folder] = f"{type(e).__name__}: {e}"
             print(f"{folder}: FAILED {errors[folder]}", file=sys.stderr)
+
+    fetch_biedronka(today, week_dir, metas, errors)
 
     (week_dir / "status.json").write_text(json.dumps(dict(fetched=today.isoformat(), errors=errors),
                                                       ensure_ascii=False, indent=1), encoding="utf-8")

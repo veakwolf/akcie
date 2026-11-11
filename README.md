@@ -23,6 +23,7 @@ Celá appka je jeden súbor `docs/index.html` (GitHub Pages z priečinka `docs/`
    - stiahne letáky Tesco, Billa a Lidl (PDF), vytiahne text strán s
      potravinami do `weeks/<dátum>/<obchod>/`; keď sú zverejnené, aj budúce
      letáky Tesco a Billa (`tesco_next`, `billa_next`),
+   - Biedronka: leták je len v obrázkoch, ukladajú sa obrázky strán (aj „fresh“ leták) a AI číta akcie z nich,
    - Kaufland berie priamo z predajne.kaufland.sk (`scripts/kaufland_web.py`,
      bez AI) – aktuálny aj budúci týždeň,
    - leták, ktorý sa nezmenil, sa len prevezme z predošlého dňa, takže nové

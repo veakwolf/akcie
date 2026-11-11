@@ -19,6 +19,8 @@ When the user asks to **"spracuj akcie"** (process this week's deals), follow
   processed page numbers to `ai_pages.txt`.
 - For Lidl (`meta.json` → `"images": true`), take the product ↔ price pairing from the page images on the
   `stranky` branch (`git fetch origin stranky`), not from the text order.
+- Biedronka (`biedronka`, `biedronka_next`, `biedronka_fresh`; `"image_only": true`) has no text at all:
+  read the deals from the page images on the `stranky` branch.
 - Only household consumables (food, drinks, alcohol, drugstore and cleaning);
   never furniture, tools, clothes, toys, electronics, decorations.
 - Never invent a price; skip unclear products.

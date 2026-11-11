@@ -1,6 +1,6 @@
 # Weekly processing (for Claude)
 
-Every Wednesday the GitHub Action downloads the flyers and saves the text of the
+Every morning the GitHub Action downloads the flyers and saves the text of the
 food pages to `weeks/<date>/<store>/pages/pNNN.txt`. This step turns that text
 into clean deals for the app.
 
@@ -8,8 +8,9 @@ into clean deals for the app.
 
 1. Use the **newest** folder in `weeks/`. Check its `status.json`; if a store
    failed (errors), tell the user and continue with the rest.
-2. For each store folder (`tesco`, `billa`, `lidl`, and `tesco_next` /
-   `billa_next` when present: next week's flyers) that is not finished yet,
+2. For each store folder (`tesco`, `billa`, `lidl`, `biedronka`, `biedronka_fresh`,
+   and `tesco_next` / `billa_next` / `biedronka_next` when present: next week's
+   flyers) that is not finished yet,
    work through the pages in batches of about 8 pages. A folder is finished
    when `ai_pages.txt` lists every page of `meta.json` → `pages_kept` (folders
    reused from last run already are):
@@ -21,6 +22,12 @@ into clean deals for the app.
      `git fetch origin stranky && git worktree add ../stranky stranky`, then
      `../stranky/<date>/<store folder>/img/pNNN.jpg`. If the images are missing, skip
      that store and say so in the reply.
+   - **Biedronka** (`meta.json` has `"image_only": true`): there is **no text**,
+     only the page images (same `stranky` branch, `img/pNNN.jpg`). Read the
+     products, units and prices straight from the images. Price before the
+     discount = `old_price`; the price with the **Moja Biedronka** app/card =
+     `club_price`. `biedronka_fresh` is a short extra flyer (fruit, vegetables,
+     meat for a few days): its dates are in `meta.json`.
    - For each **deal** (a product with a sale price) append **one line** of JSON
      to `weeks/<date>/<store>/ai.jsonl` (format below).
    - Append the page numbers of the batch to `weeks/<date>/<store>/ai_pages.txt`

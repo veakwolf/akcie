@@ -103,6 +103,10 @@ def build(week_dir):
         entry = stores.setdefault(meta["store"], {})
         if upcoming:
             entry.update(next_from=meta.get("valid_from"), next_to=meta.get("valid_to"))
+        elif store_dir.name.endswith("_fresh"):  # short extra flyer (Biedronka fresh); deals carry their own dates
+            entry.setdefault("valid_from", meta.get("valid_from"))
+            entry.setdefault("valid_to", meta.get("valid_to"))
+            entry.setdefault("web", meta.get("web"))
         else:
             entry.update({k: meta.get(k) for k in ("valid_from", "valid_to", "web")})
         parser = PARSERS.get(store_dir.name.removesuffix("_next"))
