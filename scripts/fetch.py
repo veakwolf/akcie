@@ -244,6 +244,25 @@ def reuse(folder, pdf_url, week_dir):
     return None, None
 
 
+def adopt_same_text(out, week_dir):
+    """Stores sometimes re-upload the same flyer under a new URL. If an earlier folder has exactly the
+    same page texts and is already processed, take over its AI results instead of processing it again."""
+    mine = {f.name: f.read_text(encoding="utf-8") for f in (out / "pages").glob("p*.txt")}
+    if not mine:
+        return None
+    for old in sorted((p for p in WEEKS.iterdir() if p.is_dir() and p != week_dir), reverse=True):
+        for cand in old.iterdir():
+            if not (cand / "ai.jsonl").exists() or not (cand / "pages").is_dir():
+                continue
+            theirs = {f.name: f.read_text(encoding="utf-8") for f in (cand / "pages").glob("p*.txt")}
+            if theirs == mine:
+                for name in ("ai.jsonl", "ai_pages.txt"):
+                    if (cand / name).exists():
+                        shutil.copy(cand / name, out / name)
+                return cand
+    return None
+
+
 def extract(store, pdf, info, week_dir, folder=None):
     out = week_dir / (folder or store)
     if out.exists():
@@ -302,6 +321,9 @@ def main():
                     pdf = pathlib.Path(tmp) / f"{folder}.pdf"
                     pdf.write_bytes(get(info["pdf"], binary=True))
                 metas[folder] = extract(store, pdf, info, week_dir, folder)
+                same = adopt_same_text(week_dir / folder, week_dir)
+                if same:
+                    print(f"{folder}: same pages as {same.parent.name}/{same.name}, took over its AI results")
                 print(f"{folder}: {len(metas[folder]['pages_kept'])}/{metas[folder]['pages_total']} pages, "
                       f"valid {info['valid_from']} – {info['valid_to']}")
             except Exception as e:  # one broken store must not stop the others
