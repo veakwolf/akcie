@@ -1,8 +1,4 @@
 {
  "fetched": "2026-11-11",
- "errors": {
-  "biedronka": "AttributeError: 'NoneType' object has no attribute 'group'",
-  "biedronka_next": "AttributeError: 'NoneType' object has no attribute 'group'",
-  "biedronka_fresh": "AttributeError: 'NoneType' object has no attribute 'group'"
- }
+ "errors": {}
 }
