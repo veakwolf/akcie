@@ -595,7 +595,18 @@ function renderDeals() {
       ${items.map(d => dealCard(d, false)).join("")}
     </details>`;
   }).join("");
-  $("#view").innerHTML = rulesNote + (sections || `<div class="empty">Nič sa nenašlo.</div>`);
+  // A store whose flyer only starts later (e.g. Biedronka from Thursday): offer next week instead of an empty list.
+  let later = "";
+  if (state.week === "now" && state.stores.size) {
+    const waiting = [...state.stores].filter(s => !list.some(d => d.store === s)
+      && state.data.deals.some(d => d.store === s && isNext(d)));
+    if (waiting.length) {
+      const from = state.data.stores?.[waiting[0]]?.next_from;
+      later = `<div class="notice">${waiting.map(esc).join(", ")}: nový leták platí${from ? " od " + fmtDate(from).replace(/\.$/, "") : " od budúceho týždňa"}.
+        <button class="chip" data-goweek="next" style="margin-top:8px">Zobraziť budúci týždeň</button></div>`;
+    }
+  }
+  $("#view").innerHTML = rulesNote + later + (sections || (later ? "" : `<div class="empty">Nič sa nenašlo.</div>`));
 }
 
 function renderList() {
@@ -700,6 +711,9 @@ $("#quick").addEventListener("click", e => {
   }
   document.querySelectorAll("#quick .chip").forEach(c => c.setAttribute("aria-pressed", state.quick.has(c.dataset.quick)));
   save("akcie.quick", [...state.quick]); render();
+});
+$("#view").addEventListener("click", e => {
+  if (e.target.dataset.goweek) document.querySelector(`#weeks [data-week="${e.target.dataset.goweek}"]`)?.click();
 });
 $("#weeks").addEventListener("click", e => {
   const w = e.target.dataset.week; if (!w) return;
