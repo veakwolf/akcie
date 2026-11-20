@@ -1,6 +1,6 @@
 {
  "week": "2026-11-20",
- "generated": "2026-11-20T07:30:03",
+ "generated": "2026-11-20T14:06:43",
  "source": "ai",
  "complete": true,
  "stores": {
@@ -18465,31 +18465,6 @@
   {
    "store": "Kaufland",
    "upcoming": false,
-   "name": "Gaštany",
-   "brand": null,
-   "unit": "100 g",
-   "price": 0.79,
-   "old_price": null,
-   "discount": null,
-   "club_price": null,
-   "category": "Ovocie a zelenina",
-   "note": null,
-   "valid_from": "2026-11-19",
-   "valid_to": "2026-11-25",
-   "page": null,
-   "image": "https://kaufland.media.schwarz/is/image/schwarz/2837800000000_SK_P",
-   "unit_price": 7.9,
-   "unit_basis": "kg",
-   "hist": {
-    "n": 1,
-    "min": 0.69,
-    "last": 0.69,
-    "since": "2026-11-05"
-   }
-  },
-  {
-   "store": "Kaufland",
-   "upcoming": false,
    "name": "Pistácie pražené, solené",
    "brand": null,
    "unit": "100 g",
@@ -25287,7 +25262,8 @@
    "valid_to": "2026-11-22",
    "page": 25,
    "unit_price": 5.98,
-   "unit_basis": "kg"
+   "unit_basis": "kg",
+   "image": "https://kaufland.media.schwarz/is/image/schwarz/8588004830806_SK_P"
   },
   {
    "store": "Lidl",
