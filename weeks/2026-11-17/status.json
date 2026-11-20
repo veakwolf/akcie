@@ -1,7 +1,0 @@
-{
- "fetched": "2026-11-17",
- "errors": {
-  "tesco": "HTTPError: HTTP Error 403: Forbidden",
-  "tesco_next": "HTTPError: HTTP Error 403: Forbidden"
- }
-}
