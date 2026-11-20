@@ -263,6 +263,13 @@ def adopt_same_text(out, week_dir):
     return None
 
 
+def render_images(pdf, out, kept):
+    (out / "img").mkdir(exist_ok=True)
+    for p in kept:
+        subprocess.run(["pdftoppm", "-f", str(p), "-l", str(p), "-r", "60", "-jpeg", "-jpegopt", "quality=70",
+                        "-singlefile", str(pdf), str(out / "img" / f"p{p:03d}")], capture_output=True)
+
+
 def extract(store, pdf, info, week_dir, folder=None):
     out = week_dir / (folder or store)
     if out.exists():
@@ -275,10 +282,7 @@ def extract(store, pdf, info, week_dir, folder=None):
             (out / "pages" / f"p{p:03d}.txt").write_text(t, encoding="utf-8")
             kept.append(p)
     if store in IMAGE_STORES:  # layout where text order doesn't match the price boxes
-        (out / "img").mkdir()
-        for p in kept:
-            subprocess.run(["pdftoppm", "-f", str(p), "-l", str(p), "-r", "60", "-jpeg", "-jpegopt", "quality=70",
-                            "-singlefile", str(pdf), str(out / "img" / f"p{p:03d}")], capture_output=True)
+        render_images(pdf, out, kept)
     meta = dict(store=NAMES[store], **info, pages_total=page_count(pdf), pages_kept=kept,
                 images=store in IMAGE_STORES)
     (out / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -312,11 +316,19 @@ def main():
                     if here.exists() and json.loads(here.read_text(encoding="utf-8")).get("pdf") == info["pdf"]:
                         metas[folder] = json.loads(here.read_text(encoding="utf-8"))
                         print(f"{folder}: already downloaded today, kept (incl. AI results)")
+                        if store in IMAGE_STORES:  # images are not in git, so render them again
+                            pdf = pathlib.Path(tmp) / f"{folder}.pdf"
+                            pdf.write_bytes(get(info["pdf"], binary=True))
+                            render_images(pdf, week_dir / folder, metas[folder]["pages_kept"])
                         continue
                     meta, src = reuse(folder, info["pdf"], week_dir)
                     if meta:
                         metas[folder] = meta
                         print(f"{folder}: same flyer as {src.parent.name}/{src.name}, reused (incl. AI results)")
+                        if store in IMAGE_STORES:
+                            pdf = pathlib.Path(tmp) / f"{folder}.pdf"
+                            pdf.write_bytes(get(info["pdf"], binary=True))
+                            render_images(pdf, week_dir / folder, meta["pages_kept"])
                         continue
                     pdf = pathlib.Path(tmp) / f"{folder}.pdf"
                     pdf.write_bytes(get(info["pdf"], binary=True))
